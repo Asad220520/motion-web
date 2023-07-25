@@ -1,0 +1,30 @@
+#header {
+  padding: 37px 0;
+  .header {
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .menu {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        a {
+          color: rgba(27, 27, 27, 0.6);
+          font-size: 15px;
+          font-weight: 400;
+        }
+        .active{
+          color: #000;
+        }
+      }
+      &__language{
+        display: flex;
+        gap: 5px;
+        .icon{
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

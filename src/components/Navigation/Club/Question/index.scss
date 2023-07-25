@@ -1,0 +1,27 @@
+#question {
+  .question {
+    display: flex;
+    justify-content: space-between;
+    &__title {
+      h1 {
+        color: #020202;
+        font-size: 40px;
+        font-weight: 500;
+        span {
+          color: var(--unnamed, #ec3025);
+          font-size: 40px;
+          font-weight: 500;
+        }
+      }
+    }
+    &__porag {
+      p {
+        max-width: 626px;
+        color: var(--unnamed, rgba(27, 27, 27, 0.8));
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 130%; /* 24.7px */
+      }
+    }
+  }
+}

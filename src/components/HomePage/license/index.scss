@@ -1,0 +1,44 @@
+#license {
+  background: #efefef;
+  padding: 120px 0;
+  margin: 123px 0;
+  .license {
+    display: flex;
+    justify-content: space-between;
+    &__title {
+      max-width: 485px;
+      h1 {
+        color: #000;
+        font-size: 40px;
+        font-weight: 500;
+      }
+      p {
+        max-width: 410px;
+        color: var(--unnamed, rgba(27, 27, 27, 0.8));
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 140%; /* 26.6px */
+        padding: 30px 0 60px 0;
+      }
+      &-wrap {
+        display: flex;
+        align-items: center;
+        gap: 38px;
+        h2 {
+          color: #d2d2d2;
+          font-size: 48px;
+          font-weight: 500;
+        }
+        p {
+          color: #1b1b1b;
+          font-size: 32px;
+          font-weight: 400;
+        }
+      }
+    }
+    &__img {
+      max-width: 590px;
+      height: 414px;
+    }
+  }
+}

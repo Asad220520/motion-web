@@ -1,0 +1,43 @@
+#osnovateli {
+  padding-top: 80px;
+  .osnovateli {
+    &__block {
+      display: flex;
+      justify-content: space-between;
+      &-title {
+        max-width: 370px;
+        h1 {
+          color: var(--unnamed, #ec3025);
+          font-size: 40px;
+          font-weight: 500;
+        }
+        p {
+          color: var(--unnamed, rgba(27, 27, 27, 0.8));
+          font-weight: 400;
+          line-height: 140%; /* 33.6px */
+          padding-top: 30px;
+        }
+      }
+      &-img {
+        display: flex;
+        gap: 40px;
+        img {
+          width: 380px;
+          height: 397px;
+        }
+        h1 {
+          color: #000;
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 140%; /* 33.6px */
+        }
+        p {
+          color: var(--unnamed, rgba(27, 27, 27, 0.8));
+          font-size: 19px;
+          font-weight: 400;
+          line-height: 140%; /* 26.6px */
+        }
+      }
+    }
+  }
+}
