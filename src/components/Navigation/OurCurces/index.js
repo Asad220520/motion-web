@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import React from "react";
 import Himages from "../../../assets/Homepage/Himages";
 import AboutCurs from "./about";
 import Vupusk from "./Vupusk";
@@ -27,15 +26,16 @@ const OurSchool = () => {
               <h1>{el.last_name}</h1>
             </div>
           ))} */}
-        <div className="ourCurces ">
-          <Himages />
-          <AboutCurs />
-          <Vupusk />
-          <Kursy />
-          <Whymotion />
-          <Students/>
-          <Otzyv/>
-          <Quashin/>
+          <div className="ourCurces ">
+            <Himages />
+            <AboutCurs />
+            <Vupusk />
+            <Kursy />
+            <Whymotion />
+            <Students />
+            <Otzyv />
+            <Quashin />
+          </div>
         </div>
       </div>
     </div>
