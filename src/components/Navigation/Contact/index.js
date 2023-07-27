@@ -1,6 +1,9 @@
 import React from "react";
 import "./index.scss";
 const Contact = () => {
+
+  
+
   return (
     <div id="contact">
       <div className="container">

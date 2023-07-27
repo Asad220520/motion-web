@@ -7,6 +7,7 @@ import AboutUs from "./components/Navigation/AboutUs";
 import OurCurces from "./components/Navigation/OurCurces";
 import Club from "./components/Navigation/Club";
 import Contact from "./components/Navigation/Contact";
+import FrontDetal from "./Page/FrontDetal";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/ourCurces" element={<OurCurces />} />
           <Route path="/club" element={<Club />} />
+          <Route path="/front" element={<FrontDetal />} />
         </Routes>
       </div>
       <Contact />

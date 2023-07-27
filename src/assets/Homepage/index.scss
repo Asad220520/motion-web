@@ -1,0 +1,88 @@
+#himages {
+    .himages {
+        padding: 0 0 105px 0;
+        position: relative;
+        .im{
+            position: absolute;
+            width: 290px;
+        }
+    
+        .g1{
+            top: 157px;
+            left: -50px;
+        }
+        .g7{
+            bottom: 100px;
+            left: 80px;
+        }
+        .g8{
+            bottom: 110px;
+            right: 158px;    
+            }
+        .g2{
+            top: 0px;
+            right:  235px;
+        }
+        .g3{
+            top: 117px;
+          right: -52px;
+        }
+        .g4{
+            top: 42px;
+            left: 232px;
+        }
+        .g5{
+            top: 528px;
+            left: 419px;
+        }.g6{
+            top: 265px;
+            left: 449px;
+        }
+        &--group{
+              &__block {
+                
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 705px;
+            border-radius: 20px;
+            background: linear-gradient(315deg, rgba(19, 19, 19, 0.30) 16.69%, rgba(28, 28, 28, 0.26) 100%);
+            backdrop-filter: blur(7.5px);
+            h1 {
+                color: #FFF;
+                text-align: center;
+                font-family: Inter;
+                font-size: 96px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: 150%;
+                width: 700px;
+                span {color: red;}
+            }
+
+            p {
+                color: #FFF;
+                font-size: 19px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                padding: 0 0 26px 0;
+                color: #FFFF;
+            }
+
+            button {
+                width: 366px;
+                padding: 13px 108px;
+                gap: 10px;
+                border-radius: 44px;
+                background: #DF281E;
+                color: #FFFF;
+            }
+        }
+        }
+      
+    }
+}
