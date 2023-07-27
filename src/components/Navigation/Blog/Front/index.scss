@@ -1,0 +1,35 @@
+#front {
+  .front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 404px;
+    height: 550px;
+    position: relative;
+    &__img {
+      img {
+        max-width: 404px;
+        height: 550px;
+        border-radius: 15px;
+      }
+    }
+    &__title {
+      position: absolute;
+      bottom: 0;
+      border-radius: 15px;
+      background: rgba(1, 1, 1, 0.25);
+      backdrop-filter: blur(5.235957622528076px);
+      padding: 25px;
+      p {
+        color: #e0dee9;
+        font-size: 14px;
+        font-weight: 400;
+      }
+      a {
+        color: #ec3025;
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+  }
+}

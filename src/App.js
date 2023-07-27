@@ -7,6 +7,9 @@ import AboutUs from "./components/Navigation/AboutUs";
 import OurCurces from "./components/Navigation/OurCurces";
 import Club from "./components/Navigation/Club";
 import Contact from "./components/Navigation/Contact";
+import Blog from "./components/Navigation/Blog";
+import DetailsIscl from "./components/Navigation/Blog/IscI/DetailsIscl";
+import DetailFront from "./components/Navigation/Blog/Front/DetailFront";
 import FrontDetal from "./Page/FrontDetal";
 
 function App() {
@@ -19,6 +22,9 @@ function App() {
           <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/ourCurces" element={<OurCurces />} />
           <Route path="/club" element={<Club />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/detailsIscl" element={<DetailsIscl />} />
+          <Route path="/detailfront" element={<DetailFront />} />
           <Route path="/front" element={<FrontDetal />} />
         </Routes>
       </div>

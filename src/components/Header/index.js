@@ -45,6 +45,11 @@ const Header = () => {
                   Контакты
                 </a>
               </li>
+              <li className="menu__item">
+                <NavLink to={"/blog"} className="menu__link">
+                  Блог
+                </NavLink>
+              </li>
             </ul>
             <div className="nav__language">
               <GrLanguage className="icon" />

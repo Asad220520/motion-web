@@ -1,0 +1,37 @@
+#newCart {
+  .newCart {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 20px;
+    &__img {
+      width: 264px;
+      height: 179.58px;
+      flex-shrink: 0;
+    }
+    &__title {
+      display: flex;
+      flex-direction: column;
+      h1 {
+        color: #000;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 21.96px; /* 122% */
+      }
+      p {
+        color: rgba(0, 0, 0, 0.3);
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 10px 0;
+      }
+      span {
+        color: rgba(0, 0, 0, 0.3);
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
