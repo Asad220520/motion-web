@@ -1,0 +1,13 @@
+#blog {
+  h1 {
+    color: var(--unnamed, #ec3025);
+    font-size: 40px;
+    font-weight: 800;
+    padding-bottom: 54px;
+  }
+  .blog {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 20px;
+  }
+}

@@ -1,0 +1,20 @@
+#detailFront {
+  .detailFront {
+    display: flex;
+    flex-direction: column;
+    h1 {
+      color: var(--unnamed, #ec3025);
+      font-size: 36px;
+      font-weight: 400;
+    }
+    h1 {
+      color: #ff002e;
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 90%; /* 32.4px */
+    }
+    p{
+      padding: 35px 0 25px;
+    }
+  }
+}

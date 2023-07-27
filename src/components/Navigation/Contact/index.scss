@@ -1,19 +1,23 @@
 #contact {
   background: #232323;
+
   .contact {
     padding: 95px 0 100px 0;
     display: flex;
     justify-content: space-between;
+
     &__title {
       display: flex;
       flex-direction: column;
       gap: 20px;
       max-width: 535px;
+
       h1 {
         color: #fff;
         font-size: 36px;
         font-weight: 400;
       }
+
       p {
         color: rgba(255, 255, 255, 0.8);
         font-size: 18px;
@@ -21,46 +25,79 @@
         line-height: 130%; /* 23.4px */
       }
     }
+
     &__form {
       display: flex;
       flex-direction: column;
       width: 500px;
       gap: 15px;
+
       input {
         width: 100%;
         padding: 20px 30px;
         border-radius: 20px;
         background: #fff8f8;
+
         &::placeholder {
           color: rgba(27, 27, 27, 0.3);
           font-size: 18px;
           font-weight: 400;
           line-height: 130%; /* 23.4px */
         }
-        
       }
-      .div {
+
+      .checked {
         display: flex;
-        justify-content: space-between;
+        padding: 15px 0;
+        .checkbox-spin {
+          display: none;
+        }
+        li.checkbox {
+          position: relative;
+          .checkbox-spin + label span:before,
+          .checkbox-spin + label span:after {
+            transition: all 0.3s ease-in-out;
+            content: "";
+            position: absolute;
+            z-index: 1;
+            width: 20px;
+            height: 18px;
+            background: transparent;
+            border: 2px solid;
+            position: absolute;
+            left: 0;
+            bottom: 0px;
+          }
+
+          .checkbox-spin + label span:after {
+            z-index: 0;
+            border: none;
+          }
+
+          .checkbox-spin:checked + label span:before {
+            transform: rotateZ(180deg);
+            background: red;
+          }
+        }
         span {
           color: rgba(255, 255, 255, 0.7);
           font-size: 14px;
           font-weight: 400;
           line-height: 130%; /* 18.2px */
           width: 100%;
-        }
-        input{
-          padding: 2px;
+          margin-left: 40px;
         }
       }
+
       button {
         padding: 17px 0;
         border-radius: 20px;
-        background: var(--red, #ec3025);
+        background: #ec3025;
         color: #fff;
         font-size: 20px;
         cursor: pointer;
-        &:hover{
+
+        &:hover {
           background: red;
         }
       }
