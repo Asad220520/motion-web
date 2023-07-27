@@ -1,0 +1,29 @@
+#vupusk {
+    .vupusk {
+        border-radius: 125px;
+        border: 2px solid var(--red, #ec3025);
+        padding: 60px  90px;
+        margin: 80px 0 120px 0;
+        &--block {
+       
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            p {
+                color: var(--unnamed, #ec3025);
+                font-size: 64px;
+                font-weight: 500;
+            }
+
+            span {
+                color: #000;
+                font-size: 24px;
+                font-weight: 400;
+            }
+
+        }
+    }
+   
+
+}

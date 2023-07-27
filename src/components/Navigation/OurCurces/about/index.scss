@@ -1,0 +1,45 @@
+.aboutcurs {
+    &--block {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0 0 0;
+        
+        h1 {
+            color: var(--unnamed, #EC3025);
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        &__text {
+            display: grid;
+            width: 632px;
+            gap: 30px;
+            h3 {
+                color: #1B1B1B;
+                font-size: 19px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%;
+            }
+
+            p {
+                color: #1B1B1B;
+                font-size: 19px;
+                font-style: normal;
+                font-weight: 400;
+                
+            }
+
+            button {
+                width: 70px;
+                height: 20px;
+                font-size: 18px;
+                background: none;
+                color: #EC3025;
+                border-bottom: 1px solid #EC3025;
+            }
+        }
+    }
+}
