@@ -5,6 +5,8 @@
     text-align: center;
     position: relative;
     &__img {
+      display: flex;
+      justify-content: center;
     }
     &__content {
       position: absolute;

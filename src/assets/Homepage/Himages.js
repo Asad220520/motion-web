@@ -1,13 +1,13 @@
 import React from 'react'
 import './index.scss'
-import black1 from '../../img/black1.png'
-import black2 from '../../img/black2.png'
-import black3 from '../../img/black3.png'
-import black4 from '../../img/black4.png'
-import black5 from '../../img/black5.png'
-import back6 from '../../img/back6.png'
-import black7 from '../../img/black7.png'
-import black8 from '../../img/black8.png'
+// import black1 from '../../img/black1.png'
+// import black2 from '../../img/black2.png'
+// import black3 from '../../img/black3.png'
+// import black4 from '../../img/black4.png'
+// import black5 from '../../img/black5.png'
+// import back6 from '../../img/back6.png'
+// import black7 from '../../img/black7.png'
+// import black8 from '../../img/black8.png'
 
 export const Himages = () => {
   return (
