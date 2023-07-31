@@ -11,9 +11,14 @@ const Otzyv = () => {
         speed: 500,
         slidesToShow: 2,
         slidesToScroll: 1,
+        Arrows: true,
+        nextArrow: <HiArrowLongRight/> ,
+        prevArrow: <HiArrowLongLeft/>
       };
   return (
-       <div className="otzyv">
+      <div id="otzyv">
+         <div className="container">
+        <div className="otzyv">
         <div className="otzyv--text">
             <h3>Отзывы студентов</h3>
             <div className="otzyv--text__icon">
@@ -36,6 +41,8 @@ const Otzyv = () => {
        </div>
       </div>
 
+       </div>
+      </div>
   )
 }
 

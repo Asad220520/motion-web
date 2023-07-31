@@ -10,7 +10,7 @@ import Contact from "./components/Navigation/Contact";
 import Blog from "./components/Navigation/Blog";
 import DetailsIscl from "./components/Navigation/Blog/IscI/DetailsIscl";
 import DetailFront from "./components/Navigation/Blog/Front/DetailFront";
-import FrontDetal from "./Page/FrontDetal";
+import KursFront from "./Page/FrontDetal";
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/detailsIscl" element={<DetailsIscl />} />
           <Route path="/detailfront" element={<DetailFront />} />
-          <Route path="/front" element={<FrontDetal />} />
+          <Route path="/front/:id" element={<KursFront />} />
         </Routes>
       </div>
       <Contact />

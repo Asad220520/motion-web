@@ -1,0 +1,9 @@
+#ourCurces{
+	background: #EFEFEF;
+    .ourCurces{
+        &__block{
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+        }
+    }
+}

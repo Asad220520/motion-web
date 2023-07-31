@@ -3,7 +3,8 @@ import "./index.scss"
 
 const AboutCurs = () => {
   return (
-    <div className='aboutcurs'>
+  <div className="container">
+      <div className='aboutcurs'>
       <div className="aboutcurs--block">
         <h1>О НАС</h1>
         <div className="aboutcurs--block__text">
@@ -14,6 +15,7 @@ const AboutCurs = () => {
       </div>
       
     </div>
+  </div>
   )
 }
 
