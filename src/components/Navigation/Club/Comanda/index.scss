@@ -1,0 +1,33 @@
+#comanda {
+  background: #efefef;
+  min-height: 873px;
+  .comanda {
+    text-align: center;
+    position: relative;
+    &__img {
+    }
+    &__content {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      border-radius: 20px;
+      background: linear-gradient(
+        315deg,
+        rgba(19, 19, 19, 0.3) 16.69%,
+        rgba(28, 28, 28, 0.26) 100%
+      );
+      backdrop-filter: blur(7.5px);
+    }
+    h1 {
+      color: var(--unnamed, #ec3025);
+      font-size: 96px;
+      padding: 80px 0 56px 0;
+      font-weight: 700;
+    }
+    p {
+      color: #fff;
+      font-size: 64px;
+      font-weight: 500;
+    }
+  }
+}

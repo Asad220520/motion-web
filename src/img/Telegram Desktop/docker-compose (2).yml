@@ -1,0 +1,51 @@
+version: "3.3"
+
+services:
+  
+  #  pgadmin:
+  #    container_name: pgadmin4_container
+  #    image: dpage/pgadmin4
+  #    ports:
+  #      - "5050:80"
+  #    environment:
+  #      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+  #      PGADMIN_DEFAULT_PASSWORD: 1234
+  #    restart: always
+  #    networks:
+  #      - kkb-network
+  
+  db:
+    container_name: postgres-container
+    image: postgres
+    ports:
+      - "5432:5432"
+    restart: always
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: rs
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+    networks:
+      - rs-network
+  
+  rs:
+    container_name: rs-container
+    image: metinovadilet/rs:latest
+    ports:
+      - "8080:8080"
+    restart: always
+    depends_on:
+      - db
+    environment:
+      SPRING_APPLICATION_NAME: rs
+      SPRING_PROFILES_ACTIVE: default
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/
+    networks:
+      - rs-network
+
+volumes:
+  pgdata:
+
+networks:
+  rs-network:
