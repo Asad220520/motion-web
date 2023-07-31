@@ -5,12 +5,14 @@ import { GoChevronDown } from "react-icons/go";
 const Quashin = () => {
   const [blo, setBlo] = useState(false);
   return (
-    <div className="quashin">
+    <div className="container">
+      <div className="quashin">
       <h1>Частые вопросы</h1>
       <div className="quashin--group">
         <div
           style={{
             height: blo ? "75%" : "30%",
+            overflow: blo ? '' : 'hidden',
             borderRadius: blo ? "20px" : "30px",
           }}
           className="quashin--group__block"
@@ -30,12 +32,8 @@ const Quashin = () => {
               }}
               className="par"
             >
-              {" "}
               <span
-              //      style={{
-              //         marginTop:
-              //     // display: blo ? 'block' : 'none',
-              //   }}
+              style={{}}
               >
                 Консультации на курсе программирования могут проходить в
                 различных форматах, включая личные встречи, онлайн-конференции,
@@ -48,6 +46,7 @@ const Quashin = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

@@ -7,7 +7,9 @@ import roket from "../../../../img/rocket .png"
 
 const Whymotion = () => {
   return (
-    <div className='why'>
+   <div id="why">
+    <div className="container">
+     <div className='why'>
         <h1>Почему <span>MOTIN WEB IT ACADEMY </span>
             - лучший выбор для обучения</h1>
       <div className="why--text">
@@ -44,6 +46,8 @@ const Whymotion = () => {
         </div>
       </div>
     </div>
+   </div>
+   </div>
   )
 }
 

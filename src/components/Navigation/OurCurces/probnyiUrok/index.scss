@@ -1,0 +1,115 @@
+#probnyi {
+	background: #EFEFEF;
+
+	.probnyi {
+		display: flex;
+		justify-content: center;
+		padding: 120px 0 120px 0;
+		gap: 35px;
+
+		&--block {
+			height: 186px;
+			width: 340px;
+			border-radius: 30px;
+			background: var(--blck, linear-gradient(130deg, #000 35.42%, rgba(31, 31, 31, 0.90) 100%));
+			align-self: flex-end;
+			position: relative;
+
+			img {
+				margin-top: -145px;
+				margin-left: 25px;
+				z-index: 2;
+				width: 220px;
+				position: relative;
+			}
+
+			p {
+				right: 20px;
+				bottom: 52px;
+				z-index: 1;
+				transform: rotate(-19deg);
+				position: absolute;
+				color: #FFF;
+				padding: 10px 20px;
+				border-radius: 30px;
+				background: #4886FF;
+				font-size: 20px;
+				font-style: normal;
+				font-weight: 400;
+			}
+
+
+
+		}
+
+		&--text {
+			display: flex;
+			align-items: center;
+			width: 700px;
+			height: 330px;
+			border-radius: 30px;
+			background: var(--2, #FF563F);
+			padding: 0 0 0 39px;
+			box-sizing: border-box;
+
+			&--group {
+				display: flex;
+				width: 303px;
+				flex-direction: column;
+				justify-content: center;
+				padding: 0 0 35px 0;
+
+				h2 {
+					color: #FFF;
+					font-size: 32px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: normal;
+					padding: 0 0 15px 0;
+				}
+
+				p {
+					color: rgba(255, 255, 255, 0.80);
+					font-size: 17.5px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 140%;
+				}
+			}
+
+			&--group2 {
+				width: 341px;
+				padding: 0 0 0 15px;
+
+				h2 {
+					color: #FFF;
+					// width: 353px;
+					font-size: 32px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 120%;
+				}
+
+				button {
+					color: #F00;
+					border-radius: 44px;
+					width: 300px;
+					height: 40px;
+					margin: 30px 0 0 0;
+					background: var(--unnamed, #F8F8F8);
+					font-size: 20px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: normal;
+					transition: .4s;
+				}
+
+				button:hover {
+					background: var(--2, #FF563F);
+					color: rgb(255, 255, 255);
+					border: 1px solid rgb(255, 255, 255);
+				}
+			}
+		}
+	}
+}
