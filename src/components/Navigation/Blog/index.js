@@ -17,8 +17,8 @@ const Blog = () => {
   return (
     <>
       <div id="blog">
-        <div className="container">
           <BlogProf />
+        <div className="container">
           <h1>Блоги</h1>
           <div className="blog">
             {state.map((el) => (

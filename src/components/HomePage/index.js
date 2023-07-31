@@ -8,12 +8,10 @@ const HomePage = () => {
   return (
     <div id="homePage">
       <div className="homePage">
-        <div className="container">
-          <WyMe />
-        </div>
+        <WyMe />
         <Osnovateli />
         <License />
-        <Galerea/>
+        <Galerea />
       </div>
     </div>
   );

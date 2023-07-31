@@ -1,99 +1,59 @@
-#why{
-    background: #F8F8F8;
+#why {
+  background: #f8f8f8;
+  .why {
+    display: flex;
     justify-content: space-evenly;
     padding: 100px 0 100px 0;
     h1 {
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        width: 308px;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      width: 308px;
 
-        span {
-            color: var(--red, #EC3025);
-        }
+      span {
+        color: var(--red, #ec3025);
+      }
     }
 
     &--text {
-        display: grid;
-        gap: 20px;
+      display: grid;
+      gap: 20px;
 
-        &__block {
-            display: flex;
-            align-items: start;
-            background: red;
-            gap: 30px;
-            border-radius: 25px;
-            background: #FFF;
-            padding: 30px;
-            box-sizing: border-box;
-
-            .img {
-                padding: 0 10px 0 10px;
-            }
-
-            &--group {
-                h2 {
-                    color: #000;
-                    font-size: 24px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 22px;
-                    padding-bottom: 15px;
-    .why {
+      &__block {
         display: flex;
-        justify-content: space-evenly;
-        padding: 100px 0 100px 0;
-        h1 {
-            font-size: 32px;
+        align-items: start;
+        background: red;
+        // width: 700px;
+        gap: 30px;
+        border-radius: 25px;
+        background: #fff;
+        padding: 30px;
+        box-sizing: border-box;
+
+        .img {
+          padding: 0 10px 0 10px;
+        }
+
+        &--group {
+          h2 {
+            color: #000;
+            font-size: 24px;
             font-style: normal;
             font-weight: 400;
-            line-height: normal;
-            width: 308px;
-    
-            span {
-                color: var(--red, #EC3025);
-            }
+            line-height: 22px;
+          }
+
+          p {
+            color: var(--unnamed, rgba(27, 27, 27, 0.8));
+            font-size: 19px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+            width: 640px;
+          }
         }
-    
-        &--text {
-            display: grid;
-            gap: 20px;
-    
-            &__block {
-                display: flex;
-                align-items: start;
-                background: red;
-                width: 700px;
-                gap: 30px;
-                border-radius: 25px;
-                background: #FFF;
-                padding: 30px 0 0 25px;
-                box-sizing: border-box;
-    
-                .img {
-                    padding: 0 10px 0 10px;
-                }
-    
-                &--group {
-                    h2 {
-                        color: #000;
-                        font-size: 24px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: 22px;
-                    }
-    
-                    p {
-                        color: var(--unnamed, rgba(27, 27, 27, 0.80));
-                        font-size: 19px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: 140%;
-                        width: 640px;
-                    }
-                }
-            }
-        }
+      }
     }
+  }
 }

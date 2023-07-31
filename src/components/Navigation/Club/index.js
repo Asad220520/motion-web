@@ -10,16 +10,14 @@ const Club = () => {
   return (
     <div id="club">
       <div className="club">
-        <div className="container">
-          <ClubProf />
-        </div>
+        <ClubProf />
         <Question />
         <Zoning />
         <Comanda />
-        <div className="container">
+        {/* <div className="container"> */}
           <RazProject />
-        </div>
-        <WhatYouGet/>
+        {/* </div> */}
+        <WhatYouGet />
       </div>
     </div>
   );

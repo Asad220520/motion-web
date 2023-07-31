@@ -16,10 +16,10 @@ const DetailFront = () => {
     return <div>Loading...</div>;
   }
   return (
-    <div id="detailFront">
+    <div id="DetailFront">
       <div className="container">
         <BlogProf />
-        <div className="detailFront">
+        <div className="DetailFront">
           <h1>{actorDetails.tags[0].name}</h1>
           <p>{actorDetails.descriptions[1].description}</p>
           <img
