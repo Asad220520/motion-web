@@ -30,6 +30,7 @@
       display: flex;
       flex-direction: column;
       width: 500px;
+      position: relative;
       gap: 15px;
 
       input {
@@ -67,6 +68,7 @@
             position: absolute;
             left: 0;
             bottom: 0px;
+            cursor: pointer;
           }
 
           .checkbox-spin + label span:after {
@@ -99,6 +101,27 @@
 
         &:hover {
           background: red;
+        }
+      }
+      .modal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        width: 120%;
+        height: 380px;
+        background: #fff8f8;
+        position: absolute;
+        bottom: 0;
+        left: -20px;
+        border-radius: 40px;
+        z-index: 10;
+        h2 {
+          color: #000;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 130%; /* 23.4px */
         }
       }
     }

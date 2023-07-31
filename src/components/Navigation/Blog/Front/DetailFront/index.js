@@ -1,112 +1,44 @@
-import React from "react";
-import fr1 from "../../../../../img/fr1.png";
-import './index.scss'
+import React, { useEffect, useState } from "react";
+import "./index.scss";
+import { useParams } from "react-router-dom";
+import axios from "axios";
+import BlogProf from "../../BlogProf";
 const DetailFront = () => {
+  const { id } = useParams();
+  const [actorDetails, setActorDetails] = useState({});
+  useEffect(() => {
+    axios(`http://13.48.46.219/api/v1/blog/post/${id}/`).then((res) =>
+      setActorDetails(res.data)
+    );
+  }, []);
+  console.log("detal", actorDetails);
+  if (!actorDetails.descriptions || !Array.isArray(actorDetails.descriptions)) {
+    return <div>Loading...</div>;
+  }
   return (
     <div id="detailFront">
       <div className="container">
+        <BlogProf />
         <div className="detailFront">
-          <h1>JavaScript</h1>
-          <p>
-            JavaScript (JS) - это высокоуровневый язык программирования, широко
-            используемый для разработки веб-приложений и веб-сайтов. Вот
-            некоторые особенности и возможности JavaScript:
-          </p>
-          <img src={fr1} alt="" />
-          <h1>Почему JavaScript очень крутой язык программирования?</h1>
-          <p>
-            Язык JavaScript за последние года стал мега популярным и завоевал
-            огромное доверие среди разработчиков. Почему он так крут? Узнаем в
-            этой статье. По статистике, включающей свыше 10 миллионов часто
-            посещаемых веб-страниц в интернете, около 95% из них прибегают к
-            использованию JavaScript в большей или меньшей степени. Естественно,
-            настолько популярную технологию поддерживают все браузеры:
-            веб-обозреватели на базе Chromium, а также Internet Explorer,
-            Mozilla Firefox, Safari и т. п. Изучение данного языка практически
-            наверняка обеспечит ваше будущее финансами в больших количествах, но
-            стать на путь к успеху следует уже сейчас.
-          </p>
-          <p>
-            В последнее время активное распространение приобрели фреймворки,
-            написанные на JavaScript. Среди них Angular, React, Node, Express.
-            Часто новички пропускают этап изучения основного языка и просто
-            переходят к использованию функций, заложенных в фреймворки.
-          </p>
-          <p>
-            Фреймворк – это набор, включающий готовые решения базовых задач,
-            которые ежедневно стоят перед программистами. Задача фреймворков
-            заключается в упрощении разработки, а не вытеснении необходимости
-            знания JavaScript.
-          </p>
-          <p>
-            Что собой представляет JavaScript и почему он актуален? Не стоит мне
-            верить на слово, что JS является популярным и востребованным, лучше
-            понимать почему это именно так. Для понимания важности JavaScript
-            придётся вкратце вспомнить о двух неразрывно связанных технологиях
-            веб-программирования – CSS и HTML.
-          </p>
+          <h1>{actorDetails.tags[0].name}</h1>
+          <p>{actorDetails.descriptions[1].description}</p>
           <img
-            src="https://s3-alpha-sig.figma.com/img/a85e/9aa9/df7677dd9b4ee2999e9aa3b77019b1ce?Expires=1691366400&Signature=dohew9uTe9a12Lby9bV7hNSS2tcOiH0ocZadRV6ePFc6VBQWQqcOPnLzEQClCAPWVLU~2h2xeDs8T77Pl8uTXCdIMGc3QSr-5vcU2FCOXss4x2JfZP-I7gVuXF41ABqYIM0wHXdSddTNCiA3SQf596yNM5QkT~g0CIpTLLrMBxG8ioG4VQEW3FGwN8KzVqolZIwOFgNxYOrYp6Z1vz-Lh0tTJAdlGgGVrdbdUD5l19xJFQq-30o~91HUcN02ZERbIx0NuBTM41AlzOki3snG1j4uHyz1sEOeJ~Xwu4NRlpsqfRQj1SMudBLl3i4p8U8hKAJue4K70ZDYA2m0M0hxPA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-            alt=""
+            className="indexImage1"
+            src={actorDetails.media[1].media}
+            alt="alt"
           />
-          <p>
-            CSS отвечает за визуальное отображение элементов и придания им
-            стилей: размещение, цвет, форма, внешний вид и т. п. HTML позволяет
-            создавать структуру страницы и передавать браузеру информацию о типе
-            контента. Понять суть обоих языков поможет метафора: HTML является
-            скелетом, а CSS – кожей.
-          </p>
-          <p>
-            Оба языка позволяют создать красивый сайт или отдельную страницу,
-            внешний вид которой ограничен лишь фантазией. При этом они не
-            обеспечивают интерактивность веб-страницы. При каждом клике на
-            кнопку страница должна обновиться, чтобы произошли изменения.
-            JavaScript – это душа сайта, которая делает его интерактивным и
-            живым.
-          </p>
-          <img
-            src="https://s3-alpha-sig.figma.com/img/2c05/b5b9/cb27cb692d9df6ccf354b51d28967af4?Expires=1691366400&Signature=NbVk1mSbkNTZ0ro~GftpjNekcalrPj~HPwed8tU-gcyiZsogxTBU9Vy5fVQ8TTaB~qCilGw9S~zsdpwOAMtZ8dBfs5pXt-ngPrNWh0uPSYavXH7U9ALIYQcRpLRPswfGBQPqKAURKxByEcFji44Y2HMQlUNM5q5sR78xdajWfhUmP67zJ0vFpkY-yFQseM74706ryxvq5MwqyOwcjPeL3Jp6tvJNLv1kvPKo30oBrxNSkObiW9jddUSlQ2NNKFll2Yfuc5Pdf-cWCynwk31LLW3mDuzaenjt-SdSxXfoF3cynALf9JL0vjWcDSNGdPeghU8egLg83LxbJw76~-ov8Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-            alt=""
-          />
-          <p>
-            Запросы, отправленные через JS, обрабатываются независимо от
-            состояния страницы, на ней могут сразу показываться результаты
-            работы. Например, пользователь вводит логин, JS отправляет его на
-            сервер и проверяет, есть ли такой же самый ник, затем возвращает
-            ответ на страницу в режиме реального времени. Немаловажно и то, что
-            JS обрабатывается прямо в браузере, создавая минимальную нагрузку на
-            сервер (в отличии от PHP). Сфер применения JS очень много, поэтому
-            он и является настолько популярным. Код JavaScript До сих пор на
-            изучение JavaScript приходится тратить немало сил, это абсолютно
-            нормально. Зато до тех пор, пока есть пользователи у сайтов, будет и
-            спрос на разработчиков в сфере Front-end. Да, передовые компании
-            стараются придумать замену JS. Если подобное и случится, то
-            произойдёт это не скоро. Да и перейти на новый язык со знаниями
-            старого не составит большой сложности.
-          </p>
-          <p>
-            Обычно JavaScript работает с видимой стороной веб-сайта, но с
-            выходом фреймворка Node.js для серверов, программисты могут
-            выполнять и back-end работы. Таким образом на JS сейчас можно писать
-            и довольно тяжёлый серверный код, выстраивая логику и поведение
-            сайта. И в заключение Все разработчики с опытом становятся перед
-            выбором: продолжить работать в офисе с 8-и часовым рабочим днём или
-            заняться фрилансом. Программирование пригождается как крупным
-            компаниям, так и небольшим заказчикам. Достоинства работы в офисе:
-            социальный пакет, наличие спортзала, прямой контакт с командой и
-            обучение от профессионалов. С другой стороны, фриланс позволяет
-            «делать» деньги, не выходя из дома, при чём доход последних может
-            перевешивать ставку офисного сотрудника.
-          </p>
-          <p>
-            JavaScript является не просто важным языком, но и интересным, а
-            также универсальным. Всем веб-программистам JS является обязательным
-            навыком. При этом JavaScript относительно быстро можно запомнить и
-            изучить. Безусловно, начинающему программисту следует запастись
-            терпением и иметь в распоряжении достаточное количество времени для
-            его изучения. Без увлечённости процессом обучения будет сложно
-            достичь каких-то вершин в данной сфере.
-          </p>
+          <h1>{actorDetails.tags[1].name}</h1>
+          <p>{actorDetails.descriptions[2].description}</p>
+          <p>{actorDetails.descriptions[3].description}</p>
+          <p>{actorDetails.descriptions[4].description}</p>
+          <p>{actorDetails.descriptions[5].description}</p>
+          <img src={actorDetails.media[2].media} alt="alt" />
+          <p>{actorDetails.descriptions[6].description}</p>
+          <p>{actorDetails.descriptions[7].description}</p>
+          <img src={actorDetails.media[3].media} alt="alt" />
+          <p>{actorDetails.descriptions[8].description}</p>
+          {/* <p>{actorDetails.descriptions[9].description}</p> */}
+          {/* <p>{actorDetails.descriptions[10].description}</p> */}
         </div>
       </div>
     </div>

@@ -6,6 +6,7 @@
     max-width: 404px;
     height: 550px;
     position: relative;
+    margin-bottom: 20px;
     &__img {
       img {
         max-width: 404px;
@@ -25,7 +26,8 @@
         font-size: 14px;
         font-weight: 400;
       }
-      a {
+      button {
+        background: none;
         color: #ec3025;
         font-size: 16px;
         font-weight: 500;

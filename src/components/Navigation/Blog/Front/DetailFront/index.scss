@@ -2,10 +2,15 @@
   .detailFront {
     display: flex;
     flex-direction: column;
+    .indexImage1{
+      margin: 0 auto;
+      max-width: 830px;
+    }
     h1 {
       color: var(--unnamed, #ec3025);
       font-size: 36px;
       font-weight: 400;
+      padding: 40px 0;
     }
     h1 {
       color: #ff002e;

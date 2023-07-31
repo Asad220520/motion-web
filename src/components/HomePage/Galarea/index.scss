@@ -1,0 +1,45 @@
+#galerea {
+  padding-bottom: 120px;
+  .galerea {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 24px;
+    &__block {
+      &-img {
+        border-radius: 30px;
+        // background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+        background: #000;
+        width: 380px;
+        height: 260px;
+        flex-shrink: 0;
+      }
+      h1 {
+        color: var(--unnamed, #ec3025);
+        font-size: 40px;
+        font-weight: 500;
+      }
+      p {
+        margin-top: 58%;
+        color: #000;
+        font-size: 20px;
+        font-weight: 500;
+        position: relative;
+        width: 130px;
+        cursor: pointer;
+        &::before {
+          position: absolute;
+          bottom: 0;
+          content: "";
+          width: 0%;
+          height: 0px;
+          transition: width 0.3s, height 0.3s, background-color 0.3s;
+        }
+        &:hover::before {
+          width: 90%;
+          height: 2px;
+          background: #111518;
+        }
+      }
+    }
+  }
+}
