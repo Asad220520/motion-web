@@ -14,9 +14,7 @@ const Club = () => {
         <Question />
         <Zoning />
         <Comanda />
-        {/* <div className="container"> */}
-          <RazProject />
-        {/* </div> */}
+        <RazProject />
         <WhatYouGet />
       </div>
     </div>

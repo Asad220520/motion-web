@@ -1,10 +1,11 @@
-#detailFront {
-  .detailFront {
+#DetailFront {
+  .DetailFront {
     display: flex;
     flex-direction: column;
-    .indexImage1{
-      margin: 0 auto;
-      max-width: 830px;
+    margin: 0 auto;
+    img{
+      width: 50%;
+      margin: 50px auto;
     }
     h1 {
       color: var(--unnamed, #ec3025);
@@ -12,14 +13,8 @@
       font-weight: 400;
       padding: 40px 0;
     }
-    h1 {
-      color: #ff002e;
-      font-size: 36px;
-      font-weight: 400;
-      line-height: 90%; /* 32.4px */
-    }
     p{
-      padding: 35px 0 25px;
+      padding: 15px 0 25px;
     }
   }
 }

@@ -3,7 +3,6 @@ import "./index.scss";
 import { useNavigate } from "react-router-dom";
 const Front = ({ el }) => {
   const nav = useNavigate();
-
   return (
     <div id="front">
       <div className="front">
@@ -11,7 +10,7 @@ const Front = ({ el }) => {
           <img src={el.media[0].media} alt="alt" />
         </div>
         <div className="front__title">
-          <div>
+          <div className="div">
             <p>
               {el.descriptions.length > 0 &&
                 `${el.descriptions[0].description}`}

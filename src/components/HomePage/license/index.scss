@@ -42,3 +42,28 @@
     }
   }
 }
+@media (max-width: 1140px) {
+  #license {
+    .license {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      justify-content: center;
+      gap: 50px;
+    }
+  }
+}
+@media (max-width: 540px) {
+  #license {
+    .license {
+      &__title{
+        h1{
+          font-size: 24px;
+        }
+        p{
+          font-size: 23px;
+        }
+      }
+    }
+  }
+}

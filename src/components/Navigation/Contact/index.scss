@@ -38,7 +38,7 @@
         padding: 20px 30px;
         border-radius: 20px;
         background: #fff8f8;
-
+        font-size: 16px;
         &::placeholder {
           color: rgba(27, 27, 27, 0.3);
           font-size: 18px;
@@ -122,6 +122,65 @@
           font-size: 18px;
           font-weight: 500;
           line-height: 130%; /* 23.4px */
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1165px) {
+  #contact {
+    .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      &__title {
+        padding-bottom: 50px;
+        width: 100%;
+      }
+      &__form {
+        width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 765px) {
+  #contact {
+    .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      &__title {
+        padding-bottom: 50px;
+        width: 100%;
+        h1 {
+          font-size: 22px;
+        }
+        p {
+          font-size: 16px;
+        }
+      }
+      &__form {
+        width: 100%;
+        input {
+          padding: 10px 30px;
+        }
+        button {
+          padding: 10px 30px;
+        }
+        .checked {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 30px;
+          .checkbox {
+            span {
+              display: flex;
+              width: 90%;
+              margin-left: 40px;
+            }
+          }
         }
       }
     }

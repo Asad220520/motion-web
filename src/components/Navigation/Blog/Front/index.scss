@@ -35,3 +35,14 @@
     }
   }
 }
+@media (max-width: 500px) {
+  #front {
+    .front {
+      &__img {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
