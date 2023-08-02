@@ -10,12 +10,24 @@ import Contact from "./components/Navigation/Contact";
 import Blog from "./components/Navigation/Blog";
 import KursFront from "./Page/FrontDetal";
 import DetailFront from "./components/Navigation/Blog/Front/DetailFront";
+import { useSelector } from "react-redux";
 
 function App() {
+  const {ten} = useSelector(s => s)
   return (
     <div className="App">
       <Header />
       <div className="content">
+       <div style={{
+          position:'absolute',
+          top:'0',
+          zIndex:'3',
+          width:'100%',
+          height:'530vh',
+          display:ten ? 'block' : 'none' ,
+          background:'rgba(0,0 , 0, 0.80)',
+          backdropFilter:'blur(3px)'
+          }}> </div>
         <Routes>
           <Route path="/aboutUs" element={<HomePage />} />
           <Route path="/mn" element={<AboutUs />} />

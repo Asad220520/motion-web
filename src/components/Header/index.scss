@@ -5,7 +5,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      
       .menu {
+      
         display: flex;
         justify-content: center;
         gap: 40px;
@@ -15,7 +17,8 @@
           font-weight: 400;
         }
         .active{
-          color: #000;
+          color: #0000008e;
+        text-transform: capitalize;
         }
       }
       &__language{

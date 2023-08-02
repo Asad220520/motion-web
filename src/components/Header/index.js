@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./index.scss";
@@ -9,6 +11,8 @@ const Header = () => {
     const footer = document.getElementById("contact");
     footer.scrollIntoView({ behavior: "smooth" });
   };
+  const [modal,setModal] = useState(false)
+  const nav = useNavigate()
   return (
     <div id="header">
       <div className="container">
@@ -28,10 +32,22 @@ const Header = () => {
                   О нас
                 </NavLink>
               </li>
-              <li className="menu__item">
-                <NavLink to={"/ourCurces"} className="menu__link">
+              <li style={{position:'relative'}} className="menu__item">
+                <NavLink onClick={() => setModal(!modal)} to={""} className="menu__link">
                   О курсах
                 </NavLink>
+                <ul style={{
+                  boxShadow:'8px 8px 10px #000000ad',
+                  background:'white',
+                  padding:'10px 35px 15px 35px ',top:'30px',left:'-15px',
+                  borderRadius:'15px',
+                  position:'absolute',
+                  zIndex:'3',
+                  display: modal ? 'block' : 'none'}}>
+                  <li className="li" style={{borderBottom:'1px solid black',transition:'.4s',cursor:'pointer'  ,fontSize:'18px',color:'black',textTransform:'capitalize'}}>fronEnd</li>
+                  <li  className="li" style={{borderBottom:'1px solid black',transition:'.4s',cursor:'pointer'  ,fontSize:'18px',color:'black',textTransform:'capitalize'}}>disain</li>
+                  <li  className="li" style={{borderBottom:'1px solid black',transition:'.4s',cursor:'pointer'  ,fontSize:'18px',color:'black',textTransform:'capitalize'}}>bakend</li>
+                </ul>
               </li>
               <li className="menu__item">
                 <NavLink to={"/club"} className="menu__link">

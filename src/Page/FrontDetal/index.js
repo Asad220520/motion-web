@@ -10,9 +10,13 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import ThisKurs from "./ThisKurs";
 import Sertivkat from "./Sertivkat";
+import SvoiSait from "./delaiSvoiSait";
+import Mentory from "./mentory";
+import ProgramKurs from "./programKursa";
 
 const KursFront = () => {
   const { id } = useParams();
+  // const [onli,setOnli] = useState(false)
   const [detail, setDetail] = useState({});
   useEffect(() => {
     axios(`http://13.48.46.219/api/v1/courses/courses/${id}/`).then((res) =>
@@ -30,6 +34,9 @@ const KursFront = () => {
           <Obusheni />
           <ThisKurs/>
           <Sertivkat/>
+          <SvoiSait/>
+          <Mentory/>
+          <ProgramKurs/>
         </div> 
     </>
   );

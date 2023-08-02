@@ -1,6 +1,5 @@
   .obucheni {
       width: 100%;
-
       &--group {
           border-radius: 125px;
           border: 2px solid var(--red, #ec3025);
@@ -20,10 +19,11 @@
                       color: var(--unnamed, #ec3025);
                       font-size: 64px;
                       font-weight: 500;
+                    //   color: #d552526f;
                   }
 
                   span {
-                      color: #000;
+                      color: #000000;
                       font-size: 24px;
                       font-weight: 400;
                       padding: 5px 0 0 0;
@@ -37,6 +37,7 @@
           padding: 0 0 120px 0;
           justify-content: space-between;
           position: relative;
+        //   z-index: 3;
 
           &__ofline {
               width: 590px;
@@ -85,8 +86,9 @@
               border-radius: 30px;
               background: var(--2, #FF563F);
               position: absolute;
-              top: -470px;
+              top: -500px;
                 left: 0;
+                z-index: 4;
 
               h2 {
                   color: #FFF;
@@ -119,9 +121,9 @@
               border-radius: 30px;
               background: var(--2, #FF563F);
               position: absolute;
-              top: -470px;
+              top: -500px;
               right: 0;
-
+            z-index: 4;
 
               h2 {
                   color: #FFF;
