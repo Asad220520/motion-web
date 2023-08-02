@@ -35,3 +35,11 @@
     }
   }
 }
+@media (max-width: 500px) {
+  #newCart {
+    .newCart {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

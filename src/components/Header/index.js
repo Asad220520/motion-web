@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
 import "./index.scss";
 import { GrLanguage } from "react-icons/gr";
 import logo from "../../img/logo.png";
@@ -16,7 +18,9 @@ const Header = () => {
       <div className="container">
         <div className="header">
           <nav className="nav">
-            <img src={logo} alt="" />
+            <Link to={'/'}>
+              <img src={logo} alt="" />
+            </Link>
             <ul className="menu">
               <li className="menu__item">
                 <NavLink to={"/"} className="menu__link">

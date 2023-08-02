@@ -8,7 +8,7 @@ const HomePage = () => {
   return (
     <div id="homePage">
       <div className="homePage">
-        <WyMe />
+        {/* <WyMe /> */}
         <Osnovateli />
         <License />
         <Galerea />

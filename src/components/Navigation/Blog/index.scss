@@ -11,3 +11,17 @@
     grid-gap: 20px;
   }
 }
+@media (max-width: 1200px) {
+  #blog {
+    h1 {
+      font-size: 24px;
+      text-align: center;
+    }
+    .blog {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

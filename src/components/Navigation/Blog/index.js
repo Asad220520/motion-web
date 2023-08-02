@@ -17,7 +17,7 @@ const Blog = () => {
   return (
     <>
       <div id="blog">
-          <BlogProf />
+        <BlogProf />
         <div className="container">
           <h1>Блоги</h1>
           <div className="blog">
