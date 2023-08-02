@@ -1,7 +1,7 @@
 import React from "react";
-import './index.scss'
+import "./index.scss";
 import state from "../../../../../img/state.svg";
-const GoodCard = ({el}) => {
+const GoodCard = ({ el }) => {
   return (
     <div id="goodCard">
       <div className="container">

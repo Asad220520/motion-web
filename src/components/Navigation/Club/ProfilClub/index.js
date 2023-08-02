@@ -8,7 +8,7 @@ import back6 from "../../../../img/back6.png";
 import black7 from "../../../../img/black7.png";
 import black8 from "../../../../img/black8.png";
 
-const BlogProf = () => {
+const ProfilClub = () => {
   return (
     <div id="himages">
       <div className="himages">
@@ -32,14 +32,16 @@ const BlogProf = () => {
             alt="img"
           />
           <div className="himages--group__block">
-            <h1>
-              MOTION WEB <span>IT</span> ACADEMY
+            <h1 style={{ fontSize: "128px", fontWeight: '900' }}>
+              Что такое <br />
+              <span>IT Club</span>?
             </h1>
-            <p>Лицензированная IT академия в Бишкеке</p>
+            <p>IT-Клуб это мост между курсом и реальной работой</p>
           </div>
         </div>
       </div>
     </div>
   );
 };
-export default BlogProf;
+
+export default ProfilClub;

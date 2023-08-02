@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.scss";
-import person from "../../../img/person.png";
-import person2 from "../../../img/person2.png";
+import person from "../../../../img/person.png";
+import person2 from "../../../../img/person2.png";
 const Osnovateli = () => {
   return (
     <div id="osnovateli">

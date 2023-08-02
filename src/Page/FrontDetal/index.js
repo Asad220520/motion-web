@@ -23,21 +23,20 @@ const KursFront = () => {
       setDetail(res.data)
     );
   }, []);
-  console.log('dfx',detail);
+  console.log("dfx", detail);
   return (
     <>
-     
-       <div>
-          <Himages/>
-          <Why />
-          <WereKurs el={detail}/>
-          <Obusheni />
-          <ThisKurs/>
-          <Sertivkat/>
-          <SvoiSait/>
-          <Mentory/>
-          <ProgramKurs/>
-        </div> 
+      <div>
+        <Himages />
+        <Why />
+        <WereKurs el={detail} />
+        <Obusheni />
+        <ThisKurs />
+        <Sertivkat />
+        <SvoiSait />
+        <Mentory />
+        <ProgramKurs />
+      </div>
     </>
   );
 };

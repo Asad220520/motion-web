@@ -1,25 +1,24 @@
-#begushi{
-    background: #EFEFEF;
-    .begu {
-        background: #ec3025;
-        height: 75px;
-        border-radius: 5px;
-    
-    }
-    
-    .begu2 {
-        background: #4886FF;
-        height: 60px;
-        overflow: hidden;
-        position: relative;
-        transform: rotateZ(-2deg);
-        margin: 10px 0 0 0;
-        border-radius: 5px;
-    }
-    
-    .img2 {
-        transform: rotateZ(2deg);
-        position: absolute;
-        top: -52px;
-    }
+#begushi {
+  background: #efefef;
+  .begu {
+    background: #ec3025;
+    height: 75px;
+    border-radius: 5px;
+  }
+
+  .begu2 {
+    background: #4886ff;
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+    transform: rotateZ(-2deg);
+    margin: 10px 0 0 0;
+    border-radius: 5px;
+  }
+
+  .img2 {
+    transform: rotateZ(2deg);
+    position: absolute;
+    top: -52px;
+  }
 }
