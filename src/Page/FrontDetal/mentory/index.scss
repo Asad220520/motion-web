@@ -1,0 +1,111 @@
+#mentory {
+    background: #EFEFEF;
+    padding: 120px 0 120px 0;
+
+    .mentory {
+
+        // text-align: center;
+        h2 {
+            padding: 0 0 60px 0;
+            text-align: center;
+            margin: 0 auto;
+            width: 436px;
+            color: #000;
+            font-family: Muller;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+
+            span {
+                color: var(--unnamed, #EC3025);
+                text-align: center;
+                font-family: Muller;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+        }
+
+        &--group {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 0 0 120px 0;
+            grid-gap: 34px;
+
+            &__block {
+                width: 380px;
+                height: 308px;
+
+                &--img {
+                    width: 380px;
+                    text-align: center;
+                    border-radius: 20px;
+                    background: var(--unnamed, linear-gradient(180deg, #EDF1FF 0%, rgba(203, 214, 255, 0.65) 100%));
+
+                    img {}
+                }
+
+                h3 {
+                    color: #000;
+                    font-family: SF Pro Display;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 400;
+                    text-align: start;
+                    line-height: normal;
+                    padding: 16px 0 16px 0;
+                }
+
+                p {
+                    color: rgba(27, 27, 27, 0.80);
+                    font-family: SF Pro Display;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 400;
+                    text-align: start;
+                    line-height: 130%;
+                }
+            }
+        }
+
+        &--samai {
+            padding: 120px 0 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &__text {
+                width: 362px;
+
+                h3 {
+                    color: #000;
+                    font-family: Muller;
+                    font-size: 36px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    // width: ;
+                }
+
+                p {
+                    color: #1D1D20;
+                    font-family: SF Pro Display;
+                    font-size: 19px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 140%;
+                    padding: 22px 0 0 0;
+                    width: 300px;
+                }
+            }
+
+            &__group {
+                display: flex;
+                justify-content: space-between;
+                width: 800px;
+            }
+        }
+    }
+}

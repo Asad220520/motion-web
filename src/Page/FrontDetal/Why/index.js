@@ -4,7 +4,7 @@ import "./index.scss"
 const Why = () => {
   return (
       <div className="container">
-        <div className="disain">
+        <div  className="why">
         <div className="disain--whywe">
           <h2>Почему <span>MOTIN WEB IT ACADEMY?</span></h2>
           <div className="disain--whywe__text">

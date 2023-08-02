@@ -36,7 +36,7 @@ const ThisKurs = () => {
                     <h2>04.</h2>
                     <h3>Поддержка</h3>
                 </div>
-                <p>Помимо тренера (ментора) помощь оказывается со стороны SUPPORT</p>
+                <p>Помимо тренера ментора помощь оказывается со стороны SUPPORT</p>
             </div>
             <div className="this--group__block">
                 <div className="this--group__block--text">

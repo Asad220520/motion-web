@@ -1,7 +1,7 @@
 .aboutcurs {
     &--block {
         display: flex;
-        justify-content: space-between;
+        justify-content: start;
         padding: 10px 0 0 0;
         
         h1 {
@@ -10,6 +10,7 @@
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+            width: 400px;
         }
 
         &__text {
