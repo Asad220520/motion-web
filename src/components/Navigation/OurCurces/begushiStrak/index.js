@@ -1,12 +1,12 @@
-import React from 'react'
-import "./index.scss"
+import React from "react";
+import "./index.scss";
 import beg1 from "../../../../img/бегу.png";
 import beg2 from "../../../../img/бегу 2.png";
 
 const BegushiStrak = () => {
   return (
-    <div id='begushi'>
-       <div className="">
+    <div id="begushi">
+      <div className="">
         <marquee className="begu">
           <img src={beg1} alt="img" />
           <img src={beg1} alt="img" />
@@ -19,7 +19,7 @@ const BegushiStrak = () => {
         </marquee>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default BegushiStrak
+export default BegushiStrak;

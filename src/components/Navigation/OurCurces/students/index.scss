@@ -1,61 +1,63 @@
-#student{
-    background: var(--bg, linear-gradient(315deg, #131313 16.69%, rgba(28, 28, 28, 0.87) 100%));
-    .student {
-        padding: 100px 0 100px 0;
-    
-        &--group {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 25px;
-    
-            &__block {
-                width: 340px;
-                height: 234px;
-                    align-self: flex-end;
-                h1 {
-                    color: #FFF;
-                    font-size: 32px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: normal;
-    
-                    span {
-                        color: var(--red, #EC3025);
-                        font-size: 32px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: normal;
-                    }
-                }
-    
-                .btn {
-                    display: flex;
-                    align-items: center;
-                    background: none;
-                    padding: 0 0 0 0;
-                    color: #FFF;
-                    font-size: 20px;
-                    font-style: normal;
-                    font-weight: 400;
-                   margin: 210px 0 0 5px;
-                   transition: .4s;
-                   &:hover{
-                    color: rgb(0, 60, 255);
-                    text-decoration:underline;
-                    p{
-                        display: none;
-                    }
-                   }
-                }
-    
-                img {
-                    width: 340px;
-                    height: 244px;
-                    border-radius: 30px;
-                }
-            }
+#student {
+  background: var(
+    --bg,
+    linear-gradient(315deg, #131313 16.69%, rgba(28, 28, 28, 0.87) 100%)
+  );
+  .student {
+    padding: 100px 0 100px 0;
+
+    &--group {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+
+      &__block {
+        width: 340px;
+        height: 234px;
+        align-self: flex-end;
+        h1 {
+          color: #fff;
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+
+          span {
+            color: var(--red, #ec3025);
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
         }
+
+        .btn {
+          display: flex;
+          align-items: center;
+          background: none;
+          padding: 0 0 0 0;
+          color: #fff;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          margin: 210px 0 0 5px;
+          transition: 0.4s;
+          &:hover {
+            color: rgb(0, 60, 255);
+            text-decoration: underline;
+            p {
+              display: none;
+            }
+          }
+        }
+
+        img {
+          width: 340px;
+          height: 244px;
+          border-radius: 30px;
+        }
+      }
     }
-    
+  }
 }

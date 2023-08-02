@@ -11,24 +11,24 @@ const SvoiSait = () => {
           <p>Оставляй зявку и БЕСПЛАТНО получи пробный урок</p>
         </div>
         <di v className="sait--group">
-            <div className="sait--group__boy">
-              <img src={log} alt="img" />
-              <p>Попрубуй!</p>
+          <div className="sait--group__boy">
+            <img src={log} alt="img" />
+            <p>Попрубуй!</p>
+          </div>
+          <div className="sait--text">
+            <div className="sait--text__input">
+              <input type="text" placeholder="Имя" />
+              <input type="text" placeholder="Номер" />
             </div>
-            <div className="sait--text">
-              <div className="sait--text__input">
-                  <input type="text" placeholder="Имя"/>
-              <input type="text" placeholder="Номер"/>
-              </div>
-              <div className="sait--text__group">
-               <input type="checkbox" />
-                <p>Я соглашаюсь на обработку персональных данных</p>
-              </div>
-              <button>Оставить заявку</button>
+            <div className="sait--text__group">
+              <input type="checkbox" />
+              <p>Я соглашаюсь на обработку персональных данных</p>
             </div>
-          </di>
-        </div>
+            <button>Оставить заявку</button>
+          </div>
+        </di>
       </div>
+    </div>
   );
 };
 

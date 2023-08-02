@@ -5,11 +5,11 @@ import axios from "axios";
 import { useEffect } from "react";
 
 const Kursy = ({ el }) => {
-  const {id} = useParams()
+  const { id } = useParams();
   const [detail, setDetail] = useState([]);
   useEffect(() => {
     axios(`http://13.48.46.219/api/v1/courses/courses/`).then((res) =>
-    setDetail(res.data.results)
+      setDetail(res.data.results)
     );
   }, []);
   // console.log('detail',detail);
@@ -19,7 +19,11 @@ const Kursy = ({ el }) => {
       <div className="izyk">
         <div className="izyk--front">
           <div className="izyk--front__block">
-            <img className="izyk--front__block--img" src={el.images.map((el) => el.image)} alt="img" />
+            <img
+              className="izyk--front__block--img"
+              src={el.images.map((el) => el.image)}
+              alt="img"
+            />
           </div>
           <div className="izyk--front__group">
             <h2>{el.name}</h2>

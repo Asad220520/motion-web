@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
-import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import "./index.scss";
 import { GrLanguage } from "react-icons/gr";
 import logo from "../../img/logo.png";

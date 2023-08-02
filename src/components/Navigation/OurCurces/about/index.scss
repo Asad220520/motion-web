@@ -1,46 +1,45 @@
 .aboutcurs {
-    &--block {
-        display: flex;
-        justify-content: start;
-        padding: 10px 0 0 0;
-        
-        h1 {
-            color: var(--unnamed, #EC3025);
-            font-size: 36px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            width: 400px;
-        }
+  &--block {
+    display: flex;
+    justify-content: start;
+    padding: 10px 0 0 0;
 
-        &__text {
-            display: grid;
-            width: 632px;
-            gap: 30px;
-            h3 {
-                color: #1B1B1B;
-                font-size: 19px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 140%;
-            }
-
-            p {
-                color: #1B1B1B;
-                font-size: 19px;
-                font-style: normal;
-                font-weight: 400;
-                
-            }
-
-            button {
-                width: 70px;
-                height: 20px;
-                font-size: 18px;
-                background: none;
-                color: #EC3025;
-                border-bottom: 1px solid #EC3025;
-            }
-        }
+    h1 {
+      color: var(--unnamed, #ec3025);
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      width: 400px;
     }
+
+    &__text {
+      display: grid;
+      width: 632px;
+      gap: 30px;
+      h3 {
+        color: #1b1b1b;
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+      }
+
+      p {
+        color: #1b1b1b;
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      button {
+        width: 70px;
+        height: 20px;
+        font-size: 18px;
+        background: none;
+        color: #ec3025;
+        border-bottom: 1px solid #ec3025;
+      }
+    }
+  }
 }

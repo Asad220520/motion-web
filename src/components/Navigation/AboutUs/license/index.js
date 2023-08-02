@@ -1,5 +1,5 @@
 import React from "react";
-import license from "../../../img/license.png";
+import license from "../../../../img/license.png";
 import './index.scss'
 const License = () => {
   return (

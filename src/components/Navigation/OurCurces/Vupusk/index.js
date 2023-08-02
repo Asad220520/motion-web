@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./index.scss"
+import "./index.scss";
 import axios from "axios";
 
 const Vupusk = () => {
@@ -11,19 +11,19 @@ const Vupusk = () => {
   // }, []);
   // console.log('vupusk' ,bob);
   return (
-      <div className="container">
-        <div className="vupusk">
-          <div className="vupusk--block">
-            <div className="vupusk--block__group">
-              {/* {durations.map(el => {
+    <div className="container">
+      <div className="vupusk">
+        <div className="vupusk--block">
+          <div className="vupusk--block__group">
+            {/* {durations.map(el => {
                 <p>{el.duration}</p>
               })} */}
-              {/* {
+            {/* {
                bob.map(el => el.durations) 
               } */}
             <p>2000+</p>
             <span>Выпусников</span>
-            </div>
+          </div>
           {/* <div className="vupusk--block__group">
             <p>2</p>
             <span>Года</span>
@@ -36,11 +36,9 @@ const Vupusk = () => {
             <p>95%+</p>
             <span>Трудоустроились</span>
           </div> */}
-          </div>
         </div>
-     
       </div>
-
+    </div>
   );
 };
 
