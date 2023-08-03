@@ -1,0 +1,101 @@
+#himages {
+    .himages {
+      padding: 0 0 105px 0;
+      // position: relative;
+      .im {
+        position: absolute;
+        width: 290px;
+      }
+  
+      .g1 {
+        top: 157px;
+        left: -50px;
+      }
+      .g7 {
+        bottom: 12px;
+        left: 92px;
+      }
+      .g8 {
+        bottom: 110px;
+        right: 158px;
+      }
+      .g2 {
+        top: 0px;
+        right: 235px;
+      }
+      .g3 {
+        top: 117px;
+        right: -52px;
+      }
+      .g4 {
+        top: 42px;
+        left: 232px;
+      }
+      .g5 {
+        top: 528px;
+        left: 419px;
+      }
+      .g6 {
+        top: 265px;
+        left: 449px;
+      }
+      &--group {
+        width: 1324px;
+        height: 705px;
+        margin: 0 auto;
+        position: relative;
+        &__block {
+          width: 1324px;
+          height: 705px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          height: 705px;
+          border-radius: 20px;
+          text-align: center;
+          padding: 0 0 50px 0;
+          box-sizing: border-box;
+          background: linear-gradient(
+            315deg,
+            rgba(19, 19, 19, 0.3) 16.69%,
+            rgba(28, 28, 28, 0.26) 100%
+          );
+          backdrop-filter: blur(7.5px);
+          h1 {
+            color: #fff;
+            text-align: center;
+            font-family: "Roboto", sans-serif;
+            font-size: 96px;
+            font-weight: 900;
+            line-height: 110%;
+            span {
+              color: red;
+              font-weight: 800;
+            }
+          }
+  
+          p {
+            color: #fff;
+            font-size: 19px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            padding: 0 0 26px 0;
+            color: #ffff;
+            width: 483px;
+          }
+  
+          button {
+            width: 366px;
+            padding: 13px 108px;
+            gap: 10px;
+            border-radius: 44px;
+            background: #df281e;
+            color: #ffff;
+          }
+        }
+      }
+    }
+  }
+  

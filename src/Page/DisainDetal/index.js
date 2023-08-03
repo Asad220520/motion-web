@@ -1,22 +1,21 @@
 import React from "react";
 import "./index.scss";
-import Why from "./Why";
-import WereKurs from "./WereKurs";
+import Why from "./why";
+import WereKurs from "./werekurs";
 import Obusheni from "./obucheni";
 import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import ThisKurs from "./ThisKurs";
-import Sertivkat from "./Sertivkat";
+import ThisKurs from "./thiskurs";
+import Sertivkat from "./sertivkat";
 import SvoiSait from "./delaiSvoiSait";
 import Mentory from "./mentory";
 import ProgramKurs from "./programKursa";
 import Glav from "./glav";
 
-const KursFront = () => {
+const DisainDetal = () => {
   const { id } = useParams();
-  // const [onli,setOnli] = useState(false)
   const [detail, setDetail] = useState({});
   useEffect(() => {
     axios(`http://13.48.46.219/api/v1/courses/courses/${id}/`).then((res) =>
@@ -41,4 +40,5 @@ const KursFront = () => {
   );
 };
 
-export default KursFront;
+export default DisainDetal;
+
