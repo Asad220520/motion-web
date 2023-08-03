@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate, useParams } from "react-router-dom";
 import "./index.scss";
 import { GrLanguage } from "react-icons/gr";
 import logo from "../../img/logo.png";
@@ -11,10 +11,14 @@ const Header = () => {
   };
   const [modal, setModal] = useState(false);
   const nav = useNavigate();
+  const [modal,setModal] = useState(false)
+  const [colo,setColo] = useState(1)
+  const {id} = useParams()
+  const nav = useNavigate()
   return (
     <div id="header">
       <div className="container">
-        <div className="header">
+        <div style={{background:'--hover-color:'  }} className="header">
           <nav className="nav">
             <Link to={"/"}>
               <img src={logo} alt="" />
@@ -90,6 +94,39 @@ const Header = () => {
                   >
                     bakend
                   </li>
+              <li style={{position:'relative'}} className="menu__item">
+                <NavLink onClick={() =>{
+                  // setColo(1)
+                   setModal(!modal)
+                }} to={"disain"} className="menu__link">
+                  О курсах
+                </NavLink>
+                <ul style={{
+                  boxShadow:'8px 8px 10px #000000ad',
+                  background:'white',
+                  padding:'10px 35px 15px 35px ',top:'30px',left:'-15px',
+                  borderRadius:'15px',
+                  position:'absolute',
+                  zIndex:'3',
+                  display: modal ? 'block' : 'none'}}>
+                  <li onClick={() => {
+                    setColo(1)
+                    nav("/disain")
+                    setModal(false)
+                  }} className="li" style={{color: colo === 1 ? 'blue' : 'black', 
+                    borderBottom:'1px solid black',transition:'.4s',cursor:'pointer'  ,fontSize:'18px',textTransform:'capitalize'}}>disain</li>
+                  <li onClick={() => {
+                    nav("/frontt")
+                    setColo(2)
+                    setModal(false)
+                  }} className="li" style={{color: colo === 2 ? 'blue' : 'black',
+                    borderBottom:'1px solid black',transition:'.4s',cursor:'pointer'  ,fontSize:'18px',textTransform:'capitalize'}}>fronEnd</li>
+                  <li onClick={() => {
+                    nav("/bekend")
+                    setColo(3)
+                    setModal(false)
+                  }} className="li" style={{color: colo === 3 ? 'blue' : 'black',
+                    borderBottom:'1px solid black',transition:'.4s',cursor:'pointer'  ,fontSize:'18px',textTransform:'capitalize'}}>bakend</li>
                 </ul>
               </li>
               <li className="menu__item">

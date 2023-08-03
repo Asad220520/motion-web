@@ -12,8 +12,8 @@ const WereKurs = ({ el }) => {
             <div className="were--group__block--img">
               <img src={neg} alt="img" />
             </div>
-            <h3>{el.name}</h3>
-            <p>{el.why_we}</p>
+            <h3>Новичкам</h3>
+            <p>Научитесь с нуля разрабатывать интерфейсы. Узнаете, как с помощью дизайна направлять пользователей и решать задачи</p>
           </div>
           <div className="were--group__block">
             <div className="were--group__block--img">
