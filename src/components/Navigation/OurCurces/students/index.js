@@ -18,24 +18,22 @@ const Students = () => {
               </h1>
             </div>
             <div className="student--group__block">
-              <Link to="https://bookshop-nu.vercel.app/">
-                {" "}
+              <Link to="https://bookshop-nu.vercel.app/" target="black">
                 <img src={shop} alt="img" />{" "}
               </Link>
             </div>
             <div className="student--group__block">
-              <Link to="">
-                {" "}
+              <Link to="https://club-project.vercel.app/" target="black">
                 <img src={pla} alt="img" />
               </Link>
             </div>
             <div className="student--group__block">
-              <Link to="https://self-levelup.vercel.app/">
+              <Link to="https://self-levelup.vercel.app/" target="blank">
                 <img src={rec} alt="img" />
               </Link>
             </div>
             <div className="student--group__block">
-              <Link to="https://restaurant1-three.vercel.app/">
+              <Link to="https://restaurant1-three.vercel.app/" target="black">
                 <img src={ress} alt="img" />
               </Link>
             </div>

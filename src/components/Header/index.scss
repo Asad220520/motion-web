@@ -1,11 +1,14 @@
 #header {
   padding: 37px 0;
   .header {
+    &:hover{
+      background: var(--hover-color);
+    }
     .nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-
+     
       .menu {
         display: flex;
         justify-content: center;
@@ -14,6 +17,7 @@
           color: rgba(27, 27, 27, 0.6);
           font-size: 15px;
           font-weight: 400;
+         
         }
         .active {
           color: #EC3025;
