@@ -16,7 +16,7 @@
           font-weight: 400;
         }
         .active {
-          color: #EC3025;
+          color: #ec3025;
           text-transform: capitalize;
         }
       }
@@ -25,6 +25,40 @@
         gap: 5px;
         .icon {
           font-size: 18px;
+        }
+        .burger {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 860px) {
+  #header {
+    .header {
+      .nav {
+        .menu {
+          display: none;
+        }
+        &__language {
+          .icon {
+            display: none;
+          }
+          display: flex;
+          align-items: center;
+          .burger {
+            display: block;
+            padding-left: 25px;
+            li {
+              border: 1px solid #000;
+              margin: 3px 0;
+              width: 28px;
+            }
+            .li {
+              width: 23px;
+              margin-left: 5px;
+            }
+          }
         }
       }
     }
