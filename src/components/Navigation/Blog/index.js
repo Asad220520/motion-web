@@ -10,7 +10,7 @@ const Blog = () => {
 
   useEffect(() => {
     axios
-      .get("http://13.48.46.219/api/v1/blog/posts")
+      .get("http://3.83.165.209/api/v1/blog/posts")
       .then((res) => setState(res.data.results));
   }, []);
   console.log(state);
