@@ -36,25 +36,26 @@ const Header = () => {
                   О нас
                 </NavLink>
               </li>
-              <li style={{ position: "relative" }} className="menu__item">
+              <li className="okurs" style={{ position: "relative" }}>
                 <NavLink
-                  onClick={() => setModal(!modal)}
+                  // onClick={() => setModal(!modal)}
                   to={""}
                   className="menu__link"
                 >
                   О курсах
                 </NavLink>
                 <ul
+                  className="ulgr"
                   style={{
                     boxShadow: "8px 8px 10px #000000ad",
                     background: "white",
                     padding: "10px 35px 15px 35px ",
                     top: "30px",
-                    left: "-15px",
+                    left: "-36px",
                     borderRadius: "15px",
                     position: "absolute",
                     zIndex: "3",
-                    display: modal ? "block" : "none",
+                    // display: modal ? "block" : "none",
                   }}
                 >
                   <li

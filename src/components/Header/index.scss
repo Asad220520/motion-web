@@ -10,6 +10,7 @@
     &:hover {
       background: var(--hover-color);
     }
+
     .nav {
       display: flex;
       justify-content: space-between;
@@ -19,22 +20,44 @@
         display: flex;
         justify-content: center;
         gap: 40px;
+
+        .okurs {
+          .ulgr {
+            display: none;
+          }
+
+          &:hover {
+            .ulgr {
+              display: block;
+            }
+          }
+        }
+
         a {
           color: rgba(27, 27, 27, 0.6);
           font-size: 15px;
           font-weight: 400;
+          padding: 8px 0;
+          transition: .4s;
+          &:hover {
+            color: blue;
+          }
         }
+
         .active {
           color: #ec3025;
           text-transform: capitalize;
         }
       }
+
       &__language {
         display: flex;
         gap: 5px;
+
         .icon {
           font-size: 18px;
         }
+
         .burger {
           display: none;
         }
@@ -42,6 +65,7 @@
     }
   }
 }
+
 @media (max-width: 860px) {
   #header {
     .header {
@@ -63,21 +87,26 @@
             align-items: center;
           }
         }
+
         &__language {
           .icon {
             display: none;
           }
+
           display: flex;
           align-items: center;
+
           .burger {
             display: block;
             padding-left: 25px;
             z-index: 1;
+
             li {
               border: 1px solid #000;
               margin: 3px 0;
               width: 28px;
             }
+
             .li {
               width: 23px;
               margin-left: 5px;
