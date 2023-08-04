@@ -1,14 +1,20 @@
 #header {
+  position: sticky;
+  top: 0;
   padding: 37px 0;
+  background: #fff;
+  backdrop-filter: blur(5px);
+  opacity: 0.9;
+  z-index: 99;
   .header {
-    &:hover{
+    &:hover {
       background: var(--hover-color);
     }
     .nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-     
+
       .menu {
         display: flex;
         justify-content: center;
@@ -17,7 +23,6 @@
           color: rgba(27, 27, 27, 0.6);
           font-size: 15px;
           font-weight: 400;
-         
         }
         .active {
           color: #ec3025;
@@ -42,7 +47,21 @@
     .header {
       .nav {
         .menu {
-          display: none;
+          position: fixed;
+          width: 100%;
+          height: 100vh;
+          top: 0;
+          left: 0;
+          // display: none;
+          background: #2d706c;
+          flex-direction: column;
+          margin: 0 auto;
+          opacity: 0.9;
+          &__item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
         }
         &__language {
           .icon {
@@ -53,6 +72,7 @@
           .burger {
             display: block;
             padding-left: 25px;
+            z-index: 1;
             li {
               border: 1px solid #000;
               margin: 3px 0;
@@ -62,6 +82,9 @@
               width: 23px;
               margin-left: 5px;
             }
+          }
+          .burgrer2{
+            display: none;
           }
         }
       }

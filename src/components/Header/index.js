@@ -13,6 +13,7 @@ const Header = () => {
 
   const nav = useNavigate();
   const [modal, setModal] = useState(false);
+  const [burger, setBurger] = useState(false);
   const [colo, setColo] = useState(1);
   const { id } = useParams();
 
@@ -137,10 +138,13 @@ const Header = () => {
               <span>КР /</span>
               <span>РУС /</span>
               <span>ENG /</span>
-              <ul className="burger">
+              <ul onClick={() => setBurger(!burger)} className="burger">
                 <li></li>
                 <li className="li"></li>
                 <li></li>
+              </ul>
+              <ul className="burger2">
+                <li>X</li>
               </ul>
             </div>
           </nav>

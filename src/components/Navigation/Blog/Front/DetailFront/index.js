@@ -7,7 +7,7 @@ const DetailFront = () => {
   const { id } = useParams();
   const [blogDetail, setBlogDetail] = useState({});
   useEffect(() => {
-    axios(`http://13.48.46.219/api/v1/blog/post/${id}/`).then((res) =>
+    axios(`http://3.83.165.209/api/v1/blog/post/${id}/`).then((res) =>
       setBlogDetail(res.data)
     );
   }, []);
