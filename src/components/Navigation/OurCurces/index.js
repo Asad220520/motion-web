@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Himages from "../../../assets/Homepage/Himages";
 import AboutCurs from "./about";
 import Vupusk from "./Vupusk";
-import Kursy from "./Kursy";
+import Kursy from "./Kursy"
 import Whymotion from "./whyMotion";
 import Students from "./students";
 import Otzyv from "./otzuv";

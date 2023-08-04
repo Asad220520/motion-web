@@ -1,5 +1,6 @@
 import React from 'react'
 import "./index.scss"
+import "./media.scss"
 import black1 from '../../../img/black1.png'
 import black2 from '../../../img/black2.png'
 import black3 from '../../../img/black3.png'
