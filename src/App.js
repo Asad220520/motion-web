@@ -9,11 +9,13 @@ import Blog from "./components/Navigation/Blog";
 import KursFront from "./Page/FrontDetal";
 import DetailFront from "./components/Navigation/Blog/Front/DetailFront";
 import { useSelector } from "react-redux";
-import DisainDetal from "./Page/DisainDetal"
-import BekenDetal from "./Page/BekenDetal"
+import DisainDetal from "./Page/DisainDetal";
+import BekenDetal from "./Page/BekenDetal";
 import AboutUs from "./components/Navigation/AboutUs";
+import { useEffect } from "react";
 function App() {
   const { ten } = useSelector((s) => s);
+
   return (
     <div className="App">
       <Header />
@@ -42,12 +44,11 @@ function App() {
           <Route path="/disain" element={<KursFront />} />
           <Route path="/bekend" element={<BekenDetal />} />
           <Route path="/frontt" element={<DisainDetal />} />
-          
         </Routes>
       </div>
       <Contact />
       <Footer />
-    </div>  
+    </div>
   );
 }
 

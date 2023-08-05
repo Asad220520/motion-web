@@ -14,6 +14,7 @@ const Blog = () => {
       .then((res) => setState(res.data.results));
   }, []);
   console.log(state);
+  window.scroll(0, 0);
   return (
     <>
       <div id="blog">

@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Link, NavLink, useNavigate, useParams } from "react-router-dom";
 import "./index.scss";
-import { GrLanguage } from "react-icons/gr";
+import { GrClose, GrLanguage } from "react-icons/gr";
+import { GiHamburgerMenu } from "react-icons/gi";
 import logo from "../../img/logo.png";
 
 const Header = () => {
@@ -12,11 +13,14 @@ const Header = () => {
   };
 
   const nav = useNavigate();
+  const navRef = useRef();
+
   const [modal, setModal] = useState(false);
-  const [burger, setBurger] = useState(false);
   const [colo, setColo] = useState(1);
   const { id } = useParams();
-
+  const showBurger = () => {
+    navRef.current.classList.toggle("responsive_nav");
+  };
   return (
     <div id="header">
       <div className="container">
@@ -25,13 +29,13 @@ const Header = () => {
             <Link to={"/"}>
               <img src={logo} alt="" />
             </Link>
-            <ul className="menu">
-              <li className="menu__item">
+            <ul ref={navRef} className="menu">
+              <li className="menu__item" onClick={showBurger}>
                 <NavLink to={"/"} className="menu__link">
                   Главное
                 </NavLink>
               </li>
-              <li className="menu__item">
+              <li className="menu__item" onClick={showBurger}>
                 <NavLink to={"/aboutUs"} className="menu__link">
                   О нас
                 </NavLink>
@@ -114,12 +118,12 @@ const Header = () => {
                   </li>
                 </ul>
               </li>
-              <li className="menu__item">
+              <li className="menu__item" onClick={showBurger}>
                 <NavLink to={"/club"} className="menu__link">
                   Клуб
                 </NavLink>
               </li>
-              <li className="menu__item">
+              <li className="menu__item" onClick={showBurger}>
                 <a
                   href="#contact"
                   className="menu__link"
@@ -128,24 +132,22 @@ const Header = () => {
                   Контакты
                 </a>
               </li>
-              <li className="menu__item">
+              <li className="menu__item" onClick={showBurger}>
                 <NavLink to={"/blog"} className="menu__link">
                   Блог
                 </NavLink>
               </li>
+              <ul className="nav-btn nav-close-btn" onClick={showBurger}></ul>
             </ul>
             <div className="nav__language">
               <GrLanguage className="icon" />
               <span>КР /</span>
               <span>РУС /</span>
               <span>ENG /</span>
-              <ul onClick={() => setBurger(!burger)} className="burger">
+              <ul onClick={showBurger} className="nav-btn">
                 <li></li>
                 <li className="li"></li>
                 <li></li>
-              </ul>
-              <ul className="burger2">
-                <li>X</li>
               </ul>
             </div>
           </nav>
