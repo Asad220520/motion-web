@@ -14,7 +14,6 @@ const Header = () => {
   };
 
   const nav = useNavigate();
-  const navRef = useRef();
   const {ten,onlin,ofline} = useSelector(s => s)
   const dispatch = useDispatch()
   const [modal, setModal] = useState(false);
