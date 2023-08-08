@@ -1,21 +1,16 @@
 import React from "react";
 import "./index.scss";
-import state from "../../../../../img/state.svg";
 const GoodCard = ({ el }) => {
   return (
     <div id="goodCard">
       <div className="container">
         <div className="goodCard">
           <div className="goodCard__img">
-            <img src={state} alt="" />
+            <img src={el.media.map((el) => el.media)} alt="" />
           </div>
           <div className="goodCard__title">
-            <h3>Тестировщик в IT: узнай, подходит ли тебе профессия</h3>
-            <p>
-              Далеко не все айтишники – программисты, которые пишут код. Можно
-              не знать ни одного языка программирования, но при этом быть
-              незаменимым специалистом в ИТ.
-            </p>
+            <h3>{el.title}</h3>
+            <p>{el.descriptions.map((el) => el.description)}</p>
           </div>
         </div>
       </div>

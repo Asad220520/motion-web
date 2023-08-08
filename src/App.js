@@ -12,7 +12,6 @@ import { useSelector } from "react-redux";
 import DisainDetal from "./Page/DisainDetal";
 import BekenDetal from "./Page/BekenDetal";
 import AboutUs from "./components/Navigation/AboutUs";
-import { useEffect } from "react";
 function App() {
   const { ten } = useSelector((s) => s);
 

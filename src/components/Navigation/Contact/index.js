@@ -16,7 +16,7 @@ const Contact = () => {
       phone_number: phoneNumber,
       email: email,
     };
-    const url = "http://13.48.46.219/api/v1/contacts/applications/";
+    const url = "http://3.83.165.209/api/v1/contacts/applications/";
     axios
       .post(url, formData)
       .then((response) => {

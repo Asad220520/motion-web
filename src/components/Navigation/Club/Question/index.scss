@@ -26,3 +26,28 @@
     }
   }
 }
+@media (max-width: 905px) {
+  #question {
+    .question {
+      &__porag {
+        p {
+          max-width: 404px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 700px) {
+  #question {
+    .question {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      &__porag {
+        p {
+          max-width: 604px;
+        }
+      }
+    }
+  }
+}

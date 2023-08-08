@@ -13,7 +13,6 @@ const Blog = () => {
       .get("http://3.83.165.209/api/v1/blog/posts")
       .then((res) => setState(res.data.results));
   }, []);
-  console.log(state);
   window.scroll(0, 0);
   return (
     <>
