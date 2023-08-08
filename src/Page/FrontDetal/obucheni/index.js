@@ -7,8 +7,9 @@ import { BiFontSize } from "react-icons/bi";
 const Obusheni = () => {
   const [online, setOnline] = useState(false);
   const [online1, setOnline1] = useState(false);
+
   const dispatch = useDispatch();
-  const { ten } = useSelector((s) => s);
+  const { ten,onlin,ofline } = useSelector((s) => s);
   return (
     <div className="container">
       <div className="obucheni">
@@ -29,11 +30,14 @@ const Obusheni = () => {
           </div>
         </div>
         <div className="obucheni--modal">
+
           <div
             onClick={() => {
+              window.scroll(0, 1540)
               dispatch({ type: "TEN", payload: true });
-              setOnline1(false);
-              setOnline(true);
+              dispatch({type:'OFLINE', payload:true})
+              setOnline1(true);
+              setOnline(false);
             }}
             className="obucheni--modal__ofline"
           >
@@ -41,24 +45,28 @@ const Obusheni = () => {
           </div>
           <div
             onClick={() => {
+              window.scroll(0, 1540)
               dispatch({ type: "TEN", payload: true });
-              setOnline(false);
-              setOnline1(true);
+              dispatch({type:'ONLINE', payload:true})
+              setOnline1(false);
+              setOnline(true);
             }}
             className="obucheni--modal__online"
           >
             <h2>Онлайн</h2>
           </div>
+
           <div
-            style={{
-              display: online ? "block" : "none",
-            }}
+           
+          style={{display: ofline ? 'block' : 'none'}}
+              
             className="ofli"
           >
             <HiXMark
               onClick={() => {
                 setOnline1(false);
                 setOnline(false);
+              dispatch({type:'OFLINE', payload:false})
                 dispatch({ type: "TEN", payload: false });
               }}
               style={{
@@ -67,6 +75,7 @@ const Obusheni = () => {
                 top: "30px",
                 fontSize: "35px",
                 color: "white",
+                cursor:'pointer'
               }}
             />
 
@@ -82,10 +91,12 @@ const Obusheni = () => {
                 период с 09 до 22 (OPEN SPACE).
               </li>
             </ol>
+
           </div>
+
           <div
             style={{
-              display: online1 ? "block" : "none",
+              display: onlin ? "block" : "none",
             }}
             className="onli"
           >
@@ -94,6 +105,7 @@ const Obusheni = () => {
                 setOnline1(false);
                 setOnline(false);
                 dispatch({ type: "TEN", payload: false });
+              dispatch({type:'ONLINE', payload:false})
               }}
               style={{
                 position: "absolute",
@@ -101,6 +113,7 @@ const Obusheni = () => {
                 top: "30px",
                 fontSize: "35px",
                 color: "white",
+                cursor:'pointer'
               }}
             />
             <h2>Онлайн</h2>

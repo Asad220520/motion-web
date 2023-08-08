@@ -25,7 +25,7 @@ const OurSchool = () => {
   return (
     <div id="ourCurces">
       <div className="ourCurces ">
-        <Himages />
+        {/* <Himages /> */}
         <AboutCurs />
         <Vupusk />
         <BegushiStrak />

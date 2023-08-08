@@ -4,6 +4,7 @@ import "./index.scss";
 import { GrClose, GrLanguage } from "react-icons/gr";
 import { GiHamburgerMenu } from "react-icons/gi";
 import logo from "../../img/logo.png";
+import { useDispatch, useSelector } from "react-redux";
 
 const Header = () => {
   const handleContactClick = (event) => {
@@ -13,6 +14,9 @@ const Header = () => {
   };
 
   const nav = useNavigate();
+  const navRef = useRef();
+  const {ten,onlin,ofline} = useSelector(s => s)
+  const dispatch = useDispatch()
   const [modal, setModal] = useState(false);
   const [colo, setColo] = useState(1);
   const { id } = useParams();
@@ -44,7 +48,7 @@ const Header = () => {
               <li className="okurs" style={{ position: "relative" }}>
                 <NavLink
                   // onClick={() => setModal(!modal)}
-                  to={""}
+                  to={"/front/9"}
                   className="menu__link"
                 >
                   О курсах

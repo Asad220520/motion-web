@@ -9,12 +9,8 @@ const BegushiStrak = () => {
       <div className="">
         <marquee className="begu">
           <img src={beg1} alt="img" />
-          <img src={beg1} alt="img" />
-          <img src={beg1} alt="img" />
         </marquee>
         <marquee className="begu2" behavior="" direction="">
-          <img src={beg2} alt="img" className="img2" />
-          <img src={beg2} alt="img" className="img2" />
           <img src={beg2} alt="img" className="img2" />
         </marquee>
       </div>
