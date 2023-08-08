@@ -13,11 +13,12 @@ const Header = () => {
   };
 
   const nav = useNavigate();
-  const navRef = useRef();
-
   const [modal, setModal] = useState(false);
   const [colo, setColo] = useState(1);
   const { id } = useParams();
+
+  
+  const navRef = useRef();
   const showBurger = () => {
     navRef.current.classList.toggle("responsive_nav");
   };

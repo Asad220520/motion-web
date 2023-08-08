@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./index.scss";
 import logo from "../../img/logo.png";
@@ -8,6 +8,12 @@ import { FaTelegram } from "react-icons/fa";
 import { AiFillYoutube } from "react-icons/ai";
 
 const Footer = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+  const handleLinkClick = () => {
+    window.scroll(0, 0);
+  };
   return (
     <div id="footer">
       <div className="container">
@@ -30,13 +36,23 @@ const Footer = () => {
                     <BiLogoLinkedin className="icon" />
                   </li>
                   <li>
-                    <BiLogoInstagramAlt className="icon" />
+                    <Link
+                      to={"https://www.instagram.com/motion_web/"}
+                      target="_blank"
+                    >
+                      <BiLogoInstagramAlt className="icon" />
+                    </Link>
                   </li>
                   <li>
                     <FaTelegram className="icon" />
                   </li>
                   <li>
-                    <AiFillYoutube className="icon" />
+                    <Link
+                      to={"https://www.youtube.com/@motionwebllc683"}
+                      target="_blank"
+                    >
+                      <AiFillYoutube className="icon" />
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -48,13 +64,25 @@ const Footer = () => {
                   <Link className="curs">Backend</Link>
                 </li>
                 <li className="menu__item">
-                  <Link to={"/aboutUs"} className="menu__link">
+                  <Link
+                    to={"/aboutUs"}
+                    className="menu__link"
+                    onClick={handleLinkClick}
+                  >
                     О нас
                   </Link>
-                  <Link to={"/club"} className="menu__link">
+                  <Link
+                    to={"/club"}
+                    className="menu__link"
+                    onClick={handleLinkClick}
+                  >
                     Клуб
                   </Link>
-                  <Link to={"/"} className="menu__link">
+                  <Link
+                    to={"/"}
+                    className="menu__link"
+                    onClick={handleLinkClick}
+                  >
                     FAQ
                   </Link>
                 </li>
@@ -62,7 +90,11 @@ const Footer = () => {
                   <Link to={"tel:+996 700 232 400"} className="menu__link">
                     +996 700 232 400
                   </Link>
-                  <Link className="menu__link">motionweb312@gmail.com</Link>
+                  <Link to={"motionweb312@gmail.com"}
+                  target="_blank"
+                   className="menu__link">
+                    motionweb312@gmail.com
+                  </Link>
                   <Link className="menu__link">
                     г. Бишкек ул. Турусбекова 109/3
                   </Link>
