@@ -38,7 +38,6 @@ function App() {
             backdropFilter: "blur(3px)",
           }}
         >
-          {" "}
         </div>
         <Routes>
           <Route path="/" element={<OurCurces />} />

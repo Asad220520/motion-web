@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Himages from "../../../assets/Homepage/Himages";
 import AboutCurs from "./about";
 import Vupusk from "./Vupusk";
-import Kursy from "./Kursy"
+import Kursy from "./Kursy";
 import Whymotion from "./whyMotion";
 import Students from "./students";
 import Otzyv from "./otzuv";
@@ -19,6 +19,7 @@ const OurSchool = () => {
     axios(`http://13.48.46.219/api/v1/courses/courses/`).then((res) =>
       setBob(res.data.results)
     );
+    window.scroll(0, 0);
   }, []);
   // console.log('bog',bob);
   return (

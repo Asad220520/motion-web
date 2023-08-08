@@ -6,7 +6,8 @@
     align-items: center;
     border-radius: 125px;
     border: 2px solid var(--red, #ec3025);
-    padding: 70px 150px;
+    padding: 70px 100px;
+    width: 100%;
     &__block {
       display: flex;
       flex-direction: column;
@@ -20,6 +21,35 @@
         color: #000;
         font-size: 24px;
         font-weight: 400;
+      }
+    }
+  }
+}
+@media (max-width: 1145px) {
+  #zoning {
+    .zoning {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      border-radius: 75px;
+    }
+  }
+}
+@media (max-width: 765px) {
+  #zoning {
+    .zoning {
+      border-radius: 30px;
+      &__block {
+        p {
+          font-size: 24px;
+          // width: 90%;
+        }
+        span {
+          font-size: 24px;
+        }
       }
     }
   }

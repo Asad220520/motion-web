@@ -6,6 +6,7 @@
     img{
       width: 50%;
       margin: 50px auto;
+      object-fit: contain;
     }
     h1 {
       color: var(--unnamed, #ec3025);

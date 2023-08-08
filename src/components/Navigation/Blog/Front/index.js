@@ -13,7 +13,9 @@ const Front = ({ el }) => {
           <div className="div">
             <p>
               {el.descriptions.length > 0 &&
-                `${el.descriptions[0].description}`}
+                `${el.descriptions[0].description.slice(0, 150)}${
+                  el.descriptions[0].description.length > 50 ? "..." : ""
+                }`}
             </p>
             <button onClick={() => nav(`/detailsIscl/${el.id}`)}>Далее</button>
           </div>

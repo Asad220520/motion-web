@@ -11,15 +11,15 @@ const DetailFront = () => {
       setBlogDetail(res.data)
     );
   }, []);
+  window.scroll(0, 0);
   if (!blogDetail.descriptions || !Array.isArray(blogDetail.descriptions)) {
     return <div>Loading...</div>;
   }
-
   const descriptionsArray = blogDetail.descriptions;
   return (
     <div id="DetailFront">
+      <BlogProf />
       <div className="container">
-        <BlogProf />
         <div className="DetailFront">
           <h1>{blogDetail.title}</h1>
           {blogDetail.media.map((item, index) => (
