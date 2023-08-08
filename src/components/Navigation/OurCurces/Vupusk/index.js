@@ -24,8 +24,8 @@ const Vupusk = () => {
             <p>2000+</p>
             <span>Выпусников</span>
           </div>
-          {/* <div className="vupusk--block__group">
-            <p>2</p>
+          <div className="vupusk--block__group">
+            <p>2</p>  
             <span>Года</span>
           </div>
           <div className="vupusk--block__group">
@@ -35,7 +35,7 @@ const Vupusk = () => {
            <div className="vupusk--block__group">
             <p>95%+</p>
             <span>Трудоустроились</span>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>
