@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./index.scss";
-import axios from "axios";
+import "./media.scss"
+// import axios from "axios";
 
 const Vupusk = () => {
   // const [bob, setBob] = useState([]);
@@ -15,12 +16,7 @@ const Vupusk = () => {
       <div className="vupusk">
         <div className="vupusk--block">
           <div className="vupusk--block__group">
-            {/* {durations.map(el => {
-                <p>{el.duration}</p>
-              })} */}
-            {/* {
-               bob.map(el => el.durations) 
-              } */}
+         
             <p>2000+</p>
             <span>Выпусников</span>
           </div>

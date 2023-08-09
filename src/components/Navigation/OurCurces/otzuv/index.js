@@ -1,5 +1,6 @@
 import React from "react";
 import "./index.scss";
+import "./media.scss"
 import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
 import ot from "../../../../img/ot.png";
 import Slider from "react-slick";
