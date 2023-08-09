@@ -13,39 +13,43 @@ import DisainDetal from "./Page/DisainDetal";
 import BekenDetal from "./Page/BekenDetal";
 import AboutUs from "./components/Navigation/AboutUs";
 import { useEffect, useState } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 function App() {
-  const { ten ,onlin,ofline} = useSelector((s) => s);
-  const dispatch = useDispatch()
+  const { ten, onlin, ofline } = useSelector((s) => s);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <div className="App">
       <Header />
       <div className="content">
         <div
-        onClick={() => {
-          dispatch({type:'ONLINE', payload:false})
-          dispatch({type:'OFLINE', payload:false})
-          dispatch({ type: 'TEN',payload: false})
-        }}
+          onClick={() => {
+            dispatch({ type: "ONLINE", payload: false });
+            dispatch({ type: "OFLINE", payload: false });
+            dispatch({ type: "TEN", payload: false });
+          }}
           style={{
             position: "absolute",
             top: "0",
             zIndex: "3",
             width: "100%",
-            cursor:'pointer',
+            cursor: "pointer",
             height: "713vh",
             display: ten ? "block" : "none",
             background: "rgba(0,0 , 0, 0.80)",
             backdropFilter: "blur(3px)",
           }}
-        >
-        </div>
+        ></div>
         <Routes>
           <Route path="/" element={<OurCurces />} />
           <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/club" element={<Club />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/detailsIscl/:id" element={<DetailFront />} />
-          <Route path="/front/:id" element={<KursFront />} />
+          <Route path="/fr  ont/:id" element={<KursFront />} />
           <Route path="/disain" element={<KursFront />} />
           <Route path="/bekend" element={<BekenDetal />} />
           <Route path="/frontt" element={<DisainDetal />} />

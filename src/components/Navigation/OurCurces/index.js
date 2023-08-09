@@ -29,7 +29,7 @@ const OurSchool = () => {
         <AboutCurs />
         <Vupusk />
         <BegushiStrak />
-        {/* <Kursy/> */}
+        <Kursy/>
         {/* <div className="container">
           <div className="ourCurces__block">
             {bob.map((el) => (

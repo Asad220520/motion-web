@@ -18,7 +18,9 @@ const NewInteres = () => {
     <div id="newInteres">
       <div className="container">
         <div className="block">
-          <h1 className="h1">Больше интересных новостей</h1>
+          <h1 className="h1" data-aos="fade-right">
+            Больше интересных новостей
+          </h1>
           <div className="newInteres">
             {newDate.map((el) => (
               <NewCart ne={el} key={el.id} />

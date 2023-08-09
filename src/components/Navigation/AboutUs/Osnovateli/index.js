@@ -11,17 +11,18 @@ const Osnovateli = () => {
             <div className="osnovateli__block-title">
               <h1>Основатели</h1>
               <p>
-                Motion web IT академия была <br /> основана в апреле 2021 года <br />
+                Motion web IT академия была <br /> основана в апреле 2021 года{" "}
+                <br />
                 по инициативе Курманбека Жоошбаева и Аскерова Канатбека
               </p>
             </div>
             <div className="osnovateli__block-img">
-              <div>
+              <div data-aos="fade-right">
                 <img src={person} alt="" />
                 <h1>Курманбек Жоошбаев</h1>
                 <p>Основатель</p>
               </div>
-              <div>
+              <div data-aos="fade-left">
                 <img src={person2} alt="" />
                 <h1>Канатбек Аскеров</h1>
                 <p>Сооснователь</p>

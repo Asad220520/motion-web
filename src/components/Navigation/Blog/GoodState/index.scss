@@ -11,31 +11,7 @@
     // grid-gap: 15px;
     width: 100%;
   }
-  .btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 16px;
-    border: 1px solid #ec3025;
-    width: 190px;
-    padding: 20px 50px;
-    margin: 0 auto;
-    margin-top: 60px;
-    background: none;
-    cursor: pointer;
-    &:hover {
-      background: red;
-      color: #fff;
-      transition: 0.3s;
-    }
-    button {
-      color: #fe1406;
-      text-align: center;
-      font-size: 14px;
-      font-weight: 700;
-      line-height: 24px; /* 171.429% */
-    }
-  }
+
 }
 @media (max-width: 1200px) {
   #goodState {
