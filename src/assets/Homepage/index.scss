@@ -123,25 +123,25 @@
     width: 95%;
   }
 }
-@media (max-width: 965px) {
+@media (max-width: 1465px) {
   #himages {
     width: 95%;
     margin: 0 auto;
     position: relative;
     .img {
       .group {
-        width: 30%;
+        width: 35%;
       }
       .img1 {
         position: absolute;
         left: 0%;
-        top: 20%;
+        top: 30%;
         z-index: 0;
       }
       .img2 {
         position: absolute;
         right: 30%;
-        top: 4%;
+        top: 0%;
       }
       .img3 {
         position: absolute;
@@ -150,13 +150,13 @@
       }
       .img4 {
         position: absolute;
-        left: 7%;
+        left: 17%;
         top: 5%;
       }
       .img5 {
         position: absolute;
         left: 35%;
-        bottom: 12%;
+        bottom: 4%;
       }
       .img6 {
         position: absolute;
@@ -185,6 +185,9 @@
   #himages {
     width: 96%;
     margin: 0 auto;
+    .group {
+      width: 55%;
+    }
     .himages {
       h1 {
         padding-top: 80px;
@@ -195,15 +198,52 @@
 }
 @media (max-width: 605px) {
   #himages {
+    width: 86%;
     .img {
       .group {
-        width: 40%;
+        width: 45%;
+      }
+      .img1 {
+        position: absolute;
+        left: 0%;
+        top: 20%;
+        z-index: 0;
+      }
+      .img2 {
+        position: absolute;
+        right: 23%;
+        top: -5%;
+      }
+      .img3 {
+        position: absolute;
+        right: -8%;
+        top: 10%;
       }
       .img4 {
         position: absolute;
         left: 7%;
-        top: 1%;
+        top: 2%;
         width: 30%;
+      }
+      .img5 {
+        position: absolute;
+        left: 35%;
+        bottom: 4%;
+      }
+      .img6 {
+        position: absolute;
+        left: 38%;
+        bottom: 30%;
+      }
+      .img7 {
+        position: absolute;
+        bottom: 6%;
+        left: -9%;
+      }
+      .img8 {
+        position: absolute;
+        bottom: 25%;
+        right: 0%;
       }
     }
     .himages {
@@ -219,7 +259,7 @@
   #himages {
     .img {
       .group {
-        width: 50%;
+        width: 45%;
       }
       .img4 {
         position: absolute;

@@ -1,12 +1,11 @@
 #galerea {
   padding-bottom: 120px;
   .galerea {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-gap: 24px;
     &__block {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      grid-gap: 24px;
       &-img {
-        border-radius: 30px;
         // background: url(<path-to-image>), lightgray 50% / cover no-repeat;
         background: #000;
         width: 380px;
@@ -46,16 +45,20 @@
 @media (max-width: 1224px) {
   #galerea {
     .galerea {
-      display: grid;
-      grid-template-columns: repeat(2, auto);
+      &__block {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+      }
     }
   }
 }
 @media (max-width: 826px) {
   #galerea {
     .galerea {
-      display: grid;
-      grid-template-columns: repeat(2, 2fr);
+      &__blcok {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+      }
       &__block {
         grid-column-start: 0;
         &-img {
@@ -74,9 +77,9 @@
 @media (max-width: 526px) {
   #galerea {
     .galerea {
-      display: grid;
-      grid-template-columns: repeat(2, 2fr);
       &__block {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
         grid-column-start: 0;
         &-img {
           width: 100%;
