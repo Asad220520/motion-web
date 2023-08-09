@@ -11,7 +11,7 @@ import Quashin from "./quashin";
 import "./index.scss";
 import BegushiStrak from "./begushiStrak";
 import Probnyi from "./probnyiUrok";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 const OurSchool = () => {
   // const { id } = useParams();
   const [bob, setBob] = useState([]);

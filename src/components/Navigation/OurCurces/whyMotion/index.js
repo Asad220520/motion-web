@@ -1,5 +1,6 @@
 import React from "react";
 import "./index.scss";
+import "./media.scss"
 import smail from "../../../../img/smiling.png";
 import roun from "../../../../img/roun.png";
 import chek from "../../../../img/check.png";
@@ -11,7 +12,7 @@ const Whymotion = () => {
       <div className="container">
         <div className="why">
           <h1>
-            Почему <span>MOTIN WEB IT ACADEMY </span>- лучший выбор для обучения
+            Почему <span>MOTION WEB IT ACADEMY </span>- лучший выбор для обучения
           </h1>
           <div className="why--text">
             <div className="why--text__block">
