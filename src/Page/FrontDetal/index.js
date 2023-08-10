@@ -9,8 +9,6 @@ import SvoiSait from "./delaiSvoiSait";
 import Mentory from "./mentory";
 import ProgramKurs from "./programKursa";
 import Glav from "./glav";
-import { useParams } from "react-router-dom";
-import axios from "axios";
 
 const KursFront = () => {
   return (

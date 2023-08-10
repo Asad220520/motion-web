@@ -1,19 +1,7 @@
 import React from "react";
 import "./index.scss";
-import { useNavigate, useParams } from "react-router-dom";
-// import axios from "axios";
-// import { useEffect } from "react";
-import front from "../../../../img/front.png"
-const Kursy = () => {
-  // const { id } = useParams();
-  // const [detail, setDetail] = useState([]);
-  // useEffect(() => {
-  //   axios(`http://3.83.165.209/api/v1/courses/courses/`).then((res) =>
-  //     setDetail(res.data.results)
-  //   );
-  // }, []);
-  // console.log('detail',detail);
 import { useNavigate } from "react-router-dom";
+
 const Kursy = ({ el }) => {
   const nav = useNavigate();
   return (
@@ -28,12 +16,6 @@ const Kursy = ({ el }) => {
             />
           </div>
           <div className="izyk--front__group">
-            <h2>hj;k'
-              {/* {el.name} */}
-            </h2>
-            <p>
-              {/* {el.description} */}
-            </p>
             <h2>{el.name}</h2>
             <p>{el.description}</p>
             <div className="izyk--front__group--btns">
