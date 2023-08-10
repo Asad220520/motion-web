@@ -4,7 +4,7 @@ const Question = () => {
   return (
     <div id="question">
       <div className="container">
-        <div className="question">
+        <div data-aos="fade-up" className="question">
           <div className="question__title">
             <h1>
               Зачем вам <br /> <span>IT-КЛУБ?</span>

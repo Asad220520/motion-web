@@ -11,6 +11,7 @@ const Header = () => {
     event.preventDefault();
     const footer = document.getElementById("contact");
     footer.scrollIntoView({ behavior: "smooth" });
+    footer.style.padding = '50px 0'
   };
 
   const nav = useNavigate();
