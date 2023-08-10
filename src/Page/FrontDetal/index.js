@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./index.scss";
 import Why from "./Why";
 import WereKurs from "./WereKurs";
