@@ -11,9 +11,7 @@ import Quashin from "./quashin";
 import "./index.scss";
 import BegushiStrak from "./begushiStrak";
 import Probnyi from "./probnyiUrok";
-import { useParams } from "react-router-dom";
 const OurSchool = () => {
-  const { id } = useParams();
   const [bob, setBob] = useState([]);
   useEffect(() => {
     axios(`http://3.83.165.209/api/v1/courses/courses/
@@ -28,7 +26,6 @@ const OurSchool = () => {
         <AboutCurs />
         <Vupusk />
         <BegushiStrak />
-        {/* <Kursy/> */}
         <div className="container">
           <div className="ourCurces__block">
             {bob.map((el) => (
@@ -36,8 +33,6 @@ const OurSchool = () => {
             ))}
           </div>
         </div>
-        <Kursy/>
-      
         <Probnyi />
         <Whymotion />
         <Students />
