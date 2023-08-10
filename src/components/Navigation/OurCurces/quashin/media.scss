@@ -1,0 +1,93 @@
+@media (max-width:1170px) {
+    #quashin{
+        padding: 100px 0 100px 0;
+        .quashin {
+            gap: 30px;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          h1 {
+      font-size: 36px;
+      padding: 0 0 0 0;
+          }
+        
+          &--group {
+            margin: 0 0 0 0;
+            &__block {
+            //   width: 770px;
+            width: 100%;
+              padding: 19px 0 38px 38px;
+              margin: 0 0 20px 0;
+              &--span {
+                .par {
+                  width: 95%;
+                }
+                
+                p {
+                  display: flex;
+                  justify-content: space-between;
+                  width: 100%;
+                  align-items: center;
+                  height: 50%;
+                  padding: 0 25px 18px 0;
+                }
+        
+                span {
+                }
+              }
+            }
+          }
+        }
+        
+      }
+}
+@media (max-width:440px) {
+    #quashin{
+        padding: 100px 0 100px 0;
+        .quashin {
+            gap: 30px;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          h1 {
+      font-size: 30px;
+      padding: 0 0 0 0;
+          }
+        
+          &--group {
+            margin: 0 0 0 0;
+            &__block {
+            //   width: 770px;
+            width: 100%;
+              padding: 19px 0 18px 18px;
+              margin: 0 0 15px 0;
+              &--span {
+                .par {
+                  width: 95%;
+                  line-height: 10px;
+                  
+                }
+                
+                p {
+                  display: flex;
+                  justify-content: space-between;
+                  width: 100%;
+                  align-items: center;
+                  height: 50%;
+                  font-size: 14px;
+                  padding: 0 15px 50px 0;
+                }
+        
+                span {
+                    font-size: 12px;
+                    // padding-top: -70px;
+                }
+              }
+            }
+          }
+        }
+        
+      }
+}

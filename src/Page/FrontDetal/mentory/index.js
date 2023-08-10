@@ -1,5 +1,6 @@
 import React from "react";
 import "./index.scss";
+import "./media.scss"
 import men from "../../../img/men.png";
 import vid from "../../../img/videoM.png";
 const Mentory = () => {

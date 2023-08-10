@@ -1,0 +1,296 @@
+@media (max-width:1225px) {
+    .sait {
+        padding: 80px 0 120px 0;
+        &--block {
+          width: 100%;
+          height: 179px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          gap: 8px;
+      
+          h2 {
+            font-size: 48px;
+          }
+      
+          p {
+            font-size: 19px;
+          }
+        }
+      
+        &--group {
+          display: flex;
+          justify-content: space-between;
+          padding: 16px 0 0 0;
+          &__boy {
+            display: none;
+            height: 186px;
+            width: 380px;
+            align-self: flex-end;
+            position: relative;
+      
+            img {
+              margin-top: -145px;
+              margin-left: 45px;
+              z-index: 2;
+              width: 220px;
+              position: relative;
+            }
+      
+            p {
+              right: 45px;
+              bottom: 50px;
+              z-index: 1;
+              padding: 10px 20px;
+              font-size: 20px;
+            }
+          }
+        }
+      
+        &--text {
+          display: flex;
+          align-items: start;
+          justify-content: center;
+          flex-direction: column;
+          text-align: start;
+          max-width: 1000px;
+          gap: 20px;
+          margin: 0 auto;
+          height: 330px;
+          padding: 45px 106px;
+      
+          &__input {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+      
+            input {
+              width: 588px;
+              padding: 20px 528px 20px 30px;
+            }
+          }
+      
+          &__group {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            input {
+              padding: 0 0 0 10px;
+              width: 28px;
+              height: 24px;
+            }
+            p {
+              font-size: 14px;
+            }
+          }
+          button {
+            width: 588px;
+            padding: 17px 220px;
+          }
+        }
+      }
+      
+}
+@media (max-width:840px) {
+    .sait {
+        padding: 80px 0 120px 0;
+        &--block {
+          width: 100%;
+          height: 179px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          gap: 8px;
+          border-radius: 30px 30px 0 0;
+      
+          h2 {
+            font-size: 38px;
+            text-align: center;
+          }
+      
+          p {
+            font-size: 19px;
+            text-align: center;
+          }
+        }
+      
+        &--group {
+          display: flex;
+          justify-content: space-between;
+          padding: 0 0 0 0;
+          &__boy {
+            display: none;
+            height: 186px;
+            width: 380px;
+            align-self: flex-end;
+            position: relative;
+      
+            img {
+              margin-top: -145px;
+              margin-left: 45px;
+              z-index: 2;
+              width: 220px;
+              position: relative;
+            }
+      
+            p {
+              right: 45px;
+              bottom: 50px;
+              z-index: 1;
+              padding: 10px 20px;
+              font-size: 20px;
+            }
+          }
+        }
+      
+        &--text {
+          display: flex;
+          border-radius:0 0 30px 30px ;
+          align-items: start;
+          justify-content: center;
+          flex-direction: column;
+          text-align: start;
+          width: 100%;
+          gap: 20px;
+          margin: 0 auto;
+          height: 330px;
+          padding: 25px 20px;
+      
+          &__input {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+      width: 100%;
+
+            input {
+              width: 100%;
+              height: 50px;
+              padding: 0 0 0 20px;
+            }
+          }
+      
+          &__group {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            input {
+              padding: 0 0 0 10px;
+              width: 28px;
+              height: 24px;
+            }
+            p {
+              font-size: 14px;
+            }
+          }
+          button {
+            width: 100%;
+            height: 60px;
+            padding: 0 0 ;
+          }
+        }
+      }
+      
+}
+@media (max-width:540px) {
+    .sait {
+        padding: 80px 0 120px 0;
+        &--block {
+          width: 100%;
+          height: 179px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          gap: 8px;
+          border-radius: 30px 30px 0 0;
+      
+          h2 {
+            font-size: 30px;
+            text-align: center;
+          }
+      
+          p {
+            font-size: 16px;
+            text-align: center;
+          }
+        }
+      
+        &--group {
+          display: flex;
+          justify-content: space-between;
+          padding: 0 0 0 0;
+          &__boy {
+            display: none;
+            height: 186px;
+            width: 380px;
+            align-self: flex-end;
+            position: relative;
+      
+            img {
+              margin-top: -145px;
+              margin-left: 45px;
+              z-index: 2;
+              width: 220px;
+              position: relative;
+            }
+      
+            p {
+              right: 45px;
+              bottom: 50px;
+              z-index: 1;
+              padding: 10px 20px;
+              font-size: 18px;
+            }
+          }
+        }
+      
+        &--text {
+          display: flex;
+          border-radius:0 0 30px 30px ;
+          align-items: start;
+          justify-content: center;
+          flex-direction: column;
+          text-align: start;
+          width: 100%;
+          gap: 20px;
+          margin: 0 auto;
+          height: 330px;
+          padding: 25px 20px;
+      
+          &__input {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+      width: 100%;
+
+            input {
+              width: 100%;
+              height: 50px;
+              padding: 0 0 0 20px;
+            }
+          }
+      
+          &__group {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            input {
+              padding: 0 0 0 10px;
+              width: 28px;
+              height: 24px;
+            }
+            p {
+              font-size: 14px;
+            }
+          }
+          button {
+            width: 100%;
+            height: 60px;
+            padding: 0 0 ;
+          }
+        }
+      }
+      
+}

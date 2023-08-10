@@ -1,5 +1,6 @@
 import React from "react";
 import "./index.scss";
+import "./media.scss"
 import neg from "../../../img/neg.png";
 
 const WereKurs = ({ el }) => {

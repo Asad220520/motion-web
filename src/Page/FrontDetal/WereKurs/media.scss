@@ -1,0 +1,139 @@
+@media (max-width:1240px){
+    .were {
+        padding: 120px 0 104px 0;
+        text-align: center;
+        h1 {
+          font-size: 36px;
+          width: 400px;
+          padding: 0 0 40px;
+          margin: 0 auto;
+        }
+      
+        &--group {
+          display: flex;
+          align-items:start;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 15px;
+      
+          &__block {
+            // width: 40%;
+            width: 380px;
+            &--img {
+              width: 380px;
+              text-align: center;
+              img {
+                margin: 0 auto;
+              }
+            }
+      
+            h3 {
+              font-size: 24px;
+              padding: 16px 0 16px 0;
+            }
+      
+            p {
+              font-size: 18px;
+              text-align: start;
+              line-height: 130%;
+              width: 100%;
+            }
+      
+        
+          }
+        }
+      }
+      
+}
+@media (max-width:520px){
+    .were {
+        padding: 120px 0 104px 0;
+        text-align: center;
+        h1 {
+          font-size: 26px;
+          width: 400px;
+        //   padding: 0 0 40px;
+          margin: 0 auto;
+        }
+      
+        &--group {
+          display: flex;
+          align-items:start;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 15px;
+      
+          &__block {
+            width: 65%;
+            &--img {
+              width: 280px;
+              text-align: center;
+              img {
+                margin: 0 auto;
+              }
+            }
+      
+            h3 {
+              font-size: 20px;
+              padding: 16px 0 16px 0;
+            }
+      
+            p {
+              font-size: 14px;
+              text-align: start;
+              line-height: 130%;
+              width: 100%;
+            }
+      
+        
+          }
+        }
+      }
+      
+}
+@media (max-width:420px){
+    .were {
+        padding: 120px 0 104px 0;
+        text-align: center;
+        h1 {
+          font-size: 26px;
+          width: 90%;
+          margin: 0 auto;
+        }
+      
+        &--group {
+          display: flex;
+          align-items:start;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 15px;
+      
+          &__block {
+            width: 65%;
+            &--img {
+            //   width: 230px;
+            width: 100%;
+              text-align: center;
+              img {
+                margin: 0 auto;
+              }
+            }
+      
+            h3 {
+              font-size: 20px;
+              padding: 16px 0 16px 0;
+            }
+      
+            p {
+              font-size: 14px;
+              text-align: start;
+              line-height: 130%;
+              width: 100%;
+            }
+      
+        
+          }
+        }
+      }
+      
+}
