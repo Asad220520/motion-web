@@ -1,18 +1,26 @@
 import React, { useState } from "react";
 import "./index.scss";
 import "./media.scss"
-import { useDispatch, useSelector } from "react-redux";
 import { HiXMark } from "react-icons/hi2";
-import { BiFontSize } from "react-icons/bi";
+// import { BiFontSize } from "react-icons/bi";
 
 const Obusheni = () => {
   const [online, setOnline] = useState(false);
-  const [online1, setOnline1] = useState(false);
-
-  const dispatch = useDispatch();
-  const { ten,onlin,ofline } = useSelector((s) => s);
+  const [ofline, setOfline] = useState(false);
   return (
-    <div className="container">
+    <>
+    <div onClick={() => {
+      setOfline(false)
+      setOnline(false)
+    }}
+     style={{
+      display:  ofline || online ? 'block' : 'none',
+      width:'100%',height:'1000vh'
+      ,background:'#000000cd'
+      ,position:'absolute',top:'0',zIndex:'4'
+  }}>
+    </div>
+     <div className="container">
       <div className="obucheni">
         <div className="obucheni--group">
           <div className="obucheni--group__block">
@@ -32,43 +40,33 @@ const Obusheni = () => {
         </div>
         <div className="obucheni--modal">
 
-          <div
-            onClick={() => {
-              window.scroll(0, 1540)
-              dispatch({ type: "TEN", payload: true });
-              dispatch({type:'OFLINE', payload:true})
-              setOnline1(true);
-              setOnline(false);
+          <button
+            onClick={() =>{
+              setOfline(!ofline)
+            setOnline(false)
             }}
             className="obucheni--modal__ofline"
           >
             <h2>Офлайн</h2>
-          </div>
-          <div
-            onClick={() => {
-              window.scroll(0, 1540)
-              dispatch({ type: "TEN", payload: true });
-              dispatch({type:'ONLINE', payload:true})
-              setOnline1(false);
-              setOnline(true);
+          </button>
+          <button
+            onClick={ ()=>{
+              setOnline(!online)
+              setOfline(false)
             }}
             className="obucheni--modal__online"
           >
             <h2>Онлайн</h2>
-          </div>
-
+          </button>
           <div
-           
-          style={{display: ofline ? 'block' : 'none'}}
-              
+          style={{
+
+            display: ofline ? 'block' : 'none'}}
             className="ofli"
           >
             <HiXMark
               onClick={() => {
-                setOnline1(false);
-                setOnline(false);
-              dispatch({type:'OFLINE', payload:false})
-                dispatch({ type: "TEN", payload: false });
+                setOfline(false);
               }}
               style={{
                 position: "absolute",
@@ -79,7 +77,6 @@ const Obusheni = () => {
                 cursor:'pointer'
               }}
             />
-
             <h2>Офлайн</h2>
             <ol>
               <li>
@@ -97,16 +94,13 @@ const Obusheni = () => {
 
           <div
             style={{
-              display: onlin ? "block" : "none",
+              display: online ? "block" : "none",
             }}
             className="onli"
           >
             <HiXMark
               onClick={() => {
-                setOnline1(false);
                 setOnline(false);
-                dispatch({ type: "TEN", payload: false });
-              dispatch({type:'ONLINE', payload:false})
               }}
               style={{
                 position: "absolute",
@@ -133,6 +127,8 @@ const Obusheni = () => {
         </div>
       </div>
     </div>
+    </>
+   
   );
 };
 

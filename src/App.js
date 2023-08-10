@@ -8,16 +8,13 @@ import Contact from "./components/Navigation/Contact";
 import Blog from "./components/Navigation/Blog";
 import KursFront from "./Page/FrontDetal";
 import DetailFront from "./components/Navigation/Blog/Front/DetailFront";
-import { useDispatch, useSelector } from "react-redux";
 import DisainDetal from "./Page/DisainDetal";
 import BekenDetal from "./Page/BekenDetal";
 import AboutUs from "./components/Navigation/AboutUs";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 function App() {
-  const { ten, onlin, ofline } = useSelector((s) => s);
-  const dispatch = useDispatch();
   useEffect(() => {
     Aos.init();
   }, []);
@@ -25,24 +22,6 @@ function App() {
     <div className="App">
       <Header />
       <div className="content">
-        <div
-          onClick={() => {
-            dispatch({ type: "ONLINE", payload: false });
-            dispatch({ type: "OFLINE", payload: false });
-            dispatch({ type: "TEN", payload: false });
-          }}
-          style={{
-            position: "absolute",
-            top: "0",
-            zIndex: "3",
-            width: "100%",
-            cursor: "pointer",
-            height: "713vh",
-            display: ten ? "block" : "none",
-            background: "rgba(0,0 , 0, 0.80)",
-            backdropFilter: "blur(3px)",
-          }}
-        ></div>
         <Routes>
           <Route path="/" element={<OurCurces />} />
           <Route path="/aboutUs" element={<AboutUs />} />
