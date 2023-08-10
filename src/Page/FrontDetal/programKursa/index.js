@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./index.scss";
+import "./media.scss"
 import { GoChevronDown, GoChevronUp } from "react-icons/go";
 import figma from "../../../img/figma logo.png"
 import strel from "../../../img/strel.png"

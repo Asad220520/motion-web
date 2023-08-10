@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./index.scss";
+import "./media.scss"
 import { useDispatch, useSelector } from "react-redux";
 import { HiXMark } from "react-icons/hi2";
 import { BiFontSize } from "react-icons/bi";

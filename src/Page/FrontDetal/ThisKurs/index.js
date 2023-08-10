@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.scss";
-
+import "./media.scss"
 const ThisKurs = () => {
   return (
     <div id="this">

@@ -1,0 +1,49 @@
+@media (max-width:890px) {
+    .why{
+        .disain--whywe{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            h2{
+                font-size: 36px;
+                padding: 0 0 20px 0;
+                // width: 350px;
+                    width: 90%;
+                margin: 0 auto;
+            }
+            &__text{
+                margin: 0 0 0 0;
+                width: 100%;
+                p{
+                margin: 0 auto;
+                    width: 90%;
+                }
+            }
+        }
+    }
+}
+@media (max-width:500px) {
+    .why{
+        .disain--whywe{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            h2{
+                font-size: 28px;
+                padding: 0 0 20px 0;
+                // width: 350px;
+                    width: 90%;
+                margin: 0 auto;
+            }
+            &__text{
+                margin: 0 0 0 0;
+                width: 100%;
+                p{
+                margin: 0 auto;
+                font-size: 18px;
+                    width: 90%;
+                }
+            }
+        }
+    }
+}

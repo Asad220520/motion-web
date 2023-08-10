@@ -1,5 +1,6 @@
 import React from "react";
 import "./index.scss";
+import "./media.scss"
 import log from "../../../img/boy.png";
 
 const SvoiSait = () => {

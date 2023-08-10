@@ -92,9 +92,8 @@
       background: var(--2, #ff563f);
       position: absolute;
       top: -520px;
-      left: 300px;
+      left:0;      
       z-index: 4;
-
       h2 {
         color: #fff;
         font-family: Muller;
@@ -114,7 +113,6 @@
           font-weight: 400;
           line-height: 140%;
           padding: 0 0 16px 69px;
-          padding: 0 0 16px 69px;
           width: 428px;
         }
       }
@@ -127,7 +125,7 @@
       background: var(--2, #ff563f);
       position: absolute;
       top: -520px;
-      right: 325px;
+      right: 0;
       z-index: 4;
 
       h2 {

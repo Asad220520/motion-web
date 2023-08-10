@@ -13,8 +13,16 @@ const Otzyv = () => {
     slidesToShow: 2,
     slidesToScroll: 1,
     Arrows: true,
-    nextArrow: <HiArrowLongRight />,
-    prevArrow: <HiArrowLongLeft />,
+    // nextArrow: <HiArrowLongRight />,
+    // prevArrow: <HiArrowLongLeft />,
+    responsive:[
+      {
+         breakpoint: 905,
+         settings:{
+          slidesToShow: 1,
+         }
+      }
+    ]
   };
   return (
     <div id="otzyv">
