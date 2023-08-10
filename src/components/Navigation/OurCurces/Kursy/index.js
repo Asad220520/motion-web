@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./index.scss";
 import { useNavigate, useParams } from "react-router-dom";
-import axios from "axios";
+// import axios from "axios";
 // import { useEffect } from "react";
 import front from "../../../../img/front.png"
 const Kursy = () => {
@@ -30,7 +30,7 @@ const Kursy = () => {
             <h2>hj;k'
               {/* {el.name} */}
             </h2>
-            <p>lhojpk[l[]]
+            <p>
               {/* {el.description} */}
             </p>
             <div className="izyk--front__group--btns">

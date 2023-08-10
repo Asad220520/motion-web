@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import "./index.scss";
 import "./media.scss"
 import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
@@ -6,24 +6,37 @@ import ot from "../../../../img/ot.png";
 import Slider from "react-slick";
 
 const Otzyv = () => {
+  const sliderRef = useRef(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleNextButtonClick = () => {
+    sliderRef.current.slickNext();
+    setCurrentIndex((prevIndex) => prevIndex + 1);
+  };
+
+  const handlePrevButtonClick = () => {
+    sliderRef.current.slickPrev();
+    setCurrentIndex((prevIndex) => prevIndex - 1);
+  };
+
   const settings = {
+    ref: sliderRef,
     dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
-    Arrows: true,
-    // nextArrow: <HiArrowLongRight />,
-    // prevArrow: <HiArrowLongLeft />,
-    responsive:[
+    arrows: false,
+    responsive: [
       {
-         breakpoint: 905,
-         settings:{
+        breakpoint: 905,
+        settings: {
           slidesToShow: 1,
-         }
-      }
-    ]
+        },
+      },
+    ],
   };
+
   return (
     <div id="otzyv">
       <div className="container">
@@ -31,8 +44,14 @@ const Otzyv = () => {
           <div className="otzyv--text">
             <h3>Отзывы студентов</h3>
             <div className="otzyv--text__icon">
-              <HiArrowLongLeft className="icon" />
-              <HiArrowLongRight className="icon" />
+              <HiArrowLongLeft
+                className={`icon ${currentIndex === 0 ? "disabled" : ""}`}
+                onClick={handlePrevButtonClick}
+              />
+              <HiArrowLongRight
+                className={`icon ${currentIndex === 2 ? "disabled" : ""}`}
+                onClick={handleNextButtonClick}
+              />
             </div>
           </div>
           <div className="otzyv--slid">

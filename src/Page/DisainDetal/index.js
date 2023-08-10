@@ -15,20 +15,20 @@ import ProgramKurs from "./programKursa";
 import Glav from "./glav";
 
 const DisainDetal = () => {
-  const { id } = useParams();
-  const [detail, setDetail] = useState({});
-  useEffect(() => {
-    axios(`http://13.48.46.219/api/v1/courses/courses/${id}/`).then((res) =>
-      setDetail(res.data)
-    );
-  }, []);
-  console.log("dfx", detail);
+  // const { id } = useParams();
+  // const [detail, setDetail] = useState({});
+  // useEffect(() => {
+  //   axios(`http://13.48.46.219/api/v1/courses/courses/${id}/`).then((res) =>
+  //     setDetail(res.data)
+  //   );
+  // }, []);
+  // console.log("dfx", detail);
   return (
     <>
       <div>
         <Glav />
         <Why />
-        <WereKurs el={detail} />
+        <WereKurs />
         <Obusheni />
         <ThisKurs />
         <Sertivkat />

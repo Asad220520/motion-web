@@ -2,7 +2,7 @@ import React from "react";
 // import "./index.scss";
 import neg from "../../../img/neg.png";
 
-const WereKurs = ({ el }) => {
+const WereKurs = () => {
   return (
     <div className="container">
       <div className="were">

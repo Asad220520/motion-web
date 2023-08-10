@@ -3,7 +3,15 @@ import "./index.scss";
 import "./media.scss"
 import men from "../../../img/men.png";
 import vid from "../../../img/videoM.png";
+// import axios from "axios";
 const Mentory = () => {
+  // const [detail, setDetail] = useState({});
+  // useEffect(() => {
+  //   axios(`http://3.83.165.209/api/v1/courses/courses/4/`).then((res) =>
+  //     setDetail(res.data)
+  //   );
+  // }, []);
+  // console.log("diss", detail);
   return (
     <div id="mentory">
       <div className="container">
@@ -16,7 +24,7 @@ const Mentory = () => {
               <div className="mentory--group__block--img">
                 <img src={men} alt="img" />
               </div>
-              <h3>Ахырхан Кайратов</h3>
+               <h3>Bekbolsun Nurgaziev</h3>
               <p>
                 Ментор по UI/UX дизайну. Работал в амерканской компании
                 и на фрилансе. На счёту 200+ успешных проектов.
@@ -26,7 +34,7 @@ const Mentory = () => {
               <div className="mentory--group__block--img">
                 <img src={men} alt="img" />
               </div>
-              <h3>Ахырхан Кайратов</h3>
+              <h3></h3>
               <p>
                 Ментор по UI/UX дизайну. Работал в амерканской компании
                 и на фрилансе. На счёту 200+ успешных проектов.
