@@ -36,6 +36,8 @@ const OurSchool = () => {
             ))}
           </div>
         </div>
+        <Kursy/>
+      
         <Probnyi />
         <Whymotion />
         <Students />
