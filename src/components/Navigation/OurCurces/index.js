@@ -30,13 +30,7 @@ const OurSchool = () => {
         <Vupusk />
         <BegushiStrak />
         <Kursy/>
-        {/* <div className="container">
-          <div className="ourCurces__block">
-            {bob.map((el) => (
-              <Kursy el={el} />
-            ))}
-          </div>
-        </div> */}
+      
         <Probnyi />
         <Whymotion />
         <Students />

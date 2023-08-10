@@ -55,8 +55,11 @@
           .ofli {
             width: 590px;
             height: 468px;
-            top: -520px;
-            left: 300px;
+            position: fixed;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%, -50%);   
+            z-index: 10;
             h2 {
               font-size: 40px;
               padding: 42px 0 24px 89px;
@@ -73,8 +76,11 @@
           .onli {
             width: 590px;
             height: 468px;
-            top: -520px;
-            right: 325px;
+            position: fixed;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%, -50%);   
+            z-index: 10;
       
             h2 {
               padding: 42px 0 24px 89px;
@@ -151,8 +157,11 @@
           .ofli {
             width: 590px;
             height: 468px;
-            top: -520px;
-            left: 300px;
+            position: fixed;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%, -50%);   
+            z-index: 10;
             h2 {
               font-size: 40px;
               padding: 42px 0 24px 89px;
@@ -169,8 +178,11 @@
           .onli {
             width: 590px;
             height: 468px;
-            top: -520px;
-            right: 325px;
+            position: fixed;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%, -50%);   
+            z-index: 10;
       
             h2 {
               padding: 42px 0 24px 89px;
@@ -245,13 +257,16 @@
           }
       
           .ofli {
-            width: 50%;
-            height: 468px;
-            top: -520px;
-            left: 0;
+            width: 60%;
+            height: 428px;
+            position: fixed;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%, -50%);   
+            z-index: 10;
             h2 {
               font-size: 40px;
-              padding: 32px 0 24px 29px;
+              padding: 32px 0 34px 29px;
             }
       
             ol {
@@ -263,13 +278,16 @@
           }
       
           .onli {
-            width: 50%;
-            height: 468px;
-            top: -520px;
-            right: 0;
+            width: 60%;
+            height: 428px;
+            position: fixed;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%, -50%);   
+            z-index: 10;
             h2 {
                 font-size: 40px;
-                padding: 32px 0 24px 29px;
+                padding: 32px 0 34px 29px;
             }
       
             ol {
@@ -338,13 +356,16 @@
           }
       
           .ofli {
-            width: 50%;
-            height: 468px;
-            top: -520px;
-            left: 0;
+            width: 60%;
+            height: 428px;
+            position: fixed;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%, -50%);   
+            z-index: 10;
             h2 {
               font-size: 40px;
-              padding: 32px 0 24px 29px;
+              padding: 32px 0 34px 29px;
             }
       
             ol {
@@ -356,13 +377,16 @@
           }
       
           .onli {
-            width: 50%;
-            height: 468px;
-            top: -520px;
-            right: 0;
+            width: 60%;
+            height: 428px;
+            position: fixed;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%, -50%);   
+            z-index: 10;
             h2 {
                 font-size: 40px;
-                padding: 32px 0 24px 29px;
+                padding: 32px 0 34px 29px;
             }
       
             ol {
@@ -432,13 +456,16 @@
           }
       
           .ofli {
-            width: 50%;
-            height: 468px;
-            top: -520px;
-            left: 0;
+            width: 80%;
+            height: 428px;
+            position: fixed;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%, -50%);   
+            z-index: 10;
             h2 {
               font-size: 30px;
-              padding: 32px 0 24px 29px;
+              padding: 32px 0 34px 29px;
             }
       
             ol {
@@ -450,13 +477,16 @@
           }
       
           .onli {
-            width: 50%;
-            height: 468px;
-            top: -520px;
-            right: 0;
+            width: 80%;
+            height: 428px;
+            position: fixed;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%, -50%);   
+            z-index: 10;
             h2 {
                 font-size: 30px;
-                padding: 32px 0 24px 29px;
+                padding: 32px 0 34px 29px;
             }
       
             ol {
@@ -532,9 +562,12 @@
       
           .ofli {
             width: 90%;
-            height: 468px;
-            top: -520px;
-            left: 30px;
+            height: 428px;
+            position: fixed;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%, -50%);   
+            z-index: 10;
             h2 {
               font-size: 30px;
               padding: 32px 0 24px 29px;
@@ -550,9 +583,12 @@
       
           .onli {
             width: 90%;
-            height: 468px;
-            top: -520px;
-            right: 30px;
+            height: 428px;
+            position: fixed;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%, -50%);   
+            z-index: 10;
             h2 {
                 font-size: 30px;
                 padding: 32px 0 24px 29px;
@@ -631,16 +667,20 @@
       
           .ofli {
             width: 90%;
-            height: 468px;
-            top: -520px;
-            left: 30px;
+            height: 268px;
+            position: fixed;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%, -50%);   
+            z-index: 10;
             h2 {
-              font-size: 30px;
-              padding: 32px 0 24px 29px;
+              font-size: 20px;
+              padding: 22px 0 24px 29px;
             }
       
             ol {
               li {
+                font-size:14px ;
                 padding: 0 0 16px 29px;
                 width: 90%;
               }
@@ -649,16 +689,21 @@
       
           .onli {
             width: 90%;
-            height: 468px;
-            top: -520px;
-            right: 30px;
+            height: 268px;
+            position: fixed;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%, -50%);   
+            z-index: 10;
+          
             h2 {
-                font-size: 30px;
-                padding: 32px 0 24px 29px;
+                font-size: 20px;
+                padding: 22px 0 24px 29px;
             }
       
             ol {
               li {
+                font-size: 14px;
                 padding: 0 0 16px 29px;
                 width: 90%;
               }
