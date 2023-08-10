@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./index.scss";
 import { useNavigate, useParams } from "react-router-dom";
 // import axios from "axios";
@@ -13,18 +13,19 @@ const Kursy = () => {
   //   );
   // }, []);
   // console.log('detail',detail);
+import { useNavigate } from "react-router-dom";
+const Kursy = ({ el }) => {
   const nav = useNavigate();
   return (
     <div id="kursy">
       <div className="izyk">
         <div className="izyk--front">
           <div className="izyk--front__block">
-            {/* <img
+            <img
               className="izyk--front__block--img"
               src={el.images.map((el) => el.image)}
               alt="img"
-            /> */}
-            <img src={front} alt="img" />
+            />
           </div>
           <div className="izyk--front__group">
             <h2>hj;k'
@@ -33,22 +34,15 @@ const Kursy = () => {
             <p>
               {/* {el.description} */}
             </p>
+            <h2>{el.name}</h2>
+            <p>{el.description}</p>
             <div className="izyk--front__group--btns">
-              {/* {el.courses_stacks.map((el) => (
+              {el.courses_stacks.map((el) => (
                 <button>{el.stack}</button>
-              ))} */}
-              <button>w</button>
-              <button>ed</button>
-              <button>d</button>
-              <button>df</button>
-              <button>df</button>
-              <button>df</button>
-              <button>df</button>
+              ))}
             </div>
             <div className="izyk--front__group--btn">
-              <button 
-              // onClick={() => nav(`/front/${el.id}`)}
-               className="btn1">
+              <button onClick={() => nav(`/front/${el.id}`)} className="btn1">
                 Подробнее
               </button>
               <button className="btn2">Оставить заявку</button>

@@ -23,6 +23,14 @@ const DisainDetal = () => {
   //   );
   // }, []);
   // console.log("dfx", detail);
+  const { id } = useParams();
+  const [detail, setDetail] = useState({});
+  useEffect(() => {
+    axios(`http://3.83.165.209/api/v1/courses/courses/${id}/`).then((res) =>
+      setDetail(res.data)
+    );
+  }, []);
+  console.log("dfx", detail);
   return (
     <>
       <div>

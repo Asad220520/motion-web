@@ -13,6 +13,12 @@ import BegushiStrak from "./begushiStrak";
 import Probnyi from "./probnyiUrok";
 const OurSchool = () => {
   const [bob, setBob] = useState([]);
+  useEffect(() => {
+    axios(`http://3.83.165.209/api/v1/courses/courses/
+`).then((res) => setBob(res.data.results));
+    window.scroll(0, 0);
+  }, []);
+  console.log("bog", bob);
   return (
     <div id="ourCurces">
       <div className="ourCurces ">
@@ -20,8 +26,13 @@ const OurSchool = () => {
         <AboutCurs />
         <Vupusk />
         <BegushiStrak />
-        <Kursy/>
-      
+        <div className="container">
+          <div className="ourCurces__block">
+            {bob.map((el) => (
+              <Kursy el={el} />
+            ))}
+          </div>
+        </div>
         <Probnyi />
         <Whymotion />
         <Students />
