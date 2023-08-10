@@ -7,8 +7,15 @@ import black5 from "../../../img/black5.png";
 import black6 from "../../../img/back6.png";
 import black7 from "../../../img/black7.png";
 import black8 from "../../../img/black8.png";
+// import axios from "axios";
 
 const Glav = () => {
+  // const [detail, setDetail] = useState({});
+  // useEffect(() => {
+  //   axios(`http://3.83.165.209/api/v1/courses/courses/4/`).then((res) =>
+  //     setDetail(res.data)
+  //   );
+  // }, []);
   const handleContactClick = (event) => {
     event.preventDefault();
     const footer = document.getElementById("contact");
@@ -28,13 +35,18 @@ const Glav = () => {
       </div>
       <div className="himages">
         <h1>
-          <span>UI/UX <br /> </span>DESIGN
+        UI/UX <br />
+          {/* {detail.name?.slice(0,5)} <br /> */}
+          <span>DESIGN 
+            {/* {detail.name?.slice(5)}  */}
+          </span>
+          
         </h1>
-        <p>
-          UX/UI-дизайн — это процесс создания интерактивных, удобных
-          интерфейсов. Отличный вариант профессии для творческих людей, которым
-          нравится решать проблемы пользователей и создавать что-то новое,
-          сочетая логику и эстетику.
+        <p> 
+          {/* {detail.description} */}
+          UX/UI-дизайн — это процесс создания интерактивных, удобных 
+          интерфейсов. Отличный вариант профессии для творческих людей, которым нравится решать проблемы
+           пользователей и создавать что-то новое, сочетая логику и эстетику.
         </p>
         <button onClick={handleContactClick}>Оставить заявку</button>
       </div>
