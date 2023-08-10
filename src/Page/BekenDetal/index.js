@@ -20,7 +20,7 @@ const BekenDetal = () => {
   // const [onli,setOnli] = useState(false)
   const [detail, setDetail] = useState({});
   useEffect(() => {
-    axios(`http://13.48.46.219/api/v1/courses/courses/${id}/`).then((res) =>
+    axios(`http://3.83.165.209/api/v1/courses/courses/${id}/`).then((res) =>
       setDetail(res.data)
     );
   }, []);
