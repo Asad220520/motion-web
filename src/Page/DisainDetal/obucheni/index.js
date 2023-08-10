@@ -13,7 +13,7 @@ const Obusheni = () => {
     }}
      style={{
       display:  ofline || online ? 'block' : 'none',
-      width:'100%',height:'1000vh'
+      width:'100%',height:'900vh'
       ,background:'#000000cd'
       ,position:'absolute',top:'0',zIndex:'4'
   }}>
