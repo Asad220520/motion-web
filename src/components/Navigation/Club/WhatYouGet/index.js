@@ -18,32 +18,32 @@ const WhatYouGet = () => {
             </h1>
           </div>
           <div className="whatYouGet__block">
-            <div className="whatYouGet__block-wrap">
+            <div data-aos="zoom-in-up" className="whatYouGet__block-wrap">
               <img src={club1} alt="" />
             </div>
             <p>Расширение кругозоров в сфере IT</p>
           </div>
           <div className="whatYouGet__block">
-            <div className="whatYouGet__block-wrap">
+            <div data-aos="zoom-in-up" className="whatYouGet__block-wrap">
               <img src={club21} alt="" />
               <img src={club22} alt="" />
             </div>
             <p>Улучшение английского языка</p>
           </div>
           <div className="whatYouGet__block">
-            <div className="whatYouGet__block-wrap">
+            <div data-aos="zoom-in-up" className="whatYouGet__block-wrap">
               <img src={club3} alt="" />
             </div>
             <p>Работа с командой</p>
           </div>
           <div className="whatYouGet__block">
-            <div className="whatYouGet__block-wrap">
+            <div data-aos="zoom-in-up" className="whatYouGet__block-wrap">
               <img src={club4} alt="" />
             </div>
             <p>Портфолио</p>
           </div>
           <div className="whatYouGet__block">
-            <div className="whatYouGet__block-wrap">
+            <div data-aos="zoom-in-up" className="whatYouGet__block-wrap">
               <img src={club51} alt="" />
               <img src={club52} alt="" />
             </div>

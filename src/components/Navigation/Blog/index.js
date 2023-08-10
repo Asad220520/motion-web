@@ -6,13 +6,15 @@ import Front from "./Front";
 import GoodState from "./GoodState";
 import NewInteres from "./NewIteres";
 import Loading from "../../Loading";
+import Footer from "../../Footer";
+import Header from "../../Header";
 
 const Blog = () => {
   const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
   const itemsPerPage = 4;
-
+  window.scroll(0,0)
   const getBlog = () => {
     setIsLoading(true);
     axios
@@ -69,9 +71,7 @@ const Blog = () => {
           <div id="blog">
             <BlogProf />
             <div className="container">
-              <h1 data-aos="fade-right">
-                Блоги
-              </h1>
+              <h1 data-aos="fade-right">Блоги</h1>
               <div className="blog">
                 {visiblePosts.map((post) => (
                   <div key={post.id}>
@@ -81,7 +81,7 @@ const Blog = () => {
               </div>
               {visiblePosts.length < posts.length && (
                 <button onClick={handleLoadMore} className="btn">
-                  Показать больше
+                  больше
                 </button>
               )}
             </div>
