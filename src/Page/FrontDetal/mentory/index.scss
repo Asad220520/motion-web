@@ -32,13 +32,29 @@
       grid-template-columns: repeat(3, 1fr);
       padding: 0 0 120px 0;
       grid-gap: 34px;
-
+      
       &__block {
         width: 380px;
-        height: 308px;
+        height: 438px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.276) inset;  
+        padding: 5px 10px ;   
+        border-radius: 30px 30px 10px 10px ;   
+        box-sizing: border-box;
+        position: relative;
+        &::before{
+          // width: 380px;
+          border-radius: 30px 30px 10px 10px ;   
 
+         top: 0;
+         left: 0;
+          height: 438px;
+          position: absolute;
+          background: none;
+          content: '';
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.22) ;
+        }
         &--img {
-          width: 380px;
+          // width: 380px;
           text-align: center;
           border-radius: 20px;
           background: var(
@@ -47,6 +63,7 @@
           );
 
           img {
+            width: 100%;
           }
         }
 
@@ -67,6 +84,7 @@
           font-size: 18px;
           font-style: normal;
           font-weight: 400;
+          width: 95%;
           text-align: start;
           line-height: 130%;
         }

@@ -83,7 +83,6 @@ const ProgramKurs = () => {
   borderRadius: blo1 ? "30px" : "30px", }} className="program--group__block">
           <div onClick={() =>{
               setBlo1(!blo1);
-              // setBlo(!blo)
               setBlo2(false);
               setBlo3(false);
               setBlo4(false);
