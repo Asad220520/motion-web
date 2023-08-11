@@ -3,8 +3,13 @@
 
   .ourCurces {
     &__block {
-      display: grid;
-      grid-template-columns: repeat(3, auto);
+      padding-top: 80px;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 40px;
     }
   }
 }

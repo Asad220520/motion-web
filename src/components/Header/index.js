@@ -70,6 +70,7 @@ const Header = () => {
                       setColo(1);
                       nav("/disain");
                       setModal(false);
+                      showBurger()
                     }}
                     className="li"
                     style={{
@@ -88,6 +89,7 @@ const Header = () => {
                       nav("/frontt");
                       setColo(2);
                       setModal(false);
+                      showBurger();
                     }}
                     className="li"
                     style={{
@@ -106,6 +108,7 @@ const Header = () => {
                       nav("/bekend");
                       setColo(3);
                       setModal(false);
+                      showBurger();
                     }}
                     className="li"
                     style={{
