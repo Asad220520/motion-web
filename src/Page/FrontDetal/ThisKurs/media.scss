@@ -56,7 +56,6 @@
                   font-style: normal;
                   font-weight: 500;
                   line-height: normal;
-                  width: 250px;
                 }
               }
       
@@ -113,7 +112,7 @@
                 display: flex;
                 align-items: start;
                 gap: 5%;
-                width: 270px;
+                width: 90%;
                 text-align: start;
       
                 h2 {
@@ -127,13 +126,14 @@
                 }
       
                 h3 {
+                  width: 100%;
+
                   color: #000;
                   font-family: Muller;
                   font-size: 24px;
                   font-style: normal;
                   font-weight: 500;
                   line-height: normal;
-                  width: 250px;
                 }
               }
       
@@ -145,6 +145,83 @@
                 font-weight: 400;
                 line-height: 140%;
                 // width:520px;
+              }
+            }
+          }
+        }
+      }
+      
+}
+@media (max-width: 510px) {
+    #this {
+        background: #efefef;
+        padding: 97px 0 120px 0;
+        .this {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+      
+          h2 {
+            color: var(--unnamed, #ec3025);
+            font-family: Muller;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            padding: 0 0 30px 0;
+            text-align: center;
+            width: 75%;
+          }
+      
+          &--group {
+            width: 90%;
+            padding: 25px 0 0 0;
+      
+            &__block {
+              display: flex;
+              align-items: start;
+              flex-direction: column;
+              width: 99%;
+              gap: 3%;
+              padding: 0 0 10px 0;
+              border-bottom: 1px solid black;
+              margin: 0 0 20px 0;
+              &--text {
+                display: flex;
+                align-items: start;
+                gap: 3%;
+                width:90%;
+                height: 30px;
+                padding: 0 0 50px 0;
+                text-align: start;
+      
+                h2 {
+                  color: #000;
+                  font-family: Muller;
+                  font-size: 20px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: normal;
+                  width: auto;
+                }
+      
+                h3 {
+                  color: #000;
+                  font-family: Muller;
+                  font-size: 20px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: normal;
+                }
+              }
+      
+              p {
+                color: rgba(27, 27, 27, 0.8);
+                font-family: SF Pro Display;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%;
               }
             }
           }

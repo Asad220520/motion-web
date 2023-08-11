@@ -65,6 +65,7 @@ const Obusheni = () => {
             className="ofli"
           >
             <HiXMark
+            className="icon"
               onClick={() => {
                 setOfline(false);
               }}
@@ -99,14 +100,15 @@ const Obusheni = () => {
             className="onli"
           >
             <HiXMark
+            className="icon"
               onClick={() => {
                 setOnline(false);
               }}
               style={{
                 position: "absolute",
-                right: "30px",
-                top: "30px",
-                fontSize: "35px",
+                right: "20px",
+                top: "20px",
+                fontSize: "30px",
                 color: "white",
                 cursor:'pointer'
               }}
