@@ -54,7 +54,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    width: 50%;
+    width: 90%;
     padding: 0 0 60px 0;
             span {
             }
@@ -66,8 +66,58 @@
             &__block {
              
       
-              .img {
+              img {
+                width: 10%;
               }
+      
+              &--group {
+                h2 {
+                width: 90%;
+                padding: 0 0  10px 0;
+                }
+      
+                p {
+                width: 90%;
+                padding: 0 0  10px 0;
+
+                }
+              }
+            }
+          }
+        }
+      }
+      
+}
+@media (max-width:400px) {
+    #why {
+        .why {
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            padding: 100px 0 100px 0;
+            align-items: center;
+          h1 {
+            font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 90%;
+    padding: 0 0 60px 0;
+            span {
+            }
+          }
+          
+          &--text {
+            
+            
+            &__block {
+              img {
+                width: 10%;
+              }
+             
+      .img{
+        width: 15%;
+      }
       
               &--group {
                 h2 {

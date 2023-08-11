@@ -1,5 +1,6 @@
 import React from "react";
 import "./index.scss";
+import "./media.scss"
 import { useNavigate } from "react-router-dom";
 
 const Kursy = ({ el }) => {
