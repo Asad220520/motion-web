@@ -20,7 +20,7 @@
             
             &__block {
               width:385px;
-              height: 440px;
+              height: 450px;
       
               &--img {
                 width: 380px;
@@ -34,12 +34,13 @@
                 text-align: start;
                 line-height: normal;
                     width: 70%;
-                padding: 16px 0 16px 0;
+                padding: 16px 0 16px 10px;
               }
       
               p {
                 font-size: 18px;
                 width: 100%;
+                padding: 0 0 10px 10px;
                 text-align: start;
               }
             }
@@ -106,12 +107,13 @@
               h3 {
                 width: 100%;
                 font-size: 36px;
+                padding: 16px 0 10px 10px;
               }
       
               p {
                 width: 100%;
                 font-size: 19px;
-                padding: 22px 0 0 0;
+                padding: 22px 0 0 10px;
               }
             }
       
@@ -156,12 +158,13 @@
               h3 {
                 width: 100%;
                 font-size: 36px;
+                padding: 16px 0 10px 10px;
               }
       
               p {
                 width: 100%;
                 font-size: 19px;
-                padding: 22px 0 0 0;
+                padding: 22px 0 0 10px;
               }
             }
       
@@ -188,9 +191,9 @@
             padding: 0 0 60px 0;
             text-align: center;
             width: 90%;
-            font-size: 35px;
+            font-size: 30px;
             span {
-              font-size: 35px;
+              font-size: 30px;
             }
           }
       
@@ -210,23 +213,25 @@
               h3 {
                 width: 100%;
                 font-size: 36px;
+                padding: 16px 0 10px 10px;
               }
       
               p {
                 width: 100%;
                 font-size: 19px;
-                padding: 22px 0 0 0;
+                padding: 22px 0 10px 10px;
               }
             }
       
             &__group {
+              
               display: flex;
               align-items: center;
               width:70%;
             flex-wrap: wrap;
               gap: 20px;
               img{
-                width: 100%;
+                
               }
             }
           }
@@ -270,13 +275,14 @@
                 text-align: start;
                 line-height: normal;
                     width: 100%;
-                padding: 16px 0 10px 0;
+                padding: 16px 0 10px 10px;
               }
       
               p {
                 font-size: 16px;
                 width: 100%;
                 text-align: start;
+                padding: 0 0  10px 10px;
               }
             }
           }
@@ -295,12 +301,14 @@
               h3 {
                 width: 100%;
                 font-size: 26px;
+                padding: 16px 0 16px 10px;
+
               }
       
               p {
                 width: 100%;
                 font-size: 16px;
-                padding: 22px 0 0 0;
+                padding: 22px 0 10px 10px;
               }
             }
       
