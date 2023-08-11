@@ -9,6 +9,7 @@ import Students from "./students";
 import Otzyv from "./otzuv";
 import Quashin from "./quashin";
 import "./index.scss";
+import "./media.scss"
 import BegushiStrak from "./begushiStrak";
 import Probnyi from "./probnyiUrok";
 const OurSchool = () => {
