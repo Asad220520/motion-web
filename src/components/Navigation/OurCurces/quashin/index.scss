@@ -1,11 +1,20 @@
 #quashin{
   background: #F8F8F8;
   padding: 100px 0 100px 0;
+  .h2{
+    color: var(--unnamed, #EC3025);
+font-family: Muller;
+font-size: 36px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+padding: 0 0 0 60px;
+display: none;
+  }
   .quashin {
     display: flex;
     justify-content: space-between;
-    // height: 570px;
-    h1 {
+    &--h1 {
       color: var(--unnamed, #EC3025);
 font-family: Muller;
 font-size: 36px;
@@ -15,27 +24,24 @@ line-height: normal;
 padding: 0 0 0 60px;
     }
   
-    &--group {
-      margin: 0 0 0 40px;
   
+    &--group {
+      height: auto;
+      margin: 0 0 0 40px;
       &__block {
         color: rgb(27, 21, 21);
         width: 770px;
-        padding: 19px 0 38px 38px;
+        padding: 19px 0 38px 18px;
         box-sizing: border-box;
         margin: 0 0 20px 0;
         border-radius: 30px;
         transition: 0.4s ;
         background: #FFF;
         &--span {
-          position: relative;
           cursor: pointer;  
           .par {
-            position: absolute;
-            width: 95%;
-            
+            width: 100%;
           }
-          
           p {
             color: rgb(41, 40, 40);
             display: flex;
@@ -45,9 +51,7 @@ padding: 0 0 0 60px;
             height: 50%;
             padding: 0 25px 18px 0;
           }
-  
           span {
-            // color: rgb(38, 38, 38);
             color: rgb(41, 40, 40);
           }
         }
