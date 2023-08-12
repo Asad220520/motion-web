@@ -32,7 +32,7 @@ const ProgramKurs = () => {
         </div>
         <div 
          className="program--group">
-        <div  style={{
+        {/* <div  style={{
           transition:'.4s',
   height: blo2 ? "100%" : "100px",
   overflow: blo2 ? "" : "hidden",
@@ -74,7 +74,7 @@ const ProgramKurs = () => {
             <img src={figma} alt="img" />
             </div>  
           </div>
-        </div>
+        </div> */}
         <div  style={{
           transition:'.4s',
   height: blo1 ? "100%" : "100px",
