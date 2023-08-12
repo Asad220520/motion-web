@@ -252,8 +252,8 @@ const Quashin = () => {
               style={{
                 margin:
                   blo1 || blo2 || blo3 || blo4 || blo5 || blo6
-                    ? "0 0 50px 0"
-                    : "0 0 0 0",
+                    ? "0 auto 50px auto"
+                    : "0 auto 0 auto",
                 height: blo6 ? "30%" : "60px",
                 overflow: blo6 ? "" : "hidden",
                 borderRadius: blo6 ? "20px" : "30px",
