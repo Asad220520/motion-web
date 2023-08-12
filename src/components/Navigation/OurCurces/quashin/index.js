@@ -19,7 +19,7 @@ const Quashin = () => {
           <div className="quashin--group">
             <div
               style={{
-                height: blo1 ? "90%" : "60px",
+                height: blo1 ? "30%" : "60px",
                 overflow: blo1 ? "" : "hidden",
                 borderRadius: blo1 ? "20px" : "30px",
               }}
@@ -66,7 +66,7 @@ const Quashin = () => {
             </div>
             <div
               style={{
-                height: blo2 ? "100%" : "60px",
+                height: blo2 ? "30%" : "60px",
                 overflow: blo2 ? "" : "hidden",
                 borderRadius: blo2 ? "20px" : "30px",
               }}
@@ -112,7 +112,7 @@ const Quashin = () => {
 
             <div
               style={{
-                height: blo3 ? "100%" : "60px",
+                height: blo3 ? "30%" : "60px",
                 overflow: blo3 ? "" : "hidden",
                 borderRadius: blo3 ? "20px" : "30px",
               }}
@@ -160,7 +160,7 @@ const Quashin = () => {
 
             <div
               style={{
-                height: blo4 ? "100%" : "60px",
+                height: blo4 ? "30%" : "60px",
                 overflow: blo4 ? "" : "hidden",
                 borderRadius: blo4 ? "20px" : "30px",
               }}
@@ -205,7 +205,7 @@ const Quashin = () => {
 
             <div
               style={{
-                height: blo5 ? "100%" : "60px",
+                height: blo5 ? "30%" : "60px",
                 overflow: blo5 ? "" : "hidden",
                 borderRadius: blo5 ? "20px" : "30px",
               }}
@@ -254,7 +254,7 @@ const Quashin = () => {
                   blo1 || blo2 || blo3 || blo4 || blo5 || blo6
                     ? "0 0 50px 0"
                     : "0 0 0 0",
-                height: blo6 ? "100%" : "60px",
+                height: blo6 ? "30%" : "60px",
                 overflow: blo6 ? "" : "hidden",
                 borderRadius: blo6 ? "20px" : "30px",
               }}
