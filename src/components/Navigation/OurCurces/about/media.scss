@@ -1,46 +1,21 @@
 @media (max-width: 490px) {
-    .aboutcurs{
-        &--block{
-            display: flex;
-            // text-align: center;
-        flex-direction: column;
-        gap: 10px;
-        &__text{
-            width: 428px;   
-            gap: 14px;
-           
-            h3{
-                width: 90%;
-            }
-            p{
-                width: 90%;
-            }
+  .aboutcurs {
+    &--block {
+      display: flex;
+      // text-align: center;
+      flex-direction: column;
+      gap: 10px;
+      &__text {
+        width: 90%;
+        gap: 14px;
+
+        h3 {
+          width: 90%;
         }
+        p {
+          width: 90%;
         }
-        
+      }
     }
-}
-@media (max-width: 450px)  {
-    .aboutcurs{
-        &--block{
-            display: flex;
-            // text-align: center;
-        flex-direction: column;
-        gap: 10px;
-        &__text{
-            width: 299px;   
-            gap: 14px;
-           
-            h3{
-                font-size: 20px;
-                width: 90%;
-            }
-            p{
-                font-size: 16px;
-                width: 90%;
-            }
-        }
-        }
-        
-    }
+  }
 }

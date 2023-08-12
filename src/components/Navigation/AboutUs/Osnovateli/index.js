@@ -17,12 +17,12 @@ const Osnovateli = () => {
               </p>
             </div>
             <div className="osnovateli__block-img">
-              <div data-aos="fade-right">
+              <div>
                 <img src={person} alt="" />
                 <h1>Курманбек Жоошбаев</h1>
                 <p>Основатель</p>
               </div>
-              <div data-aos="fade-left">
+              <div>
                 <img src={person2} alt="" />
                 <h1>Канатбек Аскеров</h1>
                 <p>Сооснователь</p>
