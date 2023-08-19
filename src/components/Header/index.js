@@ -11,7 +11,7 @@ const Header = () => {
     event.preventDefault();
     const footer = document.getElementById("contact");
     footer.scrollIntoView({ behavior: "smooth" });
-    footer.style.padding = '50px 0'
+    footer.style.padding = "50px 0";
   };
 
   const nav = useNavigate();
@@ -19,7 +19,6 @@ const Header = () => {
   const [colo, setColo] = useState(1);
   const { id } = useParams();
 
-  
   const navRef = useRef();
   const showBurger = () => {
     navRef.current.classList.toggle("responsive_nav");
@@ -70,7 +69,7 @@ const Header = () => {
                       setColo(1);
                       nav("/disain");
                       setModal(false);
-                      showBurger()
+                      showBurger();
                     }}
                     className="li"
                     style={{
