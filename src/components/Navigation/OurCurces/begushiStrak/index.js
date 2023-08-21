@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./index.scss";
 import "./media.scss"
-import beg1 from "../../../../img/бегу.png";
+import beg1 from "../../../../img/beg.png";
 import beg2 from "../../../../img/бегу 2.png";
 
 const BegushiStrak = () => {
