@@ -3,11 +3,12 @@ import "./index.scss";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import BlogProf from "../../BlogProf";
+import { BASE_URL } from "../../../../../API";
 const DetailFront = () => {
   const { id } = useParams();
   const [blogDetail, setBlogDetail] = useState({});
   useEffect(() => {
-    axios(`http://3.83.165.209/api/v1/blog/post/${id}/`).then((res) =>
+    axios(`${BASE_URL}/blog/post/${id}/`).then((res) =>
       setBlogDetail(res.data)
     );
   }, []);

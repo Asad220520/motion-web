@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./index.scss";
 import axios from "axios";
+import { BASE_URL } from "../../../../API";
 const Galerea = () => {
   const [osnov, setOsnov] = useState([]);
   useEffect(() => {
-    axios(`http://3.83.165.209/api/v1/blog/about-us-gallery/`)
+    axios(`${BASE_URL}/blog/about-us-gallery/`)
       .then((res) => setOsnov(res.data.results))
       .catch((err) => console.log(err));
   }, []);
@@ -16,7 +17,7 @@ const Galerea = () => {
           <div className="galerea__block">
             <h1 className="a">Галерия</h1>
             {osnov.map((el) => (
-              <img src={el.image} alt="" />
+              <img key={el.id} src={el.image} alt="" />
             ))}
             {/* <p className="b">Показать ещё</p> */}
           </div>

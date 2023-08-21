@@ -12,7 +12,7 @@ const GoodCard = ({ el }) => {
             </Link>
           </div>
           <div data-aos="flip-left" className="goodCard__title">
-            <h3>{el.title}</h3>
+            <h3>{el.best_title}</h3>
             <p>{el.descriptions.map((el) => el.description)}</p>
           </div>
         </div>

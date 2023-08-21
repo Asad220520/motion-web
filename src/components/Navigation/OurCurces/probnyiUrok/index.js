@@ -2,21 +2,21 @@ import React, { useEffect, useState } from "react";
 import "./index.scss";
 import boy from "../../../../img/boy.png";
 import axios from "axios";
+import { BASE_URL } from "../../../../API";
 
 const Probnyi = () => {
   const [bob, setBob] = useState([]);
   useEffect(() => {
-    axios(`http://13.48.46.219/api/v1/courses/triallesson/`).then((res) =>
+    axios(`${BASE_URL}/courses/triallesson/`).then((res) =>
       setBob(res.data.results)
     );
   }, []);
-  console.log("prob", bob);
 
   return (
     <div id="probnyi">
       <div className="container">
         {bob.map((el) => (
-          <div className="probnyi">
+          <div key={el.id} className="probnyi">
             <div className="probnyi--block">
               <img src={boy} alt="img" />
               <p>Kрууутоо...</p>

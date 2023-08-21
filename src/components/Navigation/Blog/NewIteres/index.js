@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import NewCart from "./NewCart";
 import "./index.scss";
 import axios from "axios";
+import { BASE_URL } from "../../../../API";
 const NewInteres = () => {
   const [newDate, setNewDate] = useState([]);
   const news = async () => {
-    const res = await axios(`http://3.83.165.209/api/v1/blog/news/`);
+    const res = await axios(`${BASE_URL}/blog/news/`);
     const { data } = res;
     setNewDate(data.results);
   };

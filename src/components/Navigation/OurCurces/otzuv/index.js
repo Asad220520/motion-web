@@ -1,41 +1,35 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./index.scss";
-import "./media.scss"
+import "./media.scss";
 import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
-import ot from "../../../../img/ot.png";
-import Slider from "react-slick";
+import axios from "axios";
+import { BASE_URL } from "../../../../API";
 
 const Otzyv = () => {
-  const sliderRef = useRef(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [videos, setVideos] = useState([]);
+  useEffect(() => {
+    axios(`${BASE_URL}/blog/reviews/`).then((res) =>
+      setVideos(res.data.results)
+    );
+  }, []);
 
-  const handleNextButtonClick = () => {
-    sliderRef.current.slickNext();
-    setCurrentIndex((prevIndex) => prevIndex + 1);
+  const [currentPage, setCurrentPage] = useState(0);
+  const videosPerPage = 3;
+  const totalVideos = videos.length;
+  const totalPages = Math.ceil(totalVideos / videosPerPage);
+
+  const handleNextSlide = () => {
+    setCurrentPage((prevPage) => (prevPage + 1) % totalPages);
   };
 
-  const handlePrevButtonClick = () => {
-    sliderRef.current.slickPrev();
-    setCurrentIndex((prevIndex) => prevIndex - 1);
+  const handlePrevSlide = () => {
+    setCurrentPage((prevPage) =>
+      prevPage === 0 ? totalPages - 1 : prevPage - 1
+    );
   };
 
-  const settings = {
-    ref: sliderRef,
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 905,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  };
+  const startIndex = currentPage * videosPerPage;
+  const visibleVideos = videos.slice(startIndex, startIndex + videosPerPage);
 
   return (
     <div id="otzyv">
@@ -44,28 +38,26 @@ const Otzyv = () => {
           <div className="otzyv--text">
             <h3>Отзывы студентов</h3>
             <div className="otzyv--text__icon">
-              <HiArrowLongLeft
-                className={`icon ${currentIndex === 0 ? "disabled" : ""}`}
-                onClick={handlePrevButtonClick}
-              />
-              <HiArrowLongRight
-                className={`icon ${currentIndex === 2 ? "disabled" : ""}`}
-                onClick={handleNextButtonClick}
-              />
+              <div className="icon" onClick={handlePrevSlide}>
+                <HiArrowLongLeft />
+              </div>
             </div>
           </div>
           <div className="otzyv--slid">
-            <Slider {...settings} className="otzyv--slid__group">
-              <div className="otzyv--slid__block">
-                <img src={ot} alt="img" />
-              </div>
-              <div className="otzyv--slid__block">
-                <img src={ot} alt="img" />
-              </div>
-              <div className="otzyv--slid__block">
-                <img src={ot} alt="img" />
-              </div>
-            </Slider>
+            <div className="otzyv--slid__group">
+              {visibleVideos.map((el, i) => (
+                <div key={i} className="otzyv--slid__block">
+                  <video className="otzyv--slid__block-vid" controls>
+                    <source className="vidi" src={el.file} type="video/mp4" />
+                  </video>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="otzyv--text__icon">
+            <div className="icon" onClick={handleNextSlide}>
+              <HiArrowLongRight />
+            </div>
           </div>
         </div>
       </div>

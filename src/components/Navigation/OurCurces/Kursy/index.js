@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.scss";
-import "./media.scss"
+import "./media.scss";
 import { useNavigate } from "react-router-dom";
 
 const Kursy = ({ el }) => {
@@ -11,6 +11,7 @@ const Kursy = ({ el }) => {
         <div className="izyk--front">
           <div className="izyk--front__block">
             <img
+              key={el.id}
               className="izyk--front__block--img"
               src={el.images.map((el) => el.image)}
               alt="img"
@@ -21,7 +22,7 @@ const Kursy = ({ el }) => {
             <p>{el.description}</p>
             <div className="izyk--front__group--btns">
               {el.courses_stacks.map((el) => (
-                <button>{el.stack}</button>
+                <button key={el.id}>{el.stack}</button>
               ))}
             </div>
             <div className="izyk--front__group--btn">

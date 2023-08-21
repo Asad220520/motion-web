@@ -1,8 +1,10 @@
 import React from "react";
 import "./index.scss";
-import "./media.scss"
+import "./media.scss";
+import { useNavigate } from "react-router-dom";
 
 const AboutCurs = () => {
+  const nav = useNavigate();
   return (
     <div className="container">
       <div className="aboutcurs">
@@ -19,7 +21,7 @@ const AboutCurs = () => {
               лучшие практики офлайн — и онлайн-образования и таким образом
               достичь высоких результатов.
             </p>
-            <button>Подробнее</button>
+            <button onClick={() => nav("/aboutUs")}>Подробнее</button>
           </div>
         </div>
       </div>

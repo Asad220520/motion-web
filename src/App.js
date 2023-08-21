@@ -28,10 +28,10 @@ function App() {
           <Route path="/club" element={<Club />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/detailsIscl/:id" element={<DetailFront />} />
-          <Route path="/fr  ont/:id" element={<KursFront />} />
-          <Route path="/disain" element={<KursFront />} />
-          <Route path="/bekend" element={<BekenDetal />} />
-          <Route path="/frontt" element={<DisainDetal />} />
+          <Route path="/front/:id" element={<KursFront />} />
+          {/* <Route path="/disain" element={<KursFront />} /> */}
+          {/* <Route path="/bekend" element={<BekenDetal />} /> */}
+          {/* <Route path="/frontt" element={<DisainDetal />} /> */}
         </Routes>
       </div>
       <Contact />

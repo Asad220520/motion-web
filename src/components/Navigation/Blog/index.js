@@ -6,19 +6,18 @@ import Front from "./Front";
 import GoodState from "./GoodState";
 import NewInteres from "./NewIteres";
 import Loading from "../../Loading";
-import Footer from "../../Footer";
-import Header from "../../Header";
+import { BASE_URL } from "../../../API";
 
 const Blog = () => {
   const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
   const itemsPerPage = 4;
-  window.scroll(0,0)
+  window.scroll(0, 0);
   const getBlog = () => {
     setIsLoading(true);
     axios
-      .get(`http://3.83.165.209/api/v1/blog/posts?page=${currentPage}`)
+      .get(`${BASE_URL}/blog/posts?page=${currentPage}`)
       .then((res) => {
         const newPosts = Array.isArray(res.data.results)
           ? res.data.results
