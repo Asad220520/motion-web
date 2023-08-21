@@ -14,13 +14,14 @@ const Blog = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
   const { language } = useContext(LanguageContext);
-
+  console.log(posts);
+  
   const itemsPerPage = 4;
   window.scroll(0, 0);
   const getBlog = () => {
     setIsLoading(true);
     axios
-      .get(`${BASE_URL}/${language}/api/v1/blog/posts?page=${currentPage}`)
+      .get(`${BASE_URL}/api/v1/blog/posts?page=${currentPage}`)
       .then((res) => {
         const newPosts = Array.isArray(res.data.results)
           ? res.data.results
