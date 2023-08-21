@@ -1,10 +1,10 @@
 import React from "react";
 import "./index.scss";
-import "./media.scss";
 import { useNavigate } from "react-router-dom";
 
 const Kursy = ({ el }) => {
   const nav = useNavigate();
+
   return (
     <div id="kursy">
       <div className="izyk">
@@ -13,7 +13,7 @@ const Kursy = ({ el }) => {
             <img
               key={el.id}
               className="izyk--front__block--img"
-              src={el.images.map((el) => el.image)}
+              src={el.images[0]?.image || ""}
               alt="img"
             />
           </div>

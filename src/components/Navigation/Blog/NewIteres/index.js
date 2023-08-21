@@ -1,20 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import NewCart from "./NewCart";
 import "./index.scss";
 import axios from "axios";
 import { BASE_URL } from "../../../../API";
+import { LanguageContext } from "../../../../context";
 const NewInteres = () => {
   const [newDate, setNewDate] = useState([]);
+  const { language } = useContext(LanguageContext);
+
   const news = async () => {
-    const res = await axios(`${BASE_URL}/blog/news/`);
+    const res = await axios(`${BASE_URL}/${language}/api/v1/blog/news/`);
     const { data } = res;
     setNewDate(data.results);
   };
   useEffect(() => {
     news();
-  }, []);
-  console.log("new", newDate);
-
+  }, [language]);
   return (
     <div id="newInteres">
       <div className="container">

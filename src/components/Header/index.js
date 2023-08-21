@@ -1,10 +1,10 @@
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { Link, NavLink, useNavigate, useParams } from "react-router-dom";
 import "./index.scss";
 import { GrClose, GrLanguage } from "react-icons/gr";
 import { GiHamburgerMenu } from "react-icons/gi";
 import logo from "../../img/logo.png";
-// import { useDispatch, useSelector } from "react-redux";
+import { LanguageContext } from "../../context";
 
 const Header = () => {
   const handleContactClick = (event) => {
@@ -18,11 +18,18 @@ const Header = () => {
   const [modal, setModal] = useState(false);
   const [colo, setColo] = useState(1);
   const { id } = useParams();
-
   const navRef = useRef();
+
+  const { language, setLanguage } = useContext(LanguageContext);
+  const handleLanguageChange = (selectedLanguage) => {
+    setLanguage(selectedLanguage);
+  };
+
   const showBurger = () => {
     navRef.current.classList.toggle("responsive_nav");
   };
+  console.log('lan', language);
+  
   return (
     <div id="header">
       <div className="container">
@@ -146,14 +153,24 @@ const Header = () => {
             </ul>
             <div className="nav__language">
               <GrLanguage className="icon" />
-              <span>КР /</span>
-              <span>РУС /</span>
-              <span>ENG /</span>
-              <ul onClick={showBurger} className="nav-btn">
-                <li></li>
-                <li className="li"></li>
-                <li></li>
-              </ul>
+              <span
+                className={language === "kg" ? "selected" : ""}
+                onClick={() => handleLanguageChange("kg")}
+              >
+                КР&nbsp;/
+              </span>
+              <span
+                className={language === "ru" ? "selected" : ""}
+                onClick={() => handleLanguageChange("ru")}
+              >
+                РУС&nbsp;/
+              </span>
+              <span
+                className={language === "en" ? "selected" : ""}
+                onClick={() => handleLanguageChange("en")}
+              >
+                ENG&nbsp;/
+              </span>
             </div>
           </nav>
         </div>

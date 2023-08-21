@@ -1,113 +1,191 @@
 #probnyi {
   background: #efefef;
 
-  .probnyi {
+  .container {
     display: flex;
-    justify-content: center;
-    padding: 120px 0 120px 0;
-    gap: 35px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px;
+
+    .probnyi {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #ff563f;
+      gap: 35px;
+      border-radius: 30px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+      padding: 50px;
+      margin: 20px 0;
+
+      &--block {
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        background: linear-gradient(
+          130deg,
+          #000 35.42%,
+          rgba(31, 31, 31, 0.9) 100%
+        );
+        border-radius: 30px;
+        width: 100%;
+        height: 186px;
+
+        img {
+          width: 220px;
+          z-index: 2;
+        }
+
+        p {
+          position: absolute;
+          bottom: 20px;
+          right: 20px;
+          z-index: 1;
+          padding: 10px 20px;
+          border-radius: 30px;
+          background: #4886ff;
+          color: #fff;
+          font-size: 20px;
+          transform: rotate(-19deg);
+        }
+      }
+
+      &--text {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+
+        &--group {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          h2 {
+            color: #fff;
+            font-size: 28px;
+          }
+
+          p {
+            color: rgba(255, 255, 255, 0.8);
+            // font-size: 16px;
+          }
+        }
+
+        &--group2 {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          h2 {
+            color: #fff;
+            font-size: 28px;
+
+            p {
+              color: #fff;
+              // font-size: 16px;
+            }
+          }
+
+          button {
+            color: #ff563f;
+            border-radius: 44px;
+            padding: 10px;
+            background: #f8f8f8;
+            font-size: 16px;
+            transition: background-color 0.4s, color 0.4s, border 0.4s;
+
+            &:hover {
+              background: #ff563f;
+              color: #fff;
+              border: 1px solid #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  #probnyi .container {
+    padding: 30px;
+  }
+
+  .probnyi {
+    padding: 30px;
 
     &--block {
-      height: 186px;
-      width: 340px;
-      border-radius: 30px;
-      background: var(
-        --blck,
-        linear-gradient(130deg, #000 35.42%, rgba(31, 31, 31, 0.9) 100%)
-      );
-      align-self: flex-end;
-      position: relative;
+      height: 150px;
+      width: 260px;
 
       img {
-        margin-top: -145px;
-        margin-left: 25px;
-        z-index: 2;
-        width: 220px;
-        position: relative;
+        width: 180px;
       }
 
       p {
-        right: 20px;
-        bottom: 52px;
-        z-index: 1;
-        transform: rotate(-19deg);
-        position: absolute;
-        color: #fff;
-        padding: 10px 20px;
-        border-radius: 30px;
-        background: #4886ff;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 400;
+        font-size: 18px;
+        padding: 8px 16px;
       }
     }
 
     &--text {
-      display: flex;
-      align-items: center;
-      width: 700px;
-      height: 330px;
-      border-radius: 30px;
-      background: var(--2, #ff563f);
-      padding: 0 0 0 39px;
-      box-sizing: border-box;
-
       &--group {
-        display: flex;
-        width: 303px;
-        flex-direction: column;
-        justify-content: center;
-        padding: 0 0 35px 0;
-
         h2 {
-          color: #fff;
-          font-size: 32px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal;
-          padding: 0 0 15px 0;
+          font-size: 24px;
         }
 
         p {
-          color: rgba(255, 255, 255, 0.8);
-          font-size: 17.5px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 140%;
+          font-size: 14px;
         }
       }
 
       &--group2 {
-        width: 341px;
-        padding: 0 0 0 15px;
-
         h2 {
-          color: #fff;
-          // width: 353px;
-          font-size: 32px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 120%;
+          font-size: 24px;
+
+          p {
+            font-size: 14px;
+          }
         }
 
         button {
-          color: #f00;
-          border-radius: 44px;
-          width: 300px;
-          height: 40px;
-          margin: 30px 0 0 0;
-          background: var(--unnamed, #f8f8f8);
+          font-size: 14px;
+          padding: 8px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #probnyi .container {
+    justify-content: center;
+  }
+
+  .probnyi {
+    width: 100%;
+    max-width: 350px;
+
+    &--text {
+      &--group {
+        h2 {
           font-size: 20px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal;
-          transition: 0.4s;
         }
 
-        button:hover {
-          background: var(--2, #ff563f);
-          color: rgb(255, 255, 255);
-          border: 1px solid rgb(255, 255, 255);
+        p {
+          font-size: 14px;
+        }
+      }
+
+      &--group2 {
+        h2 {
+          font-size: 20px;
+        }
+
+        button {
+          font-size: 14px;
+          padding: 8px;
         }
       }
     }

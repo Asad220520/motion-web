@@ -1,17 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./index.scss";
 import "./media.scss";
 import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
 import axios from "axios";
 import { BASE_URL } from "../../../../API";
+import { LanguageContext } from "../../../../context";
 
 const Otzyv = () => {
   const [videos, setVideos] = useState([]);
+  const { language } = useContext(LanguageContext);
+
   useEffect(() => {
-    axios(`${BASE_URL}/blog/reviews/`).then((res) =>
+    axios(`${BASE_URL}/${language}/api/v1/blog/reviews/`).then((res) =>
       setVideos(res.data.results)
     );
-  }, []);
+  }, [language]);
 
   const [currentPage, setCurrentPage] = useState(0);
   const videosPerPage = 3;

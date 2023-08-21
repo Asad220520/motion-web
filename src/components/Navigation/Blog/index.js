@@ -1,5 +1,5 @@
 import "./index.scss";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import BlogProf from "./BlogProf";
 import Front from "./Front";
@@ -7,17 +7,20 @@ import GoodState from "./GoodState";
 import NewInteres from "./NewIteres";
 import Loading from "../../Loading";
 import { BASE_URL } from "../../../API";
+import { LanguageContext } from "../../../context";
 
 const Blog = () => {
   const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
+  const { language } = useContext(LanguageContext);
+
   const itemsPerPage = 4;
   window.scroll(0, 0);
   const getBlog = () => {
     setIsLoading(true);
     axios
-      .get(`${BASE_URL}/blog/posts?page=${currentPage}`)
+      .get(`${BASE_URL}/${language}/api/v1/blog/posts?page=${currentPage}`)
       .then((res) => {
         const newPosts = Array.isArray(res.data.results)
           ? res.data.results
@@ -41,7 +44,7 @@ const Blog = () => {
 
   useEffect(() => {
     getBlog();
-  }, [currentPage]);
+  }, [currentPage, language]);
 
   const handleLoadMore = () => {
     setCurrentPage((prevPage) => prevPage + 1);
