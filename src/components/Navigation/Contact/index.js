@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import axios from "axios";
 import "./index.scss";
 import smail from "../../../img/smiling-face.png";
 import { BASE_URL } from "../../../API";
+import { LanguageContext } from "../../../context";
 const Contact = () => {
   const [modal, setModal] = useState(false);
   const [firstName, setFirstName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [email, setEmail] = useState("");
   const [isChecked, setIsChecked] = useState(false);
+  const { language } = useContext(LanguageContext);
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -17,7 +20,7 @@ const Contact = () => {
       phone_number: phoneNumber,
       email: email,
     };
-    const url = `${BASE_URL}/contacts/applications/`;
+    const url = `${BASE_URL}/${language}/api/v1/contacts/applications/`;
     axios
       .post(url, formData)
       .then((response) => {

@@ -1,15 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./index.scss";
 import axios from "axios";
 import { BASE_URL } from "../../../../API";
+import { LanguageContext } from "../../../../context";
 const Galerea = () => {
   const [osnov, setOsnov] = useState([]);
+  const { language } = useContext(LanguageContext);
   useEffect(() => {
-    axios(`${BASE_URL}/blog/about-us-gallery/`)
+    axios(`${BASE_URL}/${language}/api/v1/blog/about-us-gallery/`)
       .then((res) => setOsnov(res.data.results))
       .catch((err) => console.log(err));
-  }, []);
-  console.log(osnov);
+  }, [language]);
   return (
     <div id="galerea">
       <div className="container">

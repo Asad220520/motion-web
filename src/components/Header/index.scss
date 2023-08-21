@@ -61,6 +61,10 @@
         .icon {
           font-size: 18px;
         }
+        .selected {
+          color: blue; // или любой другой цвет подсветки
+          cursor: pointer;
+        }
 
         .nav-btn {
           padding: 5px;

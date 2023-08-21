@@ -1,16 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./index.scss";
 import boy from "../../../../img/boy.png";
 import axios from "axios";
 import { BASE_URL } from "../../../../API";
+import { LanguageContext } from "../../../../context";
 
 const Probnyi = () => {
   const [bob, setBob] = useState([]);
+  const { language } = useContext(LanguageContext);
+
   useEffect(() => {
-    axios(`${BASE_URL}/courses/triallesson/`).then((res) =>
+    axios(`${BASE_URL}/${language}/api/v1/courses/triallesson/`).then((res) =>
       setBob(res.data.results)
     );
-  }, []);
+  }, [language]);
 
   return (
     <div id="probnyi">
@@ -28,8 +31,8 @@ const Probnyi = () => {
               </div>
               <div className="probnyi--text--group2">
                 <h2>
-                  {el.date} в <p>{el.time}</p> мастер класс по{" "}
-                  <span>{el.name}</span>
+                  {el.date} в {el.time}
+                  <p>мастер класс по {el.name}</p>
                 </h2>
                 <button>Записаться</button>
               </div>
