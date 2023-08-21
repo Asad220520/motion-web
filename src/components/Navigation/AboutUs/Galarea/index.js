@@ -11,6 +11,8 @@ const Galerea = () => {
       .then((res) => setOsnov(res.data.results))
       .catch((err) => console.log(err));
   }, [language]);
+  console.log('osnoooov',osnov);
+  
   return (
     <div id="galerea">
       <div className="container">

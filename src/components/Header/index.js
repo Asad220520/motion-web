@@ -154,14 +154,14 @@ const Header = () => {
             <div className="nav__language">
               <GrLanguage className="icon" />
               <span
-                className={language === "kg" ? "selected" : ""}
-                onClick={() => handleLanguageChange("kg")}
+                className={language === "ky" ? "selected" : ""}
+                onClick={() => handleLanguageChange("ky")}
               >
                 КР&nbsp;/
               </span>
               <span
-                className={language === "ru" ? "selected" : ""}
-                onClick={() => handleLanguageChange("ru")}
+                className={language === "" ? "selected" : ""}
+                onClick={() => handleLanguageChange("")}
               >
                 РУС&nbsp;/
               </span>
@@ -171,6 +171,11 @@ const Header = () => {
               >
                 ENG&nbsp;/
               </span>
+              <ul onClick={showBurger} className="nav-btn">
+                <li></li>
+                <li className="li"></li>
+                <li></li>
+              </ul>
             </div>
           </nav>
         </div>

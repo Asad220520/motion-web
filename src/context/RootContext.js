@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { LanguageContext } from ".";
 
 const RootContext = ({children}) => {
-  const [language, setLanguage] = useState("ru");
+  const [language, setLanguage] = useState("");
   return (
     <LanguageContext.Provider
       value={{
