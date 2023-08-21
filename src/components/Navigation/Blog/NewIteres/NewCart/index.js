@@ -12,8 +12,8 @@ const NewCart = ({ ne }) => {
         </div>
         <div className="newCart__title">
           <h1>{ne.descriptions.map((el) => el.description)}</h1>
-          <p>Приложения</p>
-          <span> {ne.created_at}</span>
+          <p>{ne.news_title}</p>
+          <span> {ne.news_created_at}</span>
         </div>
       </div>
     </div>

@@ -2,12 +2,13 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import GoodCard from "./GoodCard";
 import "./index.scss";
+import { BASE_URL } from "../../../../API";
 
 const GoodState = () => {
   const [movies, setMovies] = useState([]);
   const getMovies = () => {
     axios
-      .get(`http://3.83.165.209/api/v1/blog/best-articles/`)
+      .get(`${BASE_URL}/blog/best-articles/`)
       .then((res) => setMovies(res.data.results))
       .catch((error) => {
         console.error("Error fetching additional movies:", error);
@@ -17,7 +18,8 @@ const GoodState = () => {
   useEffect(() => {
     getMovies();
   }, []);
-
+  console.log(movies);
+  
   return (
     <div id="goodState">
       <div className="container">

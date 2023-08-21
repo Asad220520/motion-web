@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./index.scss";
 import smail from "../../../img/smiling-face.png";
+import { BASE_URL } from "../../../API";
 const Contact = () => {
   const [modal, setModal] = useState(false);
   const [firstName, setFirstName] = useState("");
@@ -16,7 +17,7 @@ const Contact = () => {
       phone_number: phoneNumber,
       email: email,
     };
-    const url = "http://3.83.165.209/api/v1/contacts/applications/";
+    const url = `${BASE_URL}/contacts/applications/`;
     axios
       .post(url, formData)
       .then((response) => {

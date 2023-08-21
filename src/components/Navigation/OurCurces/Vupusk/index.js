@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
 import "./index.scss";
 import "./media.scss"
+// import { BASE_URL } from "../../../../API";
 // import axios from "axios";
 
 const Vupusk = () => {
-  // const [bob, setBob] = useState([]);
-  // useEffect(() => {
-  //   axios(`http://13.48.46.219/api/v1/courses/courses/`).then((res) =>
-  //     setBob(res.data.results)
-  //   );
-  // }, []);
-  // console.log('vupusk' ,bob);
+//   const [bob, setBob] = useState([]);
+//   useEffect(() => {
+//     axios(`${BASE_URL}/courses/courses/`).then((res) =>
+//       setBob(res.data.results)
+//     );
+//   }, []);
+//   console.log('vupusk' ,bob);
   return (
     <div className="container">
       <div className="vupusk">
