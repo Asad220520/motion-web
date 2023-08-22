@@ -33,13 +33,18 @@ const Otzyv = () => {
 
   const startIndex = currentPage * videosPerPage;
   const visibleVideos = videos.slice(startIndex, startIndex + videosPerPage);
-
   return (
     <div id="otzyv">
       <div className="container">
         <div className="otzyv">
           <div className="otzyv--text">
-            <h3>Отзывы студентов</h3>
+            <h3>
+              {language === ""
+                ? "Отзывы студентов"
+                : language === "ky"
+                ? "Талапкерлердин комментарийлери"
+                : "Student Reviews"}
+            </h3>
             <div className="otzyv--text__icon">
               <div className="icon" onClick={handlePrevSlide}>
                 <HiArrowLongLeft />

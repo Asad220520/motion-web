@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import black1 from "../../../../img/black1.png";
 import black2 from "../../../../img/black2.png";
 import black3 from "../../../../img/black3.png";
@@ -7,8 +7,11 @@ import black5 from "../../../../img/black5.png";
 import black6 from "../../../../img/back6.png";
 import black7 from "../../../../img/black7.png";
 import black8 from "../../../../img/black8.png";
+import { LanguageContext } from "../../../../context";
 
 const ProfilClub = () => {
+  const { language } = useContext(LanguageContext);
+
   return (
     <div id="himages">
       <div className="img">
@@ -23,11 +26,27 @@ const ProfilClub = () => {
       </div>
       <div className="himages">
         <h1>
-          Что такое
+          {language === ""
+            ? "Что такое"
+            : language === "ky"
+            ? "Эмне "
+            : "What is"}
           <br />
-          <span> IT Club</span>?
+          <span>
+            {language === ""
+              ? "IT Club"
+              : language === "ky"
+              ? "IT Клуб"
+              : "IT Club"}
+          </span>
         </h1>
-        <p>Лицензированная IT академия в Бишкеке</p>
+        <p>
+          {language === ""
+            ? "Лицензированная IT академия в Бишкеке"
+            : language === "ky"
+            ? "Лицензиялык IT академия Бишкекте"
+            : "Licensed IT academy in Bishkek"}
+        </p>
       </div>
     </div>
   );

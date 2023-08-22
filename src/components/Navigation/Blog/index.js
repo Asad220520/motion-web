@@ -15,13 +15,12 @@ const Blog = () => {
   const [isLoading, setIsLoading] = useState(false);
   const { language } = useContext(LanguageContext);
   console.log(posts);
-  
   const itemsPerPage = 4;
   window.scroll(0, 0);
   const getBlog = () => {
     setIsLoading(true);
     axios
-      .get(`${BASE_URL}/api/v1/blog/posts?page=${currentPage}`)
+      .get(`${BASE_URL}/${language}/api/v1/blog/posts?page=${currentPage}`)
       .then((res) => {
         const newPosts = Array.isArray(res.data.results)
           ? res.data.results
@@ -74,7 +73,13 @@ const Blog = () => {
           <div id="blog">
             <BlogProf />
             <div className="container">
-              <h1 data-aos="fade-right">Блоги</h1>
+              <h1 data-aos="fade-right">
+                {language === ""
+                  ? "Блоги"
+                  : language === "ky"
+                  ? "Блогдор"
+                  : "Blogs"}
+              </h1>
               <div className="blog">
                 {visiblePosts.map((post) => (
                   <div key={post.id}>
@@ -84,7 +89,11 @@ const Blog = () => {
               </div>
               {visiblePosts.length < posts.length && (
                 <button onClick={handleLoadMore} className="btn">
-                  больше
+                  {language === ""
+                    ? "Блоги"
+                    : language === "ky"
+                    ? "Блогдор"
+                    : "Blogs"}
                 </button>
               )}
             </div>

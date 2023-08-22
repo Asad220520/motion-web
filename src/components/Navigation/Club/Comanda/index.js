@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./index.scss";
 import comand from "../../../../img/comanda.png";
+import { LanguageContext } from "../../../../context";
 const Comanda = () => {
+  const { language } = useContext(LanguageContext);
+
   return (
     <div id="comanda">
       <div className="container">
         <div className="comanda">
-          <h1>Команда</h1>
+          <h1>
+            {language === ""
+              ? "Команда"
+              : language === "ky"
+              ? "Команда"
+              : "Team"}
+          </h1>{" "}
           <div className="comanda__img">
             <img src={comand} alt="" />
           </div>

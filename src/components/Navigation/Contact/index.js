@@ -46,10 +46,19 @@ const Contact = () => {
       <div className="container">
         <div className="contact">
           <div className="contact__title">
-            <h1>Оставить заявку на обучение или получить консультацию</h1>
+            <h1>
+              {language === ""
+                ? "Оставить заявку на обучение или получить консультацию"
+                : language === "ky"
+                ? "Окутуу үчүн мурожат коюу же көмөк алуу"
+                : "Leave a Request for Training or Get Consultation"}
+            </h1>
             <p>
-              Менеджер свяжется с вами в течение 30 минут и ответит на все
-              интересующие вопросы.
+              {language === ""
+                ? "Менеджер свяжется с вами в течение 30 минут и ответит на все интересующие вопросы."
+                : language === "ky"
+                ? "Менеджер 30 мүнөт ичинде сиз менен байланышат жана бардык суроолорго жооп берет."
+                : "A manager will contact you within 30 minutes and answer all your questions."}
             </p>
           </div>
           <form className="contact__form" onSubmit={handleSubmit}>
@@ -84,11 +93,23 @@ const Contact = () => {
                   onChange={(e) => setIsChecked(e.target.checked)}
                 />
                 <label htmlFor="check4">
-                  <span>Я соглашаюсь на обработку персональных данных</span>
+                  <span>
+                    {language === ""
+                      ? "Я соглашаюсь на обработку персональных данных"
+                      : language === "ky"
+                      ? "Менин шахсий маалыматтарды иштеликтөөгө риза болуп жатам"
+                      : "I agree to the processing of personal data"}
+                  </span>{" "}
                 </label>
               </li>
             </ul>
-            <button type="submit">Оставить заявку</button>
+            <button type="submit">
+              {language === ""
+                ? "Оставить заявку"
+                : language === "ky"
+                ? "Өтүүчүк калтыруу"
+                : "Submit Application"}
+            </button>{" "}
             <div
               style={{
                 display: modal ? "flex" : "none",
@@ -96,7 +117,13 @@ const Contact = () => {
               className="modal"
             >
               <img src={smail} alt="" />
-              <h2>Менеджер скоро свяжется с вами</h2>
+              <h2>
+                {language === ""
+                  ? "Менеджер скоро свяжется с вами"
+                  : language === "ky"
+                  ? "Менеджер чыгуу болот"
+                  : "Manager will contact you soon"}
+              </h2>{" "}
             </div>
           </form>
         </div>

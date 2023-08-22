@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./index.scss";
-import "./media.scss"
+import "./media.scss";
 import { GoChevronDown, GoChevronUp } from "react-icons/go";
+import { LanguageContext } from "../../../../context";
 
 const Quashin = () => {
   const [blo1, setBlo1] = useState(false);
@@ -10,12 +11,26 @@ const Quashin = () => {
   const [blo4, setBlo4] = useState(false);
   const [blo5, setBlo5] = useState(false);
   const [blo6, setBlo6] = useState(false);
+  const { language } = useContext(LanguageContext);
+
   return (
     <div id="quashin">
       <div className="container ">
-          <h1 className="h2">Частые вопросы</h1>
+        <h1 className="h2">
+          {language === ""
+            ? "Frequently Asked Questions"
+            : language === "ky"
+            ? "Кайталанган суроолор"
+            : "Frequently Asked Questions"}
+        </h1>
         <div className="quashin">
-          <h1 className="quashin--h1">Частые вопросы</h1>
+          <h1 className="quashin--h1">
+            {language === ""
+              ? "Frequently Asked Questions"
+              : language === "ky"
+              ? "Кайталанган суроолор"
+              : "Frequently Asked Questions"}
+          </h1>
           <div className="quashin--group">
             <div
               style={{
@@ -38,28 +53,29 @@ const Quashin = () => {
                 className="quashin--group__block--span"
               >
                 <p>
-                  Нужны ли начальные знания для учёбы?
+                  {language === ""
+                    ? "Нужны ли начальные знания для учёбы?"
+                    : language === "ky"
+                    ? "Окуу үчүн баштапкы билимдерге ишенбей болуу керек?"
+                    : "Do I need prior knowledge to start learning?"}
                   {blo1 ? (
                     <GoChevronUp style={{ fontSize: "25px" }} />
                   ) : (
                     <GoChevronDown style={{ fontSize: "25px" }} />
                   )}
                 </p>
-                <div 
-                 className="par">
+                <div className="par">
                   <span
                     style={{
                       transition: ".2s step-end",
                       opacity: blo1 ? "1" : "0",
                     }}
                   >
-                    Для учебы на курсе программирования обычно рекомендуется
-                    иметь базовые знания компьютера и уметь работать с
-                    операционной системой. Определенные курсы могут требовать
-                    предварительных знаний или навыков в определенных языках
-                    программирования или областях разработки. Однако, существуют
-                    и курсы, которые предназначены для начинающих и
-                    предоставляют все необходимые основы.
+                    {language === ""
+                      ? "Для учебы на курсе программирования обычно рекомендуется иметь базовые знания компьютера и уметь работать с операционной системой. Определенные курсы могут требовать предварительных знаний или навыков в определенных языках программирования или областях разработки. Однако, существуют и курсы, которые предназначены для начинающих и предоставляют все необходимые основы."
+                      : language === "ky"
+                      ? "Программалау курстарында окуу үчүн баштапкы билимдерге ээ болгондук жана операциялык система менен иштей алуу талап этилет. Базылык программалау же даярлыктардагы деңгээли билим же жетекчиликтерди талап кылууга болот. Анын бирок, жана канчалык баштоо учун курстар, бирок киргизгенчелер үчүн окуу үчүн бардык керек оңдуктарды берүүчү курстар болуп саналат."
+                      : "For learning in a programming course, it's usually recommended to have basic computer knowledge and be familiar with operating systems. Certain courses may require prior knowledge or skills in specific programming languages or development areas. However, there are also courses designed for beginners that provide all the necessary fundamentals."}
                   </span>
                 </div>
               </div>
@@ -85,7 +101,11 @@ const Quashin = () => {
                 className="quashin--group__block--span"
               >
                 <p>
-                  Как проходит консультация?
+                  {language === ""
+                    ? "Как проходит консультация?"
+                    : language === "ky"
+                    ? "Консультация кандай өткөрүлөт?"
+                    : "How does the consultation process work?"}
                   {blo2 ? (
                     <GoChevronUp style={{ fontSize: "25px" }} />
                   ) : (
@@ -99,12 +119,11 @@ const Quashin = () => {
                       opacity: blo2 ? "1" : "0",
                     }}
                   >
-                    Консультации на курсе программирования могут проходить в
-                    различных форматах, включая личные встречи,
-                    онлайн-конференции, чаты или форумы. Обычно студенты могут
-                    общаться с преподавателями, наставниками или соучастниками
-                    курса, чтобы получить ответы на вопросы, разъяснения
-                    материала или дополнительную поддержку.
+                    {language === ""
+                      ? "Консультации на курсе программирования могут проходить в различных форматах, включая личные встречи, онлайн-конференции, чаты или форумы. Обычно студенты могут общаться с преподавателями, наставниками или соучастниками курса, чтобы получить ответы на вопросы, разъяснения материала или дополнительную поддержку."
+                      : language === "ky"
+                      ? "Программалоо курстунда консультациялар адамдардын каалагына жаткан топтуу формаларда ооруган болушу мүмкүн, анын ичинде жеке кезектер, онлайн конференциялар, сүйлөшүүлөр мен форумдор кирет. Жалпы болгондо, студенттер суроолорго жооп берүү, мазмунду түшүндүрүү же кошумча дайындама алуу үчүн курстун окуучулары мен башкача кардарлар менен байланыша алат."
+                      : "Consultations in the programming course can take place in various formats, including personal meetings, online conferences, chats, or forums. Typically, students can communicate with instructors, mentors, or fellow course participants to get answers to questions, explanations of material, or additional support."}
                   </span>
                 </div>
               </div>
@@ -132,7 +151,11 @@ const Quashin = () => {
                 className="quashin--group__block--span"
               >
                 <p>
-                  Какой график обучения?
+                  {language === ""
+                    ? "Какой график обучения?"
+                    : language === "ky"
+                    ? "Окутуу демижи кандай?"
+                    : "What is the study schedule?"}
                   {blo3 ? (
                     <GoChevronUp style={{ fontSize: "25px" }} />
                   ) : (
@@ -146,13 +169,11 @@ const Quashin = () => {
                       opacity: blo3 ? "1" : "0",
                     }}
                   >
-                    Получится ли совмещать его с работо? График обучения может
-                    варьироваться в зависимости от курса и его формата.
-                    Некоторые курсы предлагают гибкий график, который позволяет
-                    студентам проходить материал в своем темпе, в то время как
-                    другие могут иметь определенные сроки и дедлайны. Если у вас
-                    есть работа, то лучше выбрать курс с гибким графиком, чтобы
-                    иметь возможность совмещать учебу и работу.
+                    {language === ""
+                      ? "Получится ли совмещать его с работой? График обучения может варьироваться в зависимости от курса и его формата. Некоторые курсы предлагают гибкий график, который позволяет студентам проходить материал в своем темпе, в то время как другие могут иметь определенные сроки и дедлайны. Если у вас есть работа, то лучше выбрать курс с гибким графиком, чтобы иметь возможность совмещать учебу и работу."
+                      : language === "ky"
+                      ? "Аны иш менен бирге камсыздоо болот му? Окутуу демижи курстун түрүне жатат менен айыр. Бирок, кечикти курстар окутуучуларга материалды тапшырып, анын темпинде окуй алуу мүмкүнчүлүгүн берет, бирок башка курстарда белгиленген убактылар жана дедлайндар болушу мүмкүн. Эгер ишиниз болсо, тандаган курсу кечикти демижи болгону менен, окутуу мен иштираакты бирге болуу мүмкүнчүлүгүн берет."
+                      : "Is it possible to combine it with work? The study schedule can vary depending on the course and its format. Some courses offer a flexible schedule that allows students to go through the material at their own pace, while others may have specific deadlines. If you have a job, it's better to choose a course with a flexible schedule to have the opportunity to balance studying and work."}
                   </span>
                 </div>
               </div>
@@ -180,7 +201,11 @@ const Quashin = () => {
                 className="quashin--group__block--span"
               >
                 <p>
-                  Мне помогут трудоустроится?
+                  {language === ""
+                    ? "Мне помогут трудоустроиться?"
+                    : language === "ky"
+                    ? "Мен ишке кабыл болууда көмөк көрсөтүлөт?"
+                    : "Will I receive assistance with job placement?"}{" "}
                   {blo4 ? (
                     <GoChevronUp style={{ fontSize: "25px" }} />
                   ) : (
@@ -194,10 +219,11 @@ const Quashin = () => {
                       opacity: blo4 ? "1" : "0",
                     }}
                   >
-                    Предоставляем помощь в трудоустройстве, предлагая ресурсы
-                    для поиска работы или установление контактов с
-                    работодателями. Однако, не все курсы предлагают гарантию
-                    трудоустройства.
+                    {language === ""
+                      ? "Предоставляем помощь в трудоустройстве, предлагая ресурсы для поиска работы или установление контактов с работодателями. Однако, не все курсы предлагают гарантию трудоустройства."
+                      : language === "ky"
+                      ? "Ишге кабыл болууда көмөк көрсөтүп, жумуш издөөсү үчүн ресурстарды калып көрсөтөт. Ал, бардык курстар жумуш кабыл алуугунун кепилгенчилигин калып көрсөтбөйт."
+                      : "We provide assistance in job placement by offering resources for job search or establishing contacts with employers. However, not all courses offer job placement guarantee."}
                   </span>
                 </div>
               </div>
@@ -225,7 +251,11 @@ const Quashin = () => {
                 className="quashin--group__block--span"
               >
                 <p>
-                  Кто мне поможет, если возникнут вопросы?
+                  {language === ""
+                    ? "Кто мне поможет, если возникнут вопросы?"
+                    : language === "ky"
+                    ? "Суроолор калганда мене ким көмөктөшөт?"
+                    : "Who will help me if I have questions?"}{" "}
                   {blo5 ? (
                     <GoChevronUp style={{ fontSize: "25px" }} />
                   ) : (
@@ -239,11 +269,11 @@ const Quashin = () => {
                       opacity: blo5 ? "1" : "0",
                     }}
                   >
-                    Курсы программирования обычно имеют команду преподавателей и
-                    наставников, которые готовы помочь вам с возникшими
-                    вопросами и трудностями. Они могут предоставить разъяснения
-                    материала, дать дополнительные примеры и объяснения, а также
-                    помочь в решении конкретных проблем.
+                    {language === ""
+                      ? "Курсы программирования обычно имеют команду преподавателей и наставников, которые готовы помочь вам с возникшими вопросами и трудностями. Они могут предоставить разъяснения материала, дать дополнительные примеры и объяснения, а также помочь в решении конкретных проблем."
+                      : language === "ky"
+                      ? "Программалаштыруу курслору обыктан курстукчулар менен кармаганчылардын жана жеңилдетүүчүлөрдүн байланыш катышуучулардын колдонушу менен бизге чыгарылган суроолор жана чечимдер менен кабыл алуу. Алар материалды түшүндүрүү, кошумча мисалдар менен жана түшүндүрүүлөр менен кабыл алуу, анан дагы окуяларды жана анын карындаштарын жардам менен жана конкреттүү чечимдерди жактырмаңыз."
+                      : "Programming courses usually have a team of instructors and mentors who are ready to help you with your questions and difficulties. They can provide explanations of the material, give additional examples and explanations, as well as assist you in solving specific problems."}
                   </span>
                 </div>
               </div>
@@ -272,7 +302,11 @@ const Quashin = () => {
                 className="quashin--group__block--span"
               >
                 <p>
-                  Какая техника нужна для обучения?
+                  {language === ""
+                    ? "Какая техника нужна для обучения?"
+                    : language === "ky"
+                    ? "Окутууга кандай техника керек?"
+                    : "What equipment is needed for learning?"}{" "}
                   {blo6 ? (
                     <GoChevronUp style={{ fontSize: "25px" }} />
                   ) : (
@@ -286,11 +320,11 @@ const Quashin = () => {
                       opacity: blo6 ? "1" : "0",
                     }}
                   >
-                    Необходим компьютер или ноутбук с доступом в Интернет, чтобы
-                    получить доступ к материалам курса, выполнять задания и
-                    практиковаться в программировании. Желательно, чтобы ноутбук
-                    был достаточно мощным, чтобы запускать современные
-                    инструменты и среды разработки.
+                    {language === ""
+                      ? "Необходим компьютер или ноутбук с доступом в Интернет, чтобы получить доступ к материалам курса, выполнять задания и практиковаться в программировании. Желательно, чтобы ноутбук был достаточно мощным, чтобы запускать современные инструменты и среды разработки."
+                      : language === "ky"
+                      ? "Курска жетү үчүн интернетке киришге болгон компьютер же ноутбук, аткарууларды ооруштуруу жана программалоо менен биргеликте болуу өчүрүүчү. Ноутбукту бош салганда, соода аткаруулары менен жана даярдалган жасалгандарды иштетүү үчүн жеткиликтүү болушу мүмкүн."
+                      : "You'll need a computer or laptop with internet access to access the course materials, complete assignments, and practice programming. It's preferable for the laptop to be powerful enough to run modern tools and development environments."}
                   </span>
                 </div>
               </div>
