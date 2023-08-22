@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import black1 from "../../../../img/black1.png";
 import black2 from "../../../../img/black2.png";
 import black3 from "../../../../img/black3.png";
@@ -7,8 +7,10 @@ import black5 from "../../../../img/black5.png";
 import black6 from "../../../../img/back6.png";
 import black7 from "../../../../img/black7.png";
 import black8 from "../../../../img/black8.png";
+import { LanguageContext } from "../../../../context";
 
 const BlogProf = () => {
+  const { language } = useContext(LanguageContext);
   return (
     <div id="himages">
       <div className="img">
@@ -23,10 +25,24 @@ const BlogProf = () => {
       </div>
       <div className="himages">
         <h1>
-          MOTION WEB <br />
-          <span> IT </span>ACADEMY
+          {language === "" ? (
+            <>
+              MOTION WEB <br />
+              <span> IT </span>ACADEMY
+            </>
+          ) : language === "ky" ? (
+            <>
+              MOTION WEB <br />
+              <span> IT </span>АКАДЕМИЯ
+            </>
+          ) : (
+            <>
+              MOTION WEB <br />
+              <span> IT </span>ACADEMY
+            </>
+          )}
         </h1>
-        <p>Лицензированная IT академия в Бишкеке</p>
+        <p>Лицензированная IT академия в Бишкеке</p>
       </div>
     </div>
   );

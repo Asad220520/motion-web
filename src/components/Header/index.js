@@ -28,8 +28,8 @@ const Header = () => {
   const showBurger = () => {
     navRef.current.classList.toggle("responsive_nav");
   };
-  console.log('lan', language);
-  
+  console.log("lan", language);
+
   return (
     <div id="header">
       <div className="container">
@@ -41,12 +41,20 @@ const Header = () => {
             <ul ref={navRef} className="menu">
               <li className="menu__item" onClick={showBurger}>
                 <NavLink to={"/"} className="menu__link">
-                  Главное
+                  {language === ""
+                    ? "Главное"
+                    : language === "ky"
+                    ? "Негизги"
+                    : "Main"}
                 </NavLink>
               </li>
               <li className="menu__item" onClick={showBurger}>
                 <NavLink to={"/aboutUs"} className="menu__link">
-                  О нас
+                  {language === ""
+                    ? "О нас"
+                    : language === "ky"
+                    ? "биз жонундо"
+                    : "About Us"}
                 </NavLink>
               </li>
               <li className="okurs" style={{ position: "relative" }}>
@@ -55,7 +63,11 @@ const Header = () => {
                   to={"/frontt"}
                   className="menu__link"
                 >
-                  О курсах
+                  {language === ""
+                    ? " О курсах"
+                    : language === "ky"
+                    ? "курс жонундо"
+                    : "About courses"}
                 </NavLink>
                 <ul
                   className="ulgr"
@@ -132,7 +144,11 @@ const Header = () => {
               </li>
               <li className="menu__item" onClick={showBurger}>
                 <NavLink to={"/club"} className="menu__link">
-                  Клуб
+                  {language === ""
+                    ? "Клуб"
+                    : language === "ky"
+                    ? "Клуб"
+                    : "Club"}
                 </NavLink>
               </li>
               <li className="menu__item" onClick={showBurger}>
@@ -141,12 +157,20 @@ const Header = () => {
                   className="menu__link"
                   onClick={handleContactClick}
                 >
-                  Контакты
+                  {language === ""
+                    ? "Контакты"
+                    : language === "ky"
+                    ? "Байланыштар"
+                    : "Contacts"}
                 </a>
               </li>
               <li className="menu__item" onClick={showBurger}>
                 <NavLink to={"/blog"} className="menu__link">
-                  Блог
+                  {language === ""
+                    ? "Блог"
+                    : language === "ky"
+                    ? "Блог"
+                    : "Blog"}
                 </NavLink>
               </li>
               <ul className="nav-btn nav-close-btn" onClick={showBurger}></ul>

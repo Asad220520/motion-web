@@ -21,7 +21,11 @@ const NewInteres = () => {
       <div className="container">
         <div className="block">
           <h1 className="h1" data-aos="fade-right">
-            Больше интересных новостей
+            {language === ""
+              ? "Больше интересных новостей"
+              : language === "ky"
+              ? "Көбүрөөк маанилүү жаңылыктар"
+              : "More Interesting News"}{" "}
           </h1>
           <div className="newInteres">
             {newDate.map((el) => (

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./index.scss";
 import black1 from "../../img/black1.png";
 import black2 from "../../img/black2.png";
@@ -8,6 +8,7 @@ import black5 from "../../img/black5.png";
 import black6 from "../../img/back6.png";
 import black7 from "../../img/black7.png";
 import black8 from "../../img/black8.png";
+import { LanguageContext } from "../../context";
 
 export const Himages = () => {
   const handleContactClick = (event) => {
@@ -15,6 +16,7 @@ export const Himages = () => {
     const footer = document.getElementById("contact");
     footer.scrollIntoView({ behavior: "smooth" });
   };
+  const { language } = useContext(LanguageContext);
   return (
     <div id="himages">
       <div className="img">
@@ -29,11 +31,35 @@ export const Himages = () => {
       </div>
       <div className="himages">
         <h1>
-          MOTION WEB <br />
-          <span> IT </span>ACADEMY
+          {language === ""
+            ? "МОУШН ВЕБ"
+            : language === "ky"
+            ? "МОУШН ВЕБ"
+            : "MOTION WEB"}
+          <br />
+          <span>
+            {language === "" ? "IT" : language === "ky" ? "IT" : "IT"}{" "}
+          </span>
+          {language === ""
+            ? "АКАДЕМИЯ"
+            : language === "ky"
+            ? "АКАДЕМИЯ"
+            : "ACADEMY"}
         </h1>
-        <p>Лицензированная IT академия в Бишкеке</p>
-        <button onClick={handleContactClick}>Оставить заявку</button>
+        <p>
+          {language === ""
+            ? "Лицензированная IT академия в Бишкеке"
+            : language === "ky"
+            ? "Лицензияланган IT академия Бишкекте"
+            : "Licensed IT academy in Bishkek"}
+        </p>
+        <button onClick={handleContactClick}>
+          {language === ""
+            ? "Оставить заявку"
+            : language === "ky"
+            ? "Калыпты билдирүү"
+            : "Leave an application"}
+        </button>
       </div>
     </div>
   );
