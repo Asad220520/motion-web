@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Question from "./Question";
 import Zoning from "./Zoning";
 import Comanda from "./Comanda";
@@ -7,9 +7,7 @@ import WhatYouGet from "./WhatYouGet";
 import ProfilClub from "./ProfilClub";
 
 const Club = () => {
-  useEffect(() => {
-    window.scroll(0, 0);
-  }, []);
+  window.scroll(0, 0);
   return (
     <div id="club">
       <div className="club">

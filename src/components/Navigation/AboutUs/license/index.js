@@ -21,7 +21,7 @@ const License = () => {
               {language === ""
                 ? "Наша программа по IT прошла проверку в Министерстве образования КР, что доказывает Motion web имеет право на:"
                 : language === "ky"
-                ? "Биздин IT программасы КР Тербиеши алып келди, бул Министерлик окуучулукка демонстрация берет, Моtion web ишенсе КРда менчик жатса:"
+                ? "Биздин IT программабыз Кыргыз Республикасынын Билим берүү министрлиги тарабынан сыналган, бул Motion web төмөнкүлөргө укуктуу экенин далилдейт:"
                 : "Our IT program has been approved by the Ministry of Education of the Kyrgyz Republic, proving that Motion web is entitled to:"}
             </p>
             <div className="license__title-wrap">
@@ -30,7 +30,7 @@ const License = () => {
                 {language === ""
                   ? "Обучать IT"
                   : language === "ky"
-                  ? "IT билелүү"
+                  ? "IT-ни уйротуу"
                   : "Teach IT"}
               </p>
             </div>
@@ -40,7 +40,7 @@ const License = () => {
                 {language === ""
                   ? "Направлять на обучение и стажировку за границу"
                   : language === "ky"
-                  ? "Тегерекке билелүү жана стажировкаго жөнөтүү"
+                  ? "Чет өлкөгө окууга жана стажировкага жөнөтүү"
                   : "Direct for education and internship abroad"}
               </p>
             </div>

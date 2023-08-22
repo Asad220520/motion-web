@@ -1,6 +1,5 @@
 import React from "react";
-import "./index.scss";
-import "./media.scss"
+import "./";
 import log from "../../../img/boy.png";
 
 const SvoiSait = () => {
@@ -34,3 +33,18 @@ const SvoiSait = () => {
 };
 
 export default SvoiSait;
+
+
+
+// import React from 'react'
+
+// const SvoiSait = () => {
+//   return (
+//     <div>
+      
+//     </div>
+//   )
+// }
+
+// export default SvoiSait
+

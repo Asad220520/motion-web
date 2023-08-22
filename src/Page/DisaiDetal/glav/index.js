@@ -1,5 +1,4 @@
 import React from "react";
-// import "./media.scss"
 import black1 from "../../../img/black1.png";
 import black2 from "../../../img/black2.png";
 import black3 from "../../../img/black3.png";
@@ -8,8 +7,7 @@ import black5 from "../../../img/black5.png";
 import black6 from "../../../img/back6.png";
 import black7 from "../../../img/black7.png";
 import black8 from "../../../img/black8.png";
-
-const Glav = () => {
+const Glav = ({ el }) => {
   const handleContactClick = (event) => {
     event.preventDefault();
     const footer = document.getElementById("contact");
@@ -29,15 +27,10 @@ const Glav = () => {
       </div>
       <div className="himages">
         <h1>
-          <span>FRONT</span>END
+          {el.name?.slice(0, 5)} <br />
+          <span>{el.name?.slice(5)}</span>
         </h1>
-        <p>
-          Frontend - это часть веб-разработки, которая отвечает за создание
-          пользовательского интерфейса и взаимодействие с пользователем в
-          браузере. Она включает в себя различные технологии, такие как HTML,
-          CSS и JavaScript, которые используются для создания структуры, стиля и
-          поведения веб-страниц.
-        </p>
+        <p>{el.why_we}</p>
         <button onClick={handleContactClick}>Оставить заявку</button>
       </div>
     </div>

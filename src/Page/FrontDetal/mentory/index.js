@@ -1,17 +1,19 @@
-import React from "react";
-import "./index.scss";
-import "./media.scss"
+import React, { useContext, useEffect, useState } from "react";
 import men from "../../../img/men.png";
 import vid from "../../../img/videoM.png";
-// import axios from "axios";
+import axios from "axios";
+import { LanguageContext } from "../../../context";
+import { BASE_URL } from "../../../API";
 const Mentory = () => {
-  // const [detail, setDetail] = useState({});
-  // useEffect(() => {
-  //   axios(`http://3.83.165.209/api/v1/courses/courses/4/`).then((res) =>
-  //     setDetail(res.data)
-  //   );
-  // }, []);
-  // console.log("diss", detail);
+  const [mentor, setMentor] = useState([]);
+  const { language } = useContext(LanguageContext);
+
+  useEffect(() => {
+    axios(`${BASE_URL}/${language}/api/v1/courses/courses/1/
+`).then((res) => setMentor(res.data));
+    window.scroll(0, 0);
+  }, [language]);
+  console.log(mentor);
   return (
     <div id="mentory">
       <div className="container">
@@ -24,7 +26,7 @@ const Mentory = () => {
               <div className="mentory--group__block--img">
                 <img src={men} alt="img" />
               </div>
-               <h3>Bekbolsun Nurgaziev</h3>
+              <h3>Ахырхан Кайратов</h3>
               <p>
                 Ментор по UI/UX дизайну. Работал в амерканской компании
                 и на фрилансе. На счёту 200+ успешных проектов.
@@ -34,7 +36,7 @@ const Mentory = () => {
               <div className="mentory--group__block--img">
                 <img src={men} alt="img" />
               </div>
-              <h3></h3>
+              <h3>Ахырхан Кайратов</h3>
               <p>
                 Ментор по UI/UX дизайну. Работал в амерканской компании
                 и на фрилансе. На счёту 200+ успешных проектов.
@@ -71,3 +73,4 @@ const Mentory = () => {
 };
 
 export default Mentory;
+

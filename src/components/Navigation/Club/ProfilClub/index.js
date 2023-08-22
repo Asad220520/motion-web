@@ -29,22 +29,22 @@ const ProfilClub = () => {
           {language === ""
             ? "Что такое"
             : language === "ky"
-            ? "Эмне "
+            ? "IT Клуб "
             : "What is"}
           <br />
           <span>
             {language === ""
-              ? "IT Club"
+              ? "IT Club ?"
               : language === "ky"
-              ? "IT Клуб"
-              : "IT Club"}
+              ? "деген эмне ?"
+              : "IT Club ?"}
           </span>
         </h1>
         <p>
           {language === ""
             ? "Лицензированная IT академия в Бишкеке"
             : language === "ky"
-            ? "Лицензиялык IT академия Бишкекте"
+            ? "Бишкектеги лицензияланган IT академиясы"
             : "Licensed IT academy in Bishkek"}
         </p>
       </div>

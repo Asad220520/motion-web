@@ -25,7 +25,7 @@ const Zoning = () => {
               {language === ""
                 ? "Каждую неделю"
                 : language === "ky"
-                ? "Жүмөшкөчө"
+                ? "жумад сайын"
                 : "Every week"}
             </span>
           </div>

@@ -22,19 +22,46 @@ const Probnyi = () => {
           <div key={el.id} className="probnyi">
             <div className="probnyi--block">
               <img src={boy} alt="img" />
-              <p>Kрууутоо...</p>
+              <p>
+                {language === ""
+                  ? "Крууутоо..."
+                  : language === "ky"
+                  ? "Крууутоо..."
+                  : "Awesome..."}
+              </p>
             </div>
             <div className="probnyi--text">
               <div className="probnyi--text--group">
-                <h2>ПРОБНЫЕ УРОКИ</h2>
+                <h2>
+                  {language === ""
+                    ? "ПРОБНЫЕ УРОКИ"
+                    : language === "ky"
+                    ? "СЫНОО САБАКТАРЫ"
+                    : "TRIAL LESSONS"}
+                </h2>
                 <p>{el.description}</p>
               </div>
               <div className="probnyi--text--group2">
                 <h2>
                   {el.date} в {el.time}
-                  <p>мастер класс по {el.name}</p>
+                  <p>
+                    {language === "" ? (
+                      <p> Мастер класс по {el.name}</p>
+                    ) : language === "ky" ? (
+                      <p> Мастер класстар {el.name}</p>
+                    ) : (
+                      <p> Masterclass in{el.name}</p>
+                    )}{" "}
+                    {el.name}
+                  </p>
                 </h2>
-                <button>Записаться</button>
+                <button>
+                  {language === ""
+                    ? "Записаться"
+                    : language === "ky"
+                    ? "Каттоо"
+                    : "Sign Up"}
+                </button>
               </div>
             </div>
           </div>

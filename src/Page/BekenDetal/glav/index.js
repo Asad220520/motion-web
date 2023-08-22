@@ -9,7 +9,7 @@ import black6 from "../../../img/back6.png";
 import black7 from "../../../img/black7.png";
 import black8 from "../../../img/black8.png";
 
-const Glav = () => {
+const Glav = ({ language }) => {
   const handleContactClick = (event) => {
     event.preventDefault();
     const footer = document.getElementById("contact");
@@ -29,15 +29,23 @@ const Glav = () => {
       </div>
       <div className="himages">
         <h1>
-          BACK<span>END </span>
+          {language === "" ? "BACK" : language === "ky" ? "BACK" : "BACK"}
+          <span>END</span>
         </h1>
         <p>
-          UX/UI-дизайн — это процесс создания интерактивных, удобных
-          интерфейсов. Отличный вариант профессии для творческих людей, которым
-          нравится решать проблемы пользователей и создавать что-то новое,
-          сочетая логику и эстетику.
+          {language === ""
+            ? "Python - это высокоуровневый, интерпретируемый язык программирования с простым и читаемым синтаксисом, что делает его отличным выбором для начинающих программистов и специалистов с различным опытом."
+            : language === "ky"
+            ? "Python – бул жөнөкөй жана окула турган синтаксиси бар жогорку деңгээлдеги, чечмеленүүчү программалоо тили, бул аны башталгыч программисттер жана бардык деңгээлдеги тажрыйбадагы адистер үчүн эң сонун тандоо."
+            : "Python is a high-level, interpreted programming language with a simple and readable syntax, making it a great choice for novice programmers and professionals of all levels of experience."}
         </p>
-        <button onClick={handleContactClick}>Оставить заявку</button>
+        <button onClick={handleContactClick}>
+          {language === ""
+            ? "Оставить заявку"
+            : language === "ky"
+            ? "Билдируу калтыруу"
+            : "Submit Application"}
+        </button>
       </div>
     </div>
   );

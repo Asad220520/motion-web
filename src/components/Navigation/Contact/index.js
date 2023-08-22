@@ -50,35 +50,49 @@ const Contact = () => {
               {language === ""
                 ? "Оставить заявку на обучение или получить консультацию"
                 : language === "ky"
-                ? "Окутуу үчүн мурожат коюу же көмөк алуу"
+                ? "Окутуу үчүн байланыш калтырыңыз же кеңеш алыңыз"
                 : "Leave a Request for Training or Get Consultation"}
             </h1>
             <p>
               {language === ""
                 ? "Менеджер свяжется с вами в течение 30 минут и ответит на все интересующие вопросы."
                 : language === "ky"
-                ? "Менеджер 30 мүнөт ичинде сиз менен байланышат жана бардык суроолорго жооп берет."
+                ? "Менеджер сиз менен 30 мүнөттүн ичинде байланышып, бардык суроолоруңузга жооп берет."
                 : "A manager will contact you within 30 minutes and answer all your questions."}
             </p>
           </div>
           <form className="contact__form" onSubmit={handleSubmit}>
             <input
               type="text"
-              placeholder="Имя"
+              placeholder={
+                language === "" ? "Имя" : language === "ky" ? "Атыныз" : "Name"
+              }
               name="firstName"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
             />
             <input
               type="text"
-              placeholder="Номер"
+              placeholder={
+                language === ""
+                  ? "Номер"
+                  : language === "ky"
+                  ? "Номер"
+                  : "Phone"
+              }
               name="phoneNumber"
               value={phoneNumber}
               onChange={(e) => setPhoneNumber(e.target.value)}
             />
             <input
               type="email"
-              placeholder="Электронная почта"
+              placeholder={
+                language === ""
+                  ? "Электронная почта"
+                  : language === "ky"
+                  ? "Электрондук почта"
+                  : "Email"
+              }
               name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -97,7 +111,7 @@ const Contact = () => {
                     {language === ""
                       ? "Я соглашаюсь на обработку персональных данных"
                       : language === "ky"
-                      ? "Менин шахсий маалыматтарды иштеликтөөгө риза болуп жатам"
+                      ? "Мен жеке маалыматтарды иштетүүгө макулмун"
                       : "I agree to the processing of personal data"}
                   </span>{" "}
                 </label>
@@ -107,7 +121,7 @@ const Contact = () => {
               {language === ""
                 ? "Оставить заявку"
                 : language === "ky"
-                ? "Өтүүчүк калтыруу"
+                ? "байланыш калтыруу"
                 : "Submit Application"}
             </button>{" "}
             <div
@@ -121,7 +135,7 @@ const Contact = () => {
                 {language === ""
                   ? "Менеджер скоро свяжется с вами"
                   : language === "ky"
-                  ? "Менеджер чыгуу болот"
+                  ? "Менеджер жакында сиз менен байланышат"
                   : "Manager will contact you soon"}
               </h2>{" "}
             </div>

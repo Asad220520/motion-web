@@ -31,7 +31,7 @@ const WhatYouGet = () => {
               {language === ""
                 ? "Расширение кругозоров в сфере IT"
                 : language === "ky"
-                ? "IT карэктериндеги кыймылсыздыктарды арттыруу"
+                ? "IT тармагындагы горизонтторду кеңейтүү"
                 : "Broadening horizons in the IT field"}
             </p>
           </div>
@@ -44,7 +44,7 @@ const WhatYouGet = () => {
               {language === ""
                 ? "Улучшение английского языка"
                 : language === "ky"
-                ? "Англис тилин кабыл алуу"
+                ? "Англис тилин өркүндөтүү"
                 : "Improving English language skills"}
             </p>
           </div>
@@ -56,7 +56,7 @@ const WhatYouGet = () => {
               {language === ""
                 ? "Работа с командой"
                 : language === "ky"
-                ? "Топтон кызмат"
+                ? "Команда менен иштөө"
                 : "Team collaboration"}
             </p>
           </div>
@@ -81,7 +81,7 @@ const WhatYouGet = () => {
               {language === ""
                 ? "Работа с реальными проектами"
                 : language === "ky"
-                ? "Өзгөрмөл иштер менен иштөө"
+                ? "Чыныгы долбоорлор менен иштөө"
                 : "Hands-on experience with real projects"}
             </p>
           </div>
