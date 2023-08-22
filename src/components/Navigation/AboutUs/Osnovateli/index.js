@@ -22,7 +22,7 @@ const Osnovateli = () => {
                 {language === ""
                   ? "Motion web IT академия была основана в апреле 2021 года по инициативе Курманбека Жоошбаева и Аскерова Канатбека"
                   : language === "ky"
-                  ? "Motion web IT академия 2021-жылдын апрельинде Курманбек Жоошбаев жана Аскеров Канатбек куралдарындагы инициативасы менен түзүлдү"
+                  ? "Motion web IT Academy 2021-жылдын апрель айында Курманбек Жоошбаев жана Аскеров Канатбектин демилгеси менен негизделген."
                   : "Motion web IT academy was founded in April 2021 by the initiative of Kurmanbek Zhoozhbaev and Askerov Kanatbek"}
               </p>
             </div>

@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./index.scss";
 import { useNavigate } from "react-router-dom";
+import { LanguageContext } from "../../../../context";
 
 const Kursy = ({ el }) => {
   const nav = useNavigate();
-
+  const {language} = useContext(LanguageContext)
   return (
     <div id="kursy">
       <div className="izyk">
@@ -26,10 +27,20 @@ const Kursy = ({ el }) => {
               ))}
             </div>
             <div className="izyk--front__group--btn">
-              <button onClick={() => nav(`/front/${el.id}`)} className="btn1">
-                Подробнее
+              <button onClick={() => nav(`/disain/${el.id}`)} className="btn1">
+                {language === ""
+                  ? "Подробнее"
+                  : language === "ky"
+                  ? "Көбүрөөк"
+                  : "Details"}
               </button>
-              <button className="btn2">Оставить заявку</button>
+              <button className="btn2">
+                {language === ""
+                  ? "Оставить заявку"
+                  : language === "ky"
+                  ? "Байланыш калтыруу"
+                  : "Submit Application"}
+              </button>{" "}
             </div>
           </div>
         </div>

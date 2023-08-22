@@ -1,14 +1,12 @@
 import React, { useState } from "react";
-import "./index.scss";
-import "./media.scss"
 import { HiXMark } from "react-icons/hi2";
-// import { BiFontSize } from "react-icons/bi";
+import { BiFontSize } from "react-icons/bi";
 
 const Obusheni = () => {
   const [online, setOnline] = useState(false);
   const [ofline, setOfline] = useState(false);
   return (
-    <>
+    <> 
     <div onClick={() => {
       setOfline(false)
       setOnline(false)
@@ -20,7 +18,7 @@ const Obusheni = () => {
       ,position:'absolute',top:'0',zIndex:'4'
   }}>
     </div>
-     <div className="container">
+    <div className="container">
       <div className="obucheni">
         <div className="obucheni--group">
           <div className="obucheni--group__block">
@@ -39,18 +37,17 @@ const Obusheni = () => {
           </div>
         </div>
         <div className="obucheni--modal">
-
           <button
-            onClick={() =>{
+            onClick={() => {
               setOfline(!ofline)
-            setOnline(false)
+              setOnline(false)
             }}
             className="obucheni--modal__ofline"
           >
             <h2>Офлайн</h2>
           </button>
           <button
-            onClick={ ()=>{
+            onClick={() => {
               setOnline(!online)
               setOfline(false)
             }}
@@ -59,15 +56,14 @@ const Obusheni = () => {
             <h2>Онлайн</h2>
           </button>
           <div
-          style={{
-
-            display: ofline ? 'block' : 'none'}}
+            style={{
+              display: ofline ? "block" : "none",
+            }}
             className="ofli"
           >
             <HiXMark
-            className="icon"
               onClick={() => {
-                setOfline(false);
+                setOfline(false)
               }}
               style={{
                 position: "absolute",
@@ -75,9 +71,9 @@ const Obusheni = () => {
                 top: "30px",
                 fontSize: "35px",
                 color: "white",
-                cursor:'pointer'
               }}
             />
+
             <h2>Офлайн</h2>
             <ol>
               <li>
@@ -90,9 +86,7 @@ const Obusheni = () => {
                 период с 09 до 22 (OPEN SPACE).
               </li>
             </ol>
-
           </div>
-
           <div
             style={{
               display: online ? "block" : "none",
@@ -100,17 +94,15 @@ const Obusheni = () => {
             className="onli"
           >
             <HiXMark
-            className="icon"
               onClick={() => {
-                setOnline(false);
+                setOnline(false)
               }}
               style={{
                 position: "absolute",
-                right: "20px",
-                top: "20px",
-                fontSize: "30px",
+                right: "30px",
+                top: "30px",
+                fontSize: "35px",
                 color: "white",
-                cursor:'pointer'
               }}
             />
             <h2>Онлайн</h2>

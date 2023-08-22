@@ -1,16 +1,17 @@
 import React from "react";
 import "./index.scss";
-import Why from "./Why";
-import WereKurs from "./WereKurs";
+import Why from "./why";
+import WereKurs from "./werekurs";
 import Obusheni from "./obucheni";
-import ThisKurs from "./ThisKurs";
-import Sertivkat from "./Sertivkat";
+import ThisKurs from "./thiskurs";
+import Sertivkat from "./sertivkat";
 import SvoiSait from "./delaiSvoiSait";
 import Mentory from "./mentory";
 import ProgramKurs from "./programKursa";
 import Glav from "./glav";
 
 const KursFront = () => {
+  window.scroll(0, 0);
   return (
     <>
       <div>

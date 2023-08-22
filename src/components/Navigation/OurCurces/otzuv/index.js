@@ -42,7 +42,7 @@ const Otzyv = () => {
               {language === ""
                 ? "Отзывы студентов"
                 : language === "ky"
-                ? "Талапкерлердин комментарийлери"
+                ? "студенттердин пикири"
                 : "Student Reviews"}
             </h3>
             <div className="otzyv--text__icon">

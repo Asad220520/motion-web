@@ -22,6 +22,8 @@ const OurSchool = () => {
 `).then((res) => setBob(res.data.results));
     window.scroll(0, 0);
   }, [language]);
+  console.log(bob);
+  
   return (
     <>
       <Himages />

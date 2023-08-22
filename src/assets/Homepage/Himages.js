@@ -32,9 +32,9 @@ export const Himages = () => {
       <div className="himages">
         <h1>
           {language === ""
-            ? "МОУШН ВЕБ"
+            ? "MOTION WEB"
             : language === "ky"
-            ? "МОУШН ВЕБ"
+            ? "MOTION WEB"
             : "MOTION WEB"}
           <br />
           <span>
@@ -50,14 +50,14 @@ export const Himages = () => {
           {language === ""
             ? "Лицензированная IT академия в Бишкеке"
             : language === "ky"
-            ? "Лицензияланган IT академия Бишкекте"
+            ? "Бишкектеги лицензияланган IT академиясы"
             : "Licensed IT academy in Bishkek"}
         </p>
         <button onClick={handleContactClick}>
           {language === ""
             ? "Оставить заявку"
             : language === "ky"
-            ? "Калыпты билдирүү"
+            ? "Билдируу калтыруу"
             : "Leave an application"}
         </button>
       </div>

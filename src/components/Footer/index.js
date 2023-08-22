@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./index.scss";
 import logo from "../../img/logo.png";
@@ -6,8 +6,10 @@ import { BiLogoLinkedin } from "react-icons/bi";
 import { BiLogoInstagramAlt } from "react-icons/bi";
 import { FaTelegram } from "react-icons/fa";
 import { AiFillYoutube } from "react-icons/ai";
+import { LanguageContext } from "../../context";
 
 const Footer = () => {
+  const { language } = useContext(LanguageContext);
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
@@ -58,10 +60,22 @@ const Footer = () => {
               </div>
               <ul className="menu">
                 <li className="menu__item">
-                  <Link className="menu__link">Курсы</Link>
-                  <Link className="curs">Frontend</Link>
-                  <Link className="curs">UI/UX design</Link>
-                  <Link className="curs">Backend</Link>
+                  <Link to="/" className="menu__link">
+                    {language === ""
+                      ? "Курсы"
+                      : language === "ky"
+                      ? "Курстар"
+                      : "Courses"}
+                  </Link>
+                  <Link to="/courses/frontend" className="curs">
+                    Frontend
+                  </Link>
+                  <Link to="/courses/ui-ux-design" className="curs">
+                    UI/UX design
+                  </Link>
+                  <Link to="/courses/backend" className="curs">
+                    Backend
+                  </Link>
                 </li>
                 <li className="menu__item">
                   <Link
@@ -69,14 +83,18 @@ const Footer = () => {
                     className="menu__link"
                     onClick={handleLinkClick}
                   >
-                    О нас
+                    {language === ""
+                      ? "О нас"
+                      : language === "ky"
+                      ? "Биз жөнүндө"
+                      : "About Us"}
                   </Link>
                   <Link
                     to={"/club"}
                     className="menu__link"
                     onClick={handleLinkClick}
                   >
-                    Клуб
+                    {language === "" ? "Клуб" : "Club"}
                   </Link>
                   <Link
                     to={"/"}
@@ -87,16 +105,22 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li className="menu__item-left">
-                  <Link to={"tel:+996 700 232 400"} className="menu__link">
+                  <Link to="tel:+996700232400" className="menu__link">
                     +996 700 232 400
                   </Link>
-                  <Link to={"motionweb312@gmail.com"}
-                  target="_blank"
-                   className="menu__link">
+                  <Link
+                    to="mailto:motionweb312@gmail.com"
+                    target="_blank"
+                    className="menu__link"
+                  >
                     motionweb312@gmail.com
                   </Link>
                   <Link className="menu__link">
-                    г. Бишкек ул. Турусбекова 109/3
+                    {language === ""
+                      ? "г. Бишкек, ул. Турусбекова 109/3"
+                      : language === "ky"
+                      ? "г. Бишкек, Турусбекова 109/3"
+                      : "Bishkek, Turusbekova Street 109/3"}
                   </Link>
                 </li>
               </ul>

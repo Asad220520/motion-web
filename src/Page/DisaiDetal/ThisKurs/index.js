@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.scss";
-import "./media.scss"
-const ThisKurs = () => {
+import "./media.scss";
+const ThisKurs = ({ el }) => {
   return (
     <div id="this">
       <div className="container">

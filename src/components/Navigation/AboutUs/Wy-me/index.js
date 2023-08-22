@@ -29,7 +29,7 @@ const WyMe = () => {
           {language === ""
             ? "Кто мы -"
             : language === "ky"
-            ? "Биз ким -"
+            ? "Биз кимбиз  -"
             : "Who we are -"}
           <br />
           <span>
@@ -44,7 +44,7 @@ const WyMe = () => {
           {language === ""
             ? "Лицензированная IT академия в Бишкеке"
             : language === "ky"
-            ? "Лицензиялык IT академия Бишкекте"
+            ? "Бишкектеги лицензияланган IT академиясы"
             : "Licensed IT academy in Bishkek"}
         </p>
       </div>
