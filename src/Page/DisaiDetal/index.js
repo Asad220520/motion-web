@@ -32,7 +32,7 @@ const DisainDetal = () => {
       <div>
         <Glav el={detal} />
         <Why language={language} el={detal} />
-        <WereKurs />
+        <WereKurs language={language} el={detal} />
         <Obusheni el={detal} />
         <ThisKurs el={detal} />
         <Sertivkat />
