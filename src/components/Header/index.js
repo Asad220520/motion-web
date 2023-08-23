@@ -95,16 +95,7 @@ const Header = () => {
                           setActiveItem(el.id);
                         }}
                         className={`li ${activeItem === el.id ? "active" : ""}`}
-                        style={{
-                        }}
-                        className="li"
-                        style={{
-                          borderBottom: "1px solid black",
-                          transition: ".4s",
-                          cursor: "pointer",
-                          fontSize: "15px",
-                          textTransform: "capitalize",
-                        }}
+                        style={{}}
                       >
                         {el.name}
                       </li>
