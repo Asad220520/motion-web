@@ -23,7 +23,7 @@ const OurSchool = () => {
     window.scroll(0, 0);
   }, [language]);
   console.log(bob);
-  
+
   return (
     <>
       <Himages />
@@ -35,7 +35,9 @@ const OurSchool = () => {
           <div className="container">
             <div className="ourCurces__block">
               {bob.map((el) => (
-                <Kursy key={el.id} el={el} />
+                <>
+                  <Kursy key={el.id} el={el} />
+                </>
               ))}
             </div>
           </div>

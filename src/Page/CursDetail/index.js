@@ -14,7 +14,7 @@ import { BASE_URL } from "../../API";
 import { LanguageContext } from "../../context";
 import { useParams } from "react-router-dom";
 
-const DisainDetal = () => {
+const CursDetail = () => {
   const [detal, setDetal] = useState([]);
   const { language } = useContext(LanguageContext);
   const { id } = useParams();
@@ -26,7 +26,7 @@ const DisainDetal = () => {
     window.scroll(0, 0);
   }, [id, language]);
 
-  console.log(detal);
+  console.log("detal", detal);
   return (
     <>
       <div>
@@ -34,7 +34,7 @@ const DisainDetal = () => {
         <Why language={language} el={detal} />
         <WereKurs language={language} el={detal} />
         <Obusheni el={detal} />
-        <ThisKurs el={detal} />
+        <ThisKurs language={language} el={detal} />
         <Sertivkat />
         <SvoiSait />
         <Mentory el={detal} language={language} />
@@ -44,4 +44,4 @@ const DisainDetal = () => {
   );
 };
 
-export default DisainDetal;
+export default CursDetail;

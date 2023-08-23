@@ -1,5 +1,5 @@
 #zoning {
-  padding: 80px 120px;
+  padding: 70px 0;
   .zoning {
     display: flex;
     justify-content: space-between;
@@ -28,24 +28,37 @@
 @media (max-width: 1145px) {
   #zoning {
     .zoning {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 30px;
-      border-radius: 75px;
+      border-radius: 80px;
     }
   }
 }
-@media (max-width: 765px) {
+@media (max-width: 865px) {
   #zoning {
     .zoning {
+      padding: 70px 50px;
       border-radius: 30px;
       &__block {
         p {
           font-size: 24px;
-          // width: 90%;
+        }
+        span {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 565px) {
+  #zoning {
+    .zoning {
+      padding: 30px 20px;
+      border-radius: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      &__block {
+        p {
+          font-size: 24px;
         }
         span {
           font-size: 24px;
