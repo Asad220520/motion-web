@@ -27,10 +27,10 @@ const Glav = ({ el }) => {
       </div>
       <div className="himages">
         <h1>
-          {el.name?.slice(0, 5)} <br />
-          <span>{el.name?.slice(5)}</span>
+          {el.name?.split(" ")[0]} <br />
+          <span>{el.name?.slice(el.name.indexOf(" ") + 1)}</span>
         </h1>
-        <p>{el.why_we}</p>
+        <p>{el.description}</p>
         <button onClick={handleContactClick}>Оставить заявку</button>
       </div>
     </div>

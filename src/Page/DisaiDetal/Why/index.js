@@ -13,9 +13,7 @@ const Why = ({ language, el }) => {
           </h2>
           <div className="disain--whywe__text">
             <p>
-              {el.for_who?.map((el) => (
-                <p>{el.for_who}</p>
-              ))}
+              <p>{el.why_we}</p>
             </p>
           </div>
         </div>

@@ -1,41 +1,30 @@
 import React from "react";
 import "./index.scss";
-import "./media.scss"
-import neg from "../../../img/neg.png";
+import "./media.scss";
+import neg from "../../../img/neg.png"; // Импортируйте ваши изображения
+import img1 from "../../../img/neg2.svg";
+import img2 from "../../../img/neg3.svg";
 
-const WereKurs = () => {
+const WereKurs = ({ el }) => {
+  const images = [neg, img1, img2]; // Массив изображений
+
   return (
     <div className="container">
       <div className="were">
         <h1>Кому подойдёт этот курс</h1>
         <div className="were--group">
-          <div className="were--group__block ">
-            <div className="were--group__block--img">
-              <img src={neg} alt="img" />
-            </div>
-            <h3>Новичкам</h3>
-            <p>Научитесь с нуля разрабатывать интерфейсы. Узнаете, как с помощью дизайна направлять пользователей и решать задачи</p>
-          </div>
-          <div className="were--group__block">
-            <div className="were--group__block--img">
-              <img src={neg} alt="img" />
-            </div>
-            <h3>Новичкам</h3>
-            <p>
-              Научитесь с нуля разрабатывать интерфейсы. Узнаете, как с помощью
-              дизайна направлять пользователей и решать задачи
-            </p>
-          </div>
-          <div className="were--group__block">
-            <div className="were--group__block--img ">
-              <img src={neg} alt="img" />
-            </div>
-            <h3>234567</h3>
-            <p>
-              Научитесь с нуля разрабатывать интерфейсы. Узнаете, как с помощью
-              дизайна направлять пользователей и решать задачи
-            </p>
-          </div>
+          {el.for_who?.map((item, index) => {
+            const imgIndex = index % images.length; // Вычисляем индекс изображения
+            return (
+              <div key={index} className="were--group__block">
+                <div className="were--group__block--img">
+                  <img src={images[imgIndex]} alt="img" />
+                </div>
+                <h3>{item.for_who.split(":")[0]}</h3>
+                <p>{item.for_who}</p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
