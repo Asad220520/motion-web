@@ -9,7 +9,7 @@ import { LanguageContext } from "../../../../context";
 
 const Whymotion = () => {
   const { language } = useContext(LanguageContext);
-  window.scroll(0, 0)
+  window.scroll(0, 0);
   return (
     <div id="why">
       <div className="container">
@@ -28,14 +28,14 @@ const Whymotion = () => {
               : "- the best choice for learning"}
           </h1>
           <div className="why--text">
-            <div className="why--text__block">
+            <div data-aos="fade-right" className="why--text__block">
               <img src={smail} alt="img" />
               <div className="why--text__block--group">
                 <h2>
                   {language === ""
                     ? "Обучение с нуля до Junior"
                     : language === "ky"
-                    ? "нөлдөн Juniorга чейинки окутуу"
+                    ? "нөлдөн Junior позициясына чейинки окутуу"
                     : "Learning from scratch to Junior"}
                 </h2>
                 <p>
@@ -47,7 +47,7 @@ const Whymotion = () => {
                 </p>
               </div>
             </div>
-            <div className="why--text__block">
+            <div data-aos="fade-right" className="why--text__block">
               <img src={roun} alt="img" />
               <div className="why--text__block--group">
                 <h2>
@@ -66,7 +66,7 @@ const Whymotion = () => {
                 </p>
               </div>
             </div>
-            <div className="why--text__block">
+            <div data-aos="fade-right" className="why--text__block">
               <img src={chek} alt="img" />
               <div className="why--text__block--group">
                 <h2>
@@ -85,7 +85,7 @@ const Whymotion = () => {
                 </p>
               </div>
             </div>
-            <div className="why--text__block">
+            <div data-aos="fade-right" className="why--text__block">
               <img src={roket} alt="img" />
               <div className="why--text__block--group">
                 <h2>

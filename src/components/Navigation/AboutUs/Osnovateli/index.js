@@ -10,7 +10,7 @@ const Osnovateli = () => {
       <div className="container">
         <div className="osnovateli">
           <div className="osnovateli__block">
-            <div className="osnovateli__block-title">
+            <div data-aos="fade-right" className="osnovateli__block-title">
               <h1>
                 {language === ""
                   ? "Основатели"

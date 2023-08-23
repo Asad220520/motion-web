@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import "./index.scss";
 import "./media.scss";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { LanguageContext } from "../../../../context";
 
 const AboutCurs = () => {
@@ -11,7 +11,7 @@ const AboutCurs = () => {
   return (
     <div className="container">
       <div className="aboutcurs">
-        <div className="aboutcurs--block">
+        <div data-aos="fade-up" className="aboutcurs--block">
           <h1>
             {language === ""
               ? "О НАС"
@@ -34,14 +34,13 @@ const AboutCurs = () => {
                 ? "Үзгүлтүксүз өнүгүүбүздүн аркасында биз IT адистерин даярдоо боюнча эффективдүү программаларды иштеп чыктык. Биз оффлайн жана онлайн билим берүүнүн мыкты тажрыйбаларын айкалыштыра алдык жана ошону менен жогорку натыйжаларга жетиштик."
                 : "Thanks to our continuous development, we have developed effective programs for preparing IT professionals. We have managed to combine the best practices of offline and online education and thus achieve high results."}
             </p>
-            <button onClick={() => nav("/aboutUs")}>
+            <Link to={"/aboutUs"}>
               {language === ""
                 ? "Подробнее"
                 : language === "ky"
-                ? "Дагы"
-                : "More"
-                }
-            </button>
+                ? "Кобуроок"
+                : "More"}
+            </Link>
           </div>
         </div>
       </div>

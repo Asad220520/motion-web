@@ -10,7 +10,7 @@ const Kursy = ({ el }) => {
     <div id="kursy">
       <div className="izyk">
         <div className="izyk--front">
-          <div className="izyk--front__block">
+          <div data-aos="zoom-out" className="izyk--front__block">
             <img
               key={el.id}
               className="izyk--front__block--img"
@@ -23,18 +23,24 @@ const Kursy = ({ el }) => {
             <p>{el.description}</p>
             <div className="izyk--front__group--btns">
               {el.courses_stacks.map((el) => (
-                <button key={el.id}>{el.stack}</button>
+                <button data-aos="zoom-in" key={el.id}>
+                  {el.stack}
+                </button>
               ))}
             </div>
             <div className="izyk--front__group--btn">
-              <button onClick={() => nav(`/curse/${el.id}`)} className="btn1">
+              <button
+                data-aos="flip-left"
+                onClick={() => nav(`/curse/${el.id}`)}
+                className="btn1"
+              >
                 {language === ""
                   ? "Подробнее"
                   : language === "ky"
                   ? "Көбүрөөк"
                   : "Details"}
               </button>
-              <button className="btn2">
+              <button data-aos="flip-right" className="btn2">
                 {language === ""
                   ? "Оставить заявку"
                   : language === "ky"

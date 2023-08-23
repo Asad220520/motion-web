@@ -21,7 +21,7 @@ const RazProject = () => {
             </span>
           </h1>
           <div className="why--text">
-            <div className="why--text__block">
+            <div data-aos="fade-left" className="why--text__block">
               <img src={smail} alt="img" />
               <div className="why--text__block--group">
                 <h2>
@@ -40,7 +40,7 @@ const RazProject = () => {
                 </p>
               </div>
             </div>
-            <div className="why--text__block">
+            <div data-aos="fade-left" className="why--text__block">
               <img className="img" src={roun} alt="img" />
               <div className="why--text__block--group">
                 <h2>
@@ -59,7 +59,7 @@ const RazProject = () => {
                 </p>
               </div>
             </div>
-            <div className="why--text__block">
+            <div data-aos="fade-left" className="why--text__block">
               <img src={chek} alt="img" />
               <div className="why--text__block--group">
                 <h2>
@@ -78,7 +78,7 @@ const RazProject = () => {
                 </p>
               </div>
             </div>
-            <div className="why--text__block">
+            <div data-aos="fade-left" className="why--text__block">
               <img src={roket} alt="img" />
               <div className="why--text__block--group">
                 <h2>{language === "" ? "Talking club" : "Talking club"}</h2>

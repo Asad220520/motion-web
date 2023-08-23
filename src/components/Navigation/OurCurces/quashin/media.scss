@@ -1,157 +1,132 @@
-@media (max-width:1175px) {
-    #quashin{
-      .h2{
-        display: block;
-        text-align: center;
-        padding: 0 0 40px 0;
+@media (max-width: 1175px) {
+  #quashin {
+    padding: 100px 0 100px 0;
+    .quashin {
+      gap: 30px;
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &--h1 {
+        font-size: 36px;
+        padding: 0 0 0 0;
       }
-        padding: 100px 0 100px 0;
-        .quashin {
-            gap: 30px;
-            flex-direction: column;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          &--h1 {
-            display: none;
-      font-size: 36px;
-      padding: 0 0 0 0;
-          }
-        
-          &--group {  
-            width: 95%;
-            margin: 0 0 0 0;
-            &__block {
-              width: 90%;
-              padding: 19px 0 38px 38px;
-              margin: 0 auto 20px auto;
-              &--span {
-                .par {
-                  width: 90%;
-                }
-                
-                p {
-                  display: flex;
-                  justify-content: space-between;
-                  width: 100%;
-                  align-items: center;
-                  padding: 0 25px 18px 0;
-                }
-        
-                span {
-                  width: 100%;
-                }
-              }
-            }
-          }
-        }
-        
-      }
-}
-@media (max-width:510px) {
-    #quashin{
-      .h2{
-        display: block;
-        text-align: center;
-        padding: 0 0 40px 0;
-      }
-        padding: 100px 0 100px 0;
-        .quashin {
-            gap: 30px;
-            flex-direction: column;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          &--h1 {
-            display: none;
-      font-size: 36px;
-      padding: 0 0 0 0;
-          }
-        
-          &--group {
-            width: 95%;
-            margin: 0 0 0 0;
-            &__block {
-              width: 90%;
-              padding: 19px 0 38px 15px;
-              margin: 0 auto 20px auto;
-              &--span {
-                .par {
-                  width: 90%;
-                }
-                
-                p {
-                  display: flex;
-                  justify-content: space-between;
-                  width: 100%;
-                  align-items: center;
-                  padding: 0 15px 18px 0;
-                }
-        
-                span {
-                  width: 100%;
 
-                }
-              }
-            }
-          }
-        }
-        
-      }
-}
-@media (max-width:445px) {
-    #quashin{
-      .h2{
-        display: block;
-        text-align: center;
-        font-size: 25px;
-        padding: 0 0 40px 0;
-      }
-        padding: 100px 0 100px 0;
-        .quashin {
-            gap: 30px;
-            flex-direction: column;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          &--h1 {
-            display: none;
-      font-size: 20px;
-      padding: 0 0 0 0;
-          }
-        
-          &--group {
-            margin: 0 0 0 0;
-            width: 95%;
-            &__block {
+      &--group {
+        width: 95%;
+        margin: 0 0 0 0;
+        &__block {
+          width: 90%;
+          padding: 19px 0 38px 38px;
+          margin: 0 auto 20px auto;
+          &--span {
+            .par {
               width: 90%;
-              padding: 19px 0 55px 18px;
-              margin: 0 auto 15px auto;
-              &--span {
-                .par {
-                  width: 90%;
-                  line-height: 10px;
-                  
-                }
-                
-                p {
-                  display: flex;
-                  justify-content: space-between;
-                  width: 100%;
-                  align-items: center;
-                  font-size: 14px;
-                  padding: 0 15px 10px 0;
-                }
-        
-                span {
-                    font-size: 12px;
-                  width: 100%;
+            }
 
-                }
-              }
+            p {
+              display: flex;
+              justify-content: space-between;
+              width: 100%;
+              align-items: center;
+              padding: 0 25px 18px 0;
+            }
+
+            span {
+              width: 100%;
             }
           }
         }
-        
       }
+    }
+  }
+}
+@media (max-width: 510px) {
+  #quashin {
+    padding: 100px 0 100px 0;
+    .quashin {
+      gap: 30px;
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &--h1 {
+        font-size: 36px;
+        padding: 0 0 0 0;
+      }
+
+      &--group {
+        width: 95%;
+        margin: 0 0 0 0;
+        &__block {
+          width: 90%;
+          padding: 19px 0 38px 15px;
+          margin: 0 auto 20px auto;
+          &--span {
+            .par {
+              width: 90%;
+            }
+
+            p {
+              display: flex;
+              justify-content: space-between;
+              width: 100%;
+              align-items: center;
+              padding: 0 15px 18px 0;
+            }
+
+            span {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 445px) {
+  #quashin {
+    padding: 100px 0 100px 0;
+    .quashin {
+      gap: 30px;
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &--h1 {
+        font-size: 20px;
+        padding: 0 0 0 0;
+      }
+
+      &--group {
+        margin: 0 0 0 0;
+        width: 95%;
+        &__block {
+          width: 90%;
+          padding: 19px 0 55px 18px;
+          margin: 0 auto 15px auto;
+          &--span {
+            .par {
+              width: 90%;
+              line-height: 10px;
+            }
+
+            p {
+              display: flex;
+              justify-content: space-between;
+              width: 100%;
+              align-items: center;
+              font-size: 14px;
+              padding: 0 15px 10px 0;
+            }
+
+            span {
+              font-size: 12px;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
 }
