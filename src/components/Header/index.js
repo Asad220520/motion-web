@@ -6,7 +6,6 @@ import logo from "../../img/logo.png";
 import { LanguageContext } from "../../context";
 import axios from "axios";
 import { BASE_URL } from "../../API";
-
 const Header = () => {
   const [bob, setBob] = useState([]);
   const [activeItem, setActiveItem] = useState(null);
