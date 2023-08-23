@@ -9,6 +9,7 @@ import { BASE_URL } from "../../API";
 
 const Header = () => {
   const [bob, setBob] = useState([]);
+  const [activeItem, setActiveItem] = useState(null);
 
   useEffect(() => {
     axios(`${BASE_URL}/${language}/api/v1/courses/courses/
@@ -92,10 +93,10 @@ const Header = () => {
                           nav(`/curse/${el.id}`);
                           setModal(false);
                           showBurger();
+                          setActiveItem(el.id);
                         }}
-                        className="li"
+                        className={`li ${activeItem === el.id ? "active" : ""}`}
                         style={{
-                          borderBottom: "1px solid black",
                           transition: ".4s",
                           cursor: "pointer",
                           fontSize: "15px",
