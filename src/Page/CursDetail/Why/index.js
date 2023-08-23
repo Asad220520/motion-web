@@ -8,7 +8,11 @@ const Why = ({ language, el }) => {
       <div className="why">
         <div className="disain--whywe">
           <h2>
-            {language === "" ? "Почему" : language === "ky" ? "Кандай" : "Why"}{" "}
+            {language === ""
+              ? "Почему"
+              : language === "ky"
+              ? "Эмне үчүн"
+              : "Why"}{" "}
             <span>MOTION WEB IT ACADEMY?</span>
           </h2>
           <div className="disain--whywe__text">

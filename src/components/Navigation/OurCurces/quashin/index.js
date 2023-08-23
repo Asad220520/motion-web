@@ -45,7 +45,7 @@ const Quashin = () => {
                 }}
                 className="quashin--group__block--span"
               >
-                <p>
+                <p data-aos="fade-left">
                   {language === ""
                     ? "Нужны ли начальные знания для учёбы?"
                     : language === "ky"
@@ -93,7 +93,7 @@ const Quashin = () => {
                 }}
                 className="quashin--group__block--span"
               >
-                <p>
+                <p data-aos="fade-left">
                   {language === ""
                     ? "Как проходит консультация?"
                     : language === "ky"
@@ -143,7 +143,7 @@ const Quashin = () => {
                 }}
                 className="quashin--group__block--span"
               >
-                <p>
+                <p data-aos="fade-left">
                   {language === ""
                     ? "Какой график обучения?"
                     : language === "ky"
@@ -193,7 +193,7 @@ const Quashin = () => {
                 }}
                 className="quashin--group__block--span"
               >
-                <p>
+                <p data-aos="fade-left">
                   {language === ""
                     ? "Мне помогут трудоустроиться?"
                     : language === "ky"
@@ -243,7 +243,7 @@ const Quashin = () => {
                 }}
                 className="quashin--group__block--span"
               >
-                <p>
+                <p data-aos="fade-left">
                   {language === ""
                     ? "Кто мне поможет, если возникнут вопросы?"
                     : language === "ky"
@@ -275,8 +275,8 @@ const Quashin = () => {
               style={{
                 margin:
                   blo1 || blo2 || blo3 || blo4 || blo5 || blo6
-                    ? "0 auto 50px auto"
-                    : "0 auto 0 auto",
+                    ? "0 0 50px 0"
+                    : "0  0 ",
                 height: blo6 ? "30%" : "60px",
                 overflow: blo6 ? "" : "hidden",
                 borderRadius: blo6 ? "20px" : "30px",
@@ -294,7 +294,7 @@ const Quashin = () => {
                 }}
                 className="quashin--group__block--span"
               >
-                <p>
+                <p data-aos="fade-left">
                   {language === ""
                     ? "Какая техника нужна для обучения?"
                     : language === "ky"

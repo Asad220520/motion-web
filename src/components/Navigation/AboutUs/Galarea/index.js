@@ -11,8 +11,8 @@ const Galerea = () => {
       .then((res) => setOsnov(res.data.results))
       .catch((err) => console.log(err));
   }, [language]);
-  console.log('osnoooov',osnov);
-  
+  console.log("osnoooov", osnov);
+
   return (
     <div id="galerea">
       <div className="container">
@@ -20,7 +20,7 @@ const Galerea = () => {
           <div className="galerea__block">
             <h1 className="a">Галерия</h1>
             {osnov.map((el) => (
-              <img key={el.id} src={el.image} alt="" />
+              <img data-aos="flip-left" key={el.id} src={el.image} alt="" />
             ))}
             {/* <p className="b">Показать ещё</p> */}
           </div>

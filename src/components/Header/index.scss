@@ -55,6 +55,7 @@
         .li {
           color: #000;
           width: 100%;
+          cursor: pointer;
         }
         .li.active {
           background-color: #000;
@@ -70,7 +71,7 @@
           font-size: 18px;
         }
         .selected {
-          color: blue; // или любой другой цвет подсветки
+          color: red;
           cursor: pointer;
         }
 

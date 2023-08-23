@@ -1,31 +1,120 @@
 #begushi {
-  background: #efefef;
-  padding: 0 0 100px 0;
-  .begu {
-    background: #ec3025;
-    height: 75px;
-    border-radius: 5px;
-    &--img{
-      position: absolute;
-    object-fit: cover;
-    }
-  }
+  background: linear-gradient(45deg, #e53935, #2196f3, #ffeb3b);
+  background-size: 600% 600%;
+  animation: gradientShift 10s infinite;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  overflow: hidden;
+}
 
+.begushi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.begu,
+.begu2 {
+  background: linear-gradient(135deg, #ffeb3b, #e53935);
+  padding: 10px 0px;
+  border-radius: 8px;
+  width: 50%;
+  margin: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  animation: tilt 12s infinite alternate, scale 12s infinite alternate,
+    shadowPulse 6s infinite alternate;
+  transform: rotateY(40deg);
+}
+
+.begu {
+  animation: scroll 12s linear infinite;
+}
+
+.begu2 {
+  animation: scroll2 15s linear infinite;
+}
+
+.begu--text,
+.begu2--text {
+  margin: 0;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  transform: skewX(-10deg);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(120%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll2 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-120%);
+  }
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotateY(40deg);
+  }
+  100% {
+    transform: rotateY(50deg);
+  }
+}
+
+@keyframes scale {
+  0%,
+  100% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shadowPulse {
+  0%,
+  100% {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .begushi {
+    padding: 40px 0;
+  }
+  .begu,
   .begu2 {
-    background: #4886ff;
-    height: 60px;
-    overflow: hidden;
-    position: relative;
-    transform: rotateZ(-2deg);
-    margin: 8px 0 0 0;
-    border-radius: 5px;
-     &--img {
-    transform: rotateZ(2deg);
-    position: absolute;
-    top: -52px;
-    object-fit: cover;
+    padding: 15px 30px;
+    margin: 10px;
   }
-  }
-
- 
 }

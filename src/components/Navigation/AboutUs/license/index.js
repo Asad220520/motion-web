@@ -8,7 +8,13 @@ const License = () => {
   return (
     <div id="license">
       <div className="container">
-        <div className="license">
+        <div
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="300"
+          data-aos-offset="0"
+          className="license"
+        >
           <div className="license__title">
             <h1>
               {language === ""

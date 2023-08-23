@@ -33,13 +33,26 @@
         font-weight: 400;
       }
 
-      button {
-        width: 70px;
-        height: 20px;
-        font-size: 18px;
-        background: none;
-        color: #ec3025;
-        border-bottom: 1px solid #ec3025;
+      a {
+        position: relative;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 2px;
+        color: #263238;
+        &::before {
+          position: absolute;
+          bottom: 0;
+          content: "";
+          width: 0%;
+          height: 0px;
+          transition: width 0.3s, height 0.3s, background-color 0.3s;
+        }
+
+        &:hover::before {
+          width: 10%;
+          height: 1px;
+          background: red;
+        }
       }
     }
   }

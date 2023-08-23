@@ -1,12 +1,7 @@
 #probnyi {
   background: #efefef;
-
+  padding: 100px 0;
   .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 50px;
-
     .probnyi {
       display: flex;
       flex-direction: column;
@@ -16,8 +11,8 @@
       border-radius: 30px;
       box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
       padding: 50px;
-      margin: 20px 0;
-
+      max-width: 750px;
+      margin: 0 auto;
       &--block {
         display: flex;
         align-items: flex-end;
@@ -108,10 +103,6 @@
 }
 
 @media (max-width: 1200px) {
-  #probnyi .container {
-    padding: 30px;
-  }
-
   .probnyi {
     padding: 30px;
 
@@ -159,14 +150,8 @@
 }
 
 @media (max-width: 768px) {
-  #probnyi .container {
-    justify-content: center;
-  }
-
   .probnyi {
     width: 100%;
-    max-width: 350px;
-
     &--text {
       &--group {
         h2 {
