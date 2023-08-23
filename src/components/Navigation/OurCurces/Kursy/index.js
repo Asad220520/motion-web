@@ -5,7 +5,7 @@ import { LanguageContext } from "../../../../context";
 
 const Kursy = ({ el }) => {
   const nav = useNavigate();
-  const {language} = useContext(LanguageContext)
+  const { language } = useContext(LanguageContext);
   return (
     <div id="kursy">
       <div className="izyk">
@@ -27,7 +27,7 @@ const Kursy = ({ el }) => {
               ))}
             </div>
             <div className="izyk--front__group--btn">
-              <button onClick={() => nav(`/disain/${el.id}`)} className="btn1">
+              <button onClick={() => nav(`/curse/${el.id}`)} className="btn1">
                 {language === ""
                   ? "Подробнее"
                   : language === "ky"

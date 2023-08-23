@@ -1,12 +1,21 @@
-import React, { useContext, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { Link, NavLink, useNavigate, useParams } from "react-router-dom";
 import "./index.scss";
-import { GrClose, GrLanguage } from "react-icons/gr";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { GrLanguage } from "react-icons/gr";
 import logo from "../../img/logo.png";
 import { LanguageContext } from "../../context";
+import axios from "axios";
+import { BASE_URL } from "../../API";
 
 const Header = () => {
+  const [bob, setBob] = useState([]);
+
+  useEffect(() => {
+    axios(`${BASE_URL}/${language}/api/v1/courses/courses/
+`).then((res) => setBob(res.data.results));
+    window.scroll(0, 0);
+  }, []);
+  console.log("head", bob);
   const handleContactClick = (event) => {
     event.preventDefault();
     const footer = document.getElementById("contact");
@@ -16,7 +25,6 @@ const Header = () => {
 
   const nav = useNavigate();
   const [modal, setModal] = useState(false);
-  const [colo, setColo] = useState(1);
   const { id } = useParams();
   const navRef = useRef();
 
@@ -28,7 +36,6 @@ const Header = () => {
   const showBurger = () => {
     navRef.current.classList.toggle("responsive_nav");
   };
-  console.log("lan", language);
 
   return (
     <div id="header">
@@ -58,11 +65,7 @@ const Header = () => {
                 </NavLink>
               </li>
               <li className="okurs" style={{ position: "relative" }}>
-                <NavLink
-                  // onClick={() => setModal(!modal)}
-                  to={"/frontt"}
-                  className="menu__link"
-                >
+                <NavLink to={"/curse/1"} className="menu__link">
                   {language === ""
                     ? " О курсах"
                     : language === "ky"
@@ -72,74 +75,37 @@ const Header = () => {
                 <ul
                   className="ulgr"
                   style={{
-                    boxShadow: "8px 8px 10px #000000ad",
+                    boxShadow: "0px 0px 5px 0px rgba(0, 0, 0, 0.4",
                     background: "white",
-                    padding: "10px 35px 15px 35px ",
+                    padding: "10px 10px",
                     top: "28px",
-                    left: "-32px",
-                    borderRadius: "15px",
+                    left: "0px",
+                    borderRadius: "8px",
                     position: "absolute",
                     zIndex: "3",
-                    // display: modal ? "block" : "none",
                   }}
                 >
-                  <li
-                    onClick={() => {
-                      setColo(1);
-                      nav("/disain");
-                      setModal(false);
-                      showBurger();
-                    }}
-                    className="li"
-                    style={{
-                      color: colo === 1 ? "blue" : "black",
-                      borderBottom: "1px solid black",
-                      transition: ".4s",
-                      cursor: "pointer",
-                      fontSize: "18px",
-                      textTransform: "capitalize",
-                    }}
-                  >
-                    disain
-                  </li>
-                  <li
-                    onClick={() => {
-                      nav("/frontt");
-                      setColo(2);
-                      setModal(false);
-                      showBurger();
-                    }}
-                    className="li"
-                    style={{
-                      color: colo === 2 ? "blue" : "black",
-                      borderBottom: "1px solid black",
-                      transition: ".4s",
-                      cursor: "pointer",
-                      fontSize: "18px",
-                      textTransform: "capitalize",
-                    }}
-                  >
-                    fronEnd
-                  </li>
-                  <li
-                    onClick={() => {
-                      nav("/bekend");
-                      setColo(3);
-                      setModal(false);
-                      showBurger();
-                    }}
-                    className="li"
-                    style={{
-                      color: colo === 3 ? "blue" : "black",
-                      borderBottom: "1px solid black",
-                      transition: ".4s",
-                      cursor: "pointer",
-                      fontSize: "18px",
-                      textTransform: "capitalize",
-                    }}
-                  >
-                    bakend
-                  </li>
+                  {bob.map((el) => (
+                    <>
+                      <li
+                        onClick={() => {
+                          nav(`/curse/${el.id}`);
+                          setModal(false);
+                          showBurger();
+                        }}
+                        className="li"
+                        style={{
+                          borderBottom: "1px solid black",
+                          transition: ".4s",
+                          cursor: "pointer",
+                          fontSize: "15px",
+                          textTransform: "capitalize",
+                        }}
+                      >
+                        {el.name}
+                      </li>
+                    </>
+                  ))}
                 </ul>
               </li>
               <li className="menu__item" onClick={showBurger}>

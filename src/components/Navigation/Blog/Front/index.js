@@ -10,15 +10,13 @@ const Front = ({ el }) => {
           <img src={el.media[0].media} alt="alt" />
         </div>
         <div className="front__title">
-          <div className="div">
-            <p>
-              {el.descriptions.length > 0 &&
-                `${el.descriptions[0].description.slice(0, 150)}${
-                  el.descriptions[0].description.length > 50 ? "..." : ""
-                }`}
-            </p>
-            <button onClick={() => nav(`/detailsIscl/${el.id}`)}>Далее</button>
-          </div>
+          <p>
+            {el.descriptions.length > 0 &&
+              `${el.descriptions[0].description.slice(0, 150)}${
+                el.descriptions[0].description.length > 50 ? "..." : ""
+              }`}
+          </p>
+          <button onClick={() => nav(`/detailsIscl/${el.id}`)}>Далее</button>
         </div>
       </div>
     </div>

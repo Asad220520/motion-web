@@ -8,28 +8,40 @@ const Mentory = ({ el, language }) => {
     <div id="mentory">
       <div className="container">
         <div className="mentory">
-          <h2>
-            <span>
-              {language === ""
-                ? "Лучшие менторы по всему Кыргызстану"
-                : language === "ky"
-                ? "Кыргызстан боюнча мыкты менторлор"
-                : "Best mentors throughout Kyrgyzstan"}
-            </span>
-          </h2>
+          {language === "" ? (
+            <h2>
+              <span>
+                Лучшие менторы <br />
+              </span>{" "}
+              по всему Кыргызстану
+            </h2>
+          ) : language === "ky" ? (
+            <h2>
+              <span>
+                Кыргызстан боюнча <br />
+              </span>{" "}
+              мыкты менторлор
+            </h2>
+          ) : (
+            <h2>
+              <span>
+                Best mentors <br />
+              </span>{" "}
+              throughout Kyrgyzstan
+            </h2>
+          )}
+
           <div className="mentory--group">
             {el.mentors?.map((el) => (
-              <>
-                <div className="mentory--group__block ">
-                  <div className="mentory--group__block--img">
-                    <img src={el.photo} alt="img" />
-                  </div>
-                  <h3>
-                    {el.first_name} {el.last_name}
-                  </h3>
-                  <p>{el.description}</p>
+              <div className="mentory--group__block ">
+                <div className="mentory--group__block--img">
+                  <img src={el.photo} alt="img" />
                 </div>
-              </>
+                <h3>
+                  {el.first_name} {el.last_name}
+                </h3>
+                <p>{el.description}</p>
+              </div>
             ))}
           </div>
           <div className="mentory--samai">

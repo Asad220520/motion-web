@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import { useEffect } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -7,13 +8,10 @@ import Club from "./components/Navigation/Club";
 import Contact from "./components/Navigation/Contact";
 import Blog from "./components/Navigation/Blog";
 import DetailFront from "./components/Navigation/Blog/Front/DetailFront";
-import BekenDetal from "./Page/BekenDetal";
 import AboutUs from "./components/Navigation/AboutUs";
-import { useEffect } from "react";
+import CursDetail from "./Page/CursDetail";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import DisainDetal from "./Page/DisaiDetal";
-import KursFront from "./Page/FrontDetal";
 function App() {
   useEffect(() => {
     Aos.init();
@@ -28,10 +26,7 @@ function App() {
           <Route path="/club" element={<Club />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/detailsIscl/:id" element={<DetailFront />} />
-          {/* <Route path="/front/:id" element={<KursFront />} /> */}
-          {/* <Route path="/frontt" element={<KursFront />} /> */}
-          <Route path="/bekend" element={<BekenDetal />} />
-          <Route path="/disain/:id" element={<DisainDetal />} />
+          <Route path="/curse/:id" element={<CursDetail />} />
         </Routes>
       </div>
       <Contact />
