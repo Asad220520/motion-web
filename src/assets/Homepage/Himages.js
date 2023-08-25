@@ -58,7 +58,7 @@ export const Himages = () => {
           {language === ""
             ? "Оставить заявку"
             : language === "ky"
-            ? "Билдируу калтыруу"
+            ? "Билдирүү калтыруу"
             : "Leave an application"}
         </button>
       </div>

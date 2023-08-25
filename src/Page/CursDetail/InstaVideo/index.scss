@@ -1,0 +1,72 @@
+.insta {
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 650px;
+    text-align: center;
+    margin: 0 auto;
+    h3 {
+      color: red;
+      font-family: Muller;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+    p {
+      color: #1d1d20;
+      font-family: SF Pro Display;
+      font-size: 19px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%; /* 26.6px */
+    }
+  }
+  &__video {
+    padding-top: 50px;
+    display: flex;
+    overflow-x: scroll;
+    gap: 30px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    &::-webkit-scrollbar {
+      width: 10%;
+      height: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      
+      background-color: #888;
+      border-radius: 5pxrgb (182, 7, 7);
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: #555;
+      
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #f1f1f1;
+    }
+
+    &::-webkit-scrollbar-track:hover {
+      background-color: #ddd;
+      
+    }
+
+    &::-webkit-scrollbar-button {
+      display: none;
+    }
+    .video {
+      background: #000;
+      border-radius: 10px;
+      min-width: 380px;
+      height: 310px;
+      border: 1px solid #fff;
+      .vidi {
+      }
+    }
+  }
+}

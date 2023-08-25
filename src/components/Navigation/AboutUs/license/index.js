@@ -53,7 +53,7 @@ const License = ({ dark }) => {
                 {language === ""
                   ? "Обучать IT"
                   : language === "ky"
-                  ? "IT-ни уйротуу"
+                  ? "IT-ни үйрөтүү"
                   : "Teach IT"}
               </p>
             </div>

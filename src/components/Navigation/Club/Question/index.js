@@ -33,7 +33,7 @@ const Question = ({ dark }) => {
                       color: dark ? "#fff" : "",
                     }}
                   >
-                    Эмне учун
+                    Эмне үчүн
                   </p>{" "}
                   <br />
                   <span>IT-КЛУБ?</span>

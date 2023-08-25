@@ -25,6 +25,11 @@ const Footer = () => {
   const handleLinkClick = () => {
     window.scroll(0, 0);
   };
+  const handleContactClick = (event) => {
+    event.preventDefault();
+    const fag = document.getElementById("quashin");
+    fag.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <div id="footer">
       <div className="container">
@@ -101,11 +106,7 @@ const Footer = () => {
                   >
                     {language === "" ? "Клуб" : "Club"}
                   </Link>
-                  <Link
-                    to={"/"}
-                    className="menu__link"
-                    onClick={handleLinkClick}
-                  >
+                  <Link className="menu__link" onClick={handleContactClick}>
                     FAQ
                   </Link>
                 </li>
@@ -120,7 +121,11 @@ const Footer = () => {
                   >
                     motionweb312@gmail.com
                   </Link>
-                  <Link className="menu__link">
+                  <Link
+                    to="https://www.google.com/maps/place/%D0%B3.+%D0%91%D0%B8%D1%88%D0%BA%D0%B5%D0%BA,+%D1%83%D0%BB.+%D0%A2%D1%83%D1%80%D1%83%D1%81%D0%B1%D0%B5%D0%BA%D0%BE%D0%B2%D0%B0+109/3"
+                    target="_blank"
+                    className="menu__link"
+                  >
                     {language === ""
                       ? "г. Бишкек, ул. Турусбекова 109/3"
                       : language === "ky"
