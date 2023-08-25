@@ -5,7 +5,7 @@ import "./index.scss";
 import { BASE_URL } from "../../../../API";
 import { LanguageContext } from "../../../../context";
 
-const GoodState = () => {
+const GoodState = ({ dark }) => {
   const [movies, setMovies] = useState([]);
   const { language } = useContext(LanguageContext);
 
@@ -22,7 +22,12 @@ const GoodState = () => {
     getMovies();
   }, [language]);
   return (
-    <div id="goodState">
+    <div
+      style={{
+        background: dark ? "#1c1c1c" : "",
+      }}
+      id="goodState"
+    >
       <div className="container">
         <h1 data-aos="fade-right">
           {language === ""
@@ -33,7 +38,7 @@ const GoodState = () => {
         </h1>
         <div className="goodState">
           {movies.map((el) => (
-            <GoodCard el={el} key={el.id} />
+            <GoodCard dark={dark} el={el} key={el.id} />
           ))}
         </div>
       </div>

@@ -8,10 +8,18 @@ import club51 from "../../../../img/club5.1.png";
 import club52 from "../../../../img/club5.2.png";
 import "./index.scss";
 import { LanguageContext } from "../../../../context";
-const WhatYouGet = () => {
+
+const WhatYouGet = ({ dark }) => {
   const { language } = useContext(LanguageContext);
+
   return (
-    <div id="whatYouGet">
+    <div
+      style={{
+        background: dark ? "#000" : "#fff",
+        color: dark ? "#fff" : "#1b1b1b",
+      }}
+      id="whatYouGet"
+    >
       <div className="container">
         <div className="whatYouGet">
           <div className="whatYouGet__bloc">

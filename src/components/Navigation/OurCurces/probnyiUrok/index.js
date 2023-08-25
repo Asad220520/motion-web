@@ -5,7 +5,7 @@ import axios from "axios";
 import { BASE_URL } from "../../../../API";
 import { LanguageContext } from "../../../../context";
 
-const Probnyi = () => {
+const Probnyi = ({ dark }) => {
   const [bob, setBob] = useState([]);
   const { language } = useContext(LanguageContext);
 
@@ -16,7 +16,13 @@ const Probnyi = () => {
   }, [language]);
 
   return (
-    <div id="probnyi">
+    <div
+      style={{
+        background: dark ? "#1c1c1c" : "",
+        borderBottom: dark ? "1px solid #fff" : "",
+      }}
+      id="probnyi"
+    >
       <div className="container">
         {bob.map((el) => (
           <div key={el.id} className="probnyi">

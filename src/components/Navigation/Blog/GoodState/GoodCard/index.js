@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.scss";
 import { Link } from "react-router-dom";
-const GoodCard = ({ el }) => {
+const GoodCard = ({ el, dark }) => {
   return (
     <div id="goodCard">
       <div className="container">
@@ -13,7 +13,13 @@ const GoodCard = ({ el }) => {
           </div>
           <div data-aos="flip-left" className="goodCard__title">
             <h3>{el.best_title}</h3>
-            <p>{el.descriptions.map((el) => el.description)}</p>
+            <p
+              style={{
+                color: dark ? "#fff" : "",
+              }}
+            >
+              {el.descriptions.map((el) => el.description)}
+            </p>
           </div>
         </div>
       </div>

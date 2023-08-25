@@ -16,7 +16,7 @@ import { LanguageContext } from "../../../context";
 const OurSchool = () => {
   const [bob, setBob] = useState([]);
   const { language } = useContext(LanguageContext);
-
+  const { dark } = useContext(LanguageContext);
   useEffect(() => {
     axios(`${BASE_URL}/${language}/api/v1/courses/courses/
 `).then((res) => setBob(res.data.results));
@@ -25,30 +25,40 @@ const OurSchool = () => {
   console.log(bob);
 
   return (
-    <>
-      <Himages />
-      <div id="ourCurces">
-        <div className="ourCurces ">
-          <AboutCurs />
-          <Vupusk />
-          <BegushiStrak />
+    <div>
+      <div
+        style={{
+          background: dark ? "#000" : "",
+        }}
+        id="ourCurces"
+      >
+        <Himages />
+        <div
+          style={{
+            background: dark ? "#1c1c1c" : "",
+          }}
+          className="ourCurces "
+        >
+          <AboutCurs dark={dark} />
+          <Vupusk dark={dark} />
+          <BegushiStrak dark={dark} />
           <div className="container">
             <div className="ourCurces__block">
               {bob.map((el) => (
                 <>
-                  <Kursy key={el.id} el={el} />
+                  <Kursy dark={dark} key={el.id} el={el} />
                 </>
               ))}
             </div>
           </div>
-          <Probnyi />
-          <Whymotion />
-          <Students />
-          <Otzyv />
-          <Quashin />
+          <Probnyi dark={dark} />
+          <Whymotion dark={dark} />
+          <Students dark={dark} />
+          <Otzyv dark={dark} />
+          <Quashin dark={dark} />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

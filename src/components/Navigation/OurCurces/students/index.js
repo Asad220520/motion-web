@@ -1,17 +1,27 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./index.scss";
-import rec from "../../../../img/book.png";
-import pla from "../../../../img/platf.png";
-import ress from "../../../../img/ress.png";
-import shop from "../../../../img/bshop.png";
 import { Link } from "react-router-dom";
 import { LanguageContext } from "../../../../context";
+import axios from "axios";
+import { BASE_URL } from "../../../../API";
 
-const Students = () => {
+const Students = ({ dark }) => {
   const { language } = useContext(LanguageContext);
+  const [project, setProject] = useState([]);
+  const getProject = async () => {
+    const res = await axios(`${BASE_URL}/${language}/api/v1/blog/projects/`);
+    const { data } = res;
+    setProject(data.results);
+  };
+  useEffect(() => {
+    getProject();
+  }, [language]);
+  console.log("proja", project);
 
   return (
-    <div id="student">
+    <div
+      id="student"
+    >
       <div className="container">
         <div className="student">
           <div className="student--group">
@@ -22,38 +32,16 @@ const Students = () => {
                   : language === "ky"
                   ? "Студенттердин проекттери"
                   : "Student Projects"}{" "}
+                <br />
                 <span>MOTION WEB IT ACADEMY</span>
               </h1>
             </div>
-            <div className="student--group__block">
-              <Link to="https://bookshop-nu.vercel.app/" target="black">
-                <img src={shop} alt="img" />{" "}
-              </Link>
-            </div>
-            <div className="student--group__block">
-              <Link to="https://club-project.vercel.app/" target="black">
-                <img src={pla} alt="img" />
-              </Link>
-            </div>
-            <div className="student--group__block">
-              <Link to="https://self-levelup.vercel.app/" target="blank">
-                <img src={rec} alt="img" />
-              </Link>
-            </div>
-            <div className="student--group__block">
-              <Link to="https://restaurant1-three.vercel.app/" target="black">
-                <img src={ress} alt="img" />
-              </Link>
-            </div>
-            <div className="student--group__block">
-              <button className="btn">
-                {language === ""
-                  ? "Показать ещё"
-                  : language === "ky"
-                  ? "Көбүрөөк көрсөтүү"
-                  : "Show More"}
-                <p>...</p>
-              </button>
+            <div className="student--group__block-s">
+              {project.map((el) => (
+                <Link to={el.url} target="_blanck">
+                  <img src={el.image} alt="img" />
+                </Link>
+              ))}
             </div>
           </div>
         </div>

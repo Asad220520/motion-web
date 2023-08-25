@@ -7,14 +7,24 @@ import chek from "../../../../img/check.png";
 import roket from "../../../../img/rocket .png";
 import { LanguageContext } from "../../../../context";
 
-const Whymotion = () => {
+const Whymotion = ({ dark }) => {
   const { language } = useContext(LanguageContext);
   window.scroll(0, 0);
   return (
-    <div id="why">
+    <div
+      style={{
+        background: dark ? "#1c1c1c" : "",
+        borderBottom: dark ? "1px solid #fff" : "",
+      }}
+      id="why"
+    >
       <div className="container">
         <div className="why">
-          <h1>
+          <h1
+            style={{
+              color: dark ? "#fff" : "",
+            }}
+          >
             {language === ""
               ? "Почему"
               : language === "ky"
@@ -28,17 +38,31 @@ const Whymotion = () => {
               : "- the best choice for learning"}
           </h1>
           <div className="why--text">
-            <div data-aos="fade-right" className="why--text__block">
+            <div
+              style={{
+                background: dark ? "#000" : "",
+              }}
+              data-aos="fade-right"
+              className="why--text__block"
+            >
               <img src={smail} alt="img" />
               <div className="why--text__block--group">
-                <h2>
+                <h2
+                  style={{
+                    color: dark ? "#fff" : "",
+                  }}
+                >
                   {language === ""
                     ? "Обучение с нуля до Junior"
                     : language === "ky"
                     ? "нөлдөн Junior позициясына чейинки окутуу"
                     : "Learning from scratch to Junior"}
                 </h2>
-                <p>
+                <p
+                  style={{
+                    color: dark ? "#fff" : "",
+                  }}
+                >
                   {language === ""
                     ? "На курсе вы научитесь создавать интерфейсы веб-сервисов с помощью языков программирования и дополнительных технологий. Сможете разрабатывать планировщики задач, мессенджеры, интернет-магазины"
                     : language === "ky"
@@ -47,17 +71,31 @@ const Whymotion = () => {
                 </p>
               </div>
             </div>
-            <div data-aos="fade-right" className="why--text__block">
+            <div
+              style={{
+                background: dark ? "#000" : "",
+              }}
+              data-aos="fade-right"
+              className="why--text__block"
+            >
               <img src={roun} alt="img" />
               <div className="why--text__block--group">
-                <h2>
+                <h2
+                  style={{
+                    color: dark ? "#fff" : "",
+                  }}
+                >
                   {language === ""
                     ? "Open Space"
                     : language === "ky"
                     ? "Open Space"
                     : "Open Space"}
                 </h2>
-                <p>
+                <p
+                  style={{
+                    color: dark ? "#fff" : "",
+                  }}
+                >
                   {language === ""
                     ? "Наша компания предоставляет Open Space для наших студентов, где вы сможете комфортно заниматься учёбой, заводить знакомства с другими студентами и развивать навыки коммуникации"
                     : language === "ky"
@@ -66,17 +104,31 @@ const Whymotion = () => {
                 </p>
               </div>
             </div>
-            <div data-aos="fade-right" className="why--text__block">
+            <div
+              style={{
+                background: dark ? "#000" : "",
+              }}
+              data-aos="fade-right"
+              className="why--text__block"
+            >
               <img src={chek} alt="img" />
               <div className="why--text__block--group">
-                <h2>
+                <h2
+                  style={{
+                    color: dark ? "#fff" : "",
+                  }}
+                >
                   {language === ""
                     ? "Английский"
                     : language === "ky"
                     ? "Английский"
                     : "English"}
                 </h2>
-                <p>
+                <p
+                  style={{
+                    color: dark ? "#fff" : "",
+                  }}
+                >
                   {language === ""
                     ? "На данный момент на рынке больше востребованы специалисты владеющие английским языком, так как это даёт возможность выводить продукт в мировую арену. Поэтому мы предоставляем нашим студентам БЕСПЛАТНЫЕ языковые курсы"
                     : language === "ky"
@@ -85,17 +137,31 @@ const Whymotion = () => {
                 </p>
               </div>
             </div>
-            <div data-aos="fade-right" className="why--text__block">
+            <div
+              style={{
+                background: dark ? "#000" : "",
+              }}
+              data-aos="fade-right"
+              className="why--text__block"
+            >
               <img src={roket} alt="img" />
               <div className="why--text__block--group">
-                <h2>
+                <h2
+                  style={{
+                    color: dark ? "#fff" : "",
+                  }}
+                >
                   {language === ""
                     ? "IT club"
                     : language === "ky"
                     ? "IT club"
                     : "IT club"}
                 </h2>
-                <p>
+                <p
+                  style={{
+                    color: dark ? "#fff" : "",
+                  }}
+                >
                   {language === ""
                     ? "IT-Клуб это мост между курсом и реальной работой. Анализируя курсы в Бишкеке мы решили открыть клуб, который поможет студентам подготовиться к реальным проектам. Участники не заканчивая курс смогут понять как работать в команде, научатся презентовать свои работы и поймут какие проблемы бывают на стадии разработки"
                     : language === "ky"

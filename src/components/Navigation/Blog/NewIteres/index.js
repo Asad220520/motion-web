@@ -4,7 +4,7 @@ import "./index.scss";
 import axios from "axios";
 import { BASE_URL } from "../../../../API";
 import { LanguageContext } from "../../../../context";
-const NewInteres = () => {
+const NewInteres = ({ dark }) => {
   const [newDate, setNewDate] = useState([]);
   const { language } = useContext(LanguageContext);
 
@@ -17,7 +17,12 @@ const NewInteres = () => {
     news();
   }, [language]);
   return (
-    <div id="newInteres">
+    <div
+      style={{
+        background: dark ? "#1c1c1c" : "",
+      }}
+      id="newInteres"
+    >
       <div className="container">
         <div className="block">
           <h1 className="h1" data-aos="fade-right">
@@ -29,7 +34,7 @@ const NewInteres = () => {
           </h1>
           <div className="newInteres">
             {newDate.map((el) => (
-              <NewCart ne={el} key={el.id} />
+              <NewCart dark={dark} ne={el} key={el.id} />
             ))}
           </div>
         </div>

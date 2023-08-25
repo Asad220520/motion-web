@@ -3,13 +3,23 @@ import "./index.scss";
 import "./media.scss";
 import men from "../../../img/men.png";
 import vid from "../../../img/videoM.png";
-const Mentory = ({ el, language }) => {
+const Mentory = ({ el, language, dark }) => {
   return (
-    <div id="mentory">
+    <div
+      style={{
+        background: dark ? "#000" : "",
+        borderBottom: dark ? "1px solid #fff" : "",
+      }}
+      id="mentory"
+    >
       <div className="container">
         <div className="mentory">
           {language === "" ? (
-            <h2>
+            <h2
+              style={{
+                color: dark ? "#fff" : "",
+              }}
+            >
               <span>
                 Лучшие менторы <br />
               </span>{" "}
@@ -37,23 +47,41 @@ const Mentory = ({ el, language }) => {
                 <div className="mentory--group__block--img">
                   <img src={el.photo} alt="img" />
                 </div>
-                <h3>
+                <h3
+                  style={{
+                    color: dark ? "#fff" : "",
+                  }}
+                >
                   {el.first_name} {el.last_name}
                 </h3>
-                <p>{el.description}</p>
+                <p
+                  style={{
+                    color: dark ? "#fff" : "",
+                  }}
+                >
+                  {el.description}
+                </p>
               </div>
             ))}
           </div>
           <div className="mentory--samai">
             <div className="mentory--samai__text">
-              <h3>
+              <h3
+                style={{
+                  color: dark ? "#fff" : "",
+                }}
+              >
                 {language === ""
                   ? "Самая оперативная и качественная обратная связь"
                   : language === "ky"
                   ? "Эң эффективдүү жана сапаттуу пикир"
                   : "Most prompt and high-quality feedback"}
               </h3>
-              <p>
+              <p
+                style={{
+                  color: dark ? "#fff" : "",
+                }}
+              >
                 {language === ""
                   ? "Наши менторы дают подробный разбор ваших работ, отмечают ошибки и помогают их исправить."
                   : language === "ky"

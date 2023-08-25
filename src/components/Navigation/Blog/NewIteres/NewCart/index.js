@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.scss";
 import { Link } from "react-router-dom";
-const NewCart = ({ ne }) => {
+const NewCart = ({ ne, dark }) => {
   return (
     <div id="newCart">
       <div className="newCart">
@@ -11,9 +11,28 @@ const NewCart = ({ ne }) => {
           </Link>
         </div>
         <div className="newCart__title">
-          <h1>{ne.descriptions.map((el) => el.description)}</h1>
-          <p>{ne.news_title}</p>
-          <span> {ne.news_created_at}</span>
+          <h1
+            style={{
+              color: dark ? "#fff" : "",
+            }}
+          >
+            {ne.descriptions.map((el) => el.description)}
+          </h1>
+          <p
+            style={{
+              color: dark ? "#fff" : "",
+            }}
+          >
+            {ne.news_title}
+          </p>
+          <span
+            style={{
+              color: dark ? "#fff" : "",
+            }}
+          >
+            {" "}
+            {ne.news_created_at}
+          </span>
         </div>
       </div>
     </div>

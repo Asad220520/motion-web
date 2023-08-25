@@ -2,11 +2,16 @@ import React, { useContext } from "react";
 import license from "../../../../img/license.png";
 import "./index.scss";
 import { LanguageContext } from "../../../../context";
-const License = () => {
+const License = ({ dark }) => {
   const { language } = useContext(LanguageContext);
 
   return (
-    <div id="license">
+    <div
+      style={{
+        background: dark ? "#1c1c1c" : "",
+      }}
+      id="license"
+    >
       <div className="container">
         <div
           data-aos="fade-zoom-in"
@@ -16,14 +21,22 @@ const License = () => {
           className="license"
         >
           <div className="license__title">
-            <h1>
+            <h1
+              style={{
+                color: dark ? "#fff" : "",
+              }}
+            >
               {language === ""
                 ? "Наша лицензия"
                 : language === "ky"
                 ? "Биздин лицензия"
                 : "Our License"}
             </h1>
-            <p>
+            <p
+              style={{
+                color: dark ? "#fff" : "",
+              }}
+            >
               {language === ""
                 ? "Наша программа по IT прошла проверку в Министерстве образования КР, что доказывает Motion web имеет право на:"
                 : language === "ky"
@@ -32,7 +45,11 @@ const License = () => {
             </p>
             <div className="license__title-wrap">
               <h2>01.</h2>
-              <p>
+              <p
+                style={{
+                  color: dark ? "#fff" : "",
+                }}
+              >
                 {language === ""
                   ? "Обучать IT"
                   : language === "ky"
@@ -42,7 +59,11 @@ const License = () => {
             </div>
             <div className="license__title-wrap">
               <h2>02.</h2>
-              <p>
+              <p
+                style={{
+                  color: dark ? "#fff" : "",
+                }}
+              >
                 {language === ""
                   ? "Направлять на обучение и стажировку за границу"
                   : language === "ky"

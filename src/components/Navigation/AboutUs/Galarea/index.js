@@ -18,7 +18,7 @@ const Galerea = () => {
       <div className="container">
         <div className="galerea">
           <div className="galerea__block">
-            <h1 className="a">Галерия</h1>
+            <h1 className="a">Галерея</h1>
             {osnov.map((el) => (
               <img data-aos="flip-left" key={el.id} src={el.image} alt="" />
             ))}

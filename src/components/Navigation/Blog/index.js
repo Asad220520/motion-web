@@ -13,7 +13,7 @@ const Blog = () => {
   const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
-  const { language } = useContext(LanguageContext);
+  const { language, dark } = useContext(LanguageContext);
   console.log(posts);
   const itemsPerPage = 4;
   window.scroll(0, 0);
@@ -22,18 +22,7 @@ const Blog = () => {
     axios
       .get(`${BASE_URL}/${language}/api/v1/blog/posts?page=${currentPage}`)
       .then((res) => {
-        const newPosts = Array.isArray(res.data.results)
-          ? res.data.results
-          : [];
-
-        setPosts((prevPosts) => {
-          const uniqueNewPosts = newPosts.filter(
-            (newPost) => !prevPosts.some((post) => post.id === newPost.id)
-          );
-
-          return [...prevPosts, ...uniqueNewPosts];
-        });
-
+        setPosts(res.data.results);
         setIsLoading(false);
       })
       .catch((error) => {
@@ -45,12 +34,6 @@ const Blog = () => {
   useEffect(() => {
     getBlog();
   }, [currentPage, language]);
-
-  const handleLoadMore = () => {
-    setCurrentPage((prevPage) => prevPage + 1);
-  };
-
-  const visiblePosts = posts.slice(0, currentPage * itemsPerPage);
 
   return (
     <>
@@ -70,36 +53,44 @@ const Blog = () => {
         </div>
       ) : (
         <>
-          <div id="blog">
+          <div
+            style={{
+              background: dark ? "#000" : "",
+            }}
+            id="blog"
+          >
             <BlogProf />
             <div className="container">
               <h1 data-aos="fade-right">
                 {language === ""
                   ? "Блоги"
                   : language === "ky"
-                  ? "Блогдор"
+                  ? "Блогтор"
                   : "Blogs"}
               </h1>
               <div className="blog">
-                {visiblePosts.map((post) => (
-                  <div key={post.id}>
-                    <Front el={post} />
+                {posts.map((post) => (
+                  <div className="bl" key={post.id}>
+                    <Front dark={dark} el={post} />
                   </div>
                 ))}
               </div>
-              {visiblePosts.length < posts.length && (
-                <button onClick={handleLoadMore} className="btn">
-                  {language === ""
-                    ? "Блоги"
-                    : language === "ky"
-                    ? "Блогдор"
-                    : "Blogs"}
-                </button>
-              )}
+              {/* <button
+                style={{
+                  color: dark ? "#fff" : "",
+                }}
+                className="btn"
+              >
+                {language === ""
+                  ? "Блоги"
+                  : language === "ky"
+                  ? "Блогдор"
+                  : "Blogs"}
+              </button> */}
             </div>
           </div>
-          <GoodState />
-          <NewInteres />
+          <GoodState dark={dark} />
+          <NewInteres dark={dark} />
         </>
       )}
     </>

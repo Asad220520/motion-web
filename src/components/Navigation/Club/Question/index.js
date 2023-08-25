@@ -1,34 +1,64 @@
 import React, { useContext } from "react";
 import "./index.scss";
 import { LanguageContext } from "../../../../context";
-const Question = () => {
+const Question = ({ dark }) => {
   const { language } = useContext(LanguageContext);
+
   return (
-    <div id="question">
+    <div
+      style={{
+        background: dark ? "#1c1c1c" : "",
+      }}
+      id="question"
+    >
       <div className="container">
         <div data-aos="fade-up" className="question">
           <div className="question__title">
             <h1>
               {language === "" ? (
                 <>
-                  Зачем вам <br />
+                  <p
+                    style={{
+                      color: dark ? "#fff" : "",
+                    }}
+                  >
+                    Зачем вам
+                  </p>
                   <span>IT-КЛУБ?</span>
                 </>
               ) : language === "ky" ? (
                 <>
-                  Эмне учун <br />
+                  <p
+                    style={{
+                      color: dark ? "#fff" : "",
+                    }}
+                  >
+                    Эмне учун
+                  </p>{" "}
+                  <br />
                   <span>IT-КЛУБ?</span>
                 </>
               ) : (
                 <>
-                  Why do you need <br />
-                  <span>IT-Club?</span> "
+                  <p
+                    style={{
+                      color: dark ? "#fff" : "",
+                    }}
+                  >
+                    Why do you need
+                  </p>{" "}
+                  <br />
+                  <span>IT-Club?</span>
                 </>
               )}
             </h1>
           </div>
           <div className="question__porag">
-            <p>
+            <p
+              style={{
+                color: dark ? "#fff" : "",
+              }}
+            >
               {language === "" ? (
                 <>
                   Анализируя курсы в Бишкеке мы решили открыть клуб, который

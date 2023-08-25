@@ -2,11 +2,16 @@ import React, { useContext } from "react";
 import "./index.scss";
 import comand from "../../../../img/comanda.png";
 import { LanguageContext } from "../../../../context";
-const Comanda = () => {
+const Comanda = ({ dark }) => {
   const { language } = useContext(LanguageContext);
 
   return (
-    <div id="comanda">
+    <div
+      style={{
+        background: dark ? "#1c1c1c" : "",
+      }}
+      id="comanda"
+    >
       <div className="container">
         <div className="comanda">
           <h1>

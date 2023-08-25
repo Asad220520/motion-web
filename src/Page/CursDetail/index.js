@@ -16,7 +16,7 @@ import { useParams } from "react-router-dom";
 
 const CursDetail = () => {
   const [detal, setDetal] = useState([]);
-  const { language } = useContext(LanguageContext);
+  const { language, dark } = useContext(LanguageContext);
   const { id } = useParams();
   useEffect(() => {
     axios(`${BASE_URL}/${language}/api/v1/courses/courses/${id}/`)
@@ -29,16 +29,21 @@ const CursDetail = () => {
   console.log("detal", detal);
   return (
     <>
-      <div>
+      <div
+        style={{
+          background: dark ? "#000" : "",
+          borderBottom: dark ? "1px solid #fff" : "",
+        }}
+      >
         <Glav el={detal} />
-        <Why language={language} el={detal} />
-        <WereKurs language={language} el={detal} />
-        <Obusheni el={detal} />
-        <ThisKurs language={language} el={detal} />
+        <Why language={language} el={detal} dark={dark} />
+        <WereKurs language={language} el={detal} dark={dark} />
+        <Obusheni el={detal} dark={dark} />
+        <ThisKurs language={language} el={detal} dark={dark} />
         <Sertivkat />
         <SvoiSait />
-        <Mentory el={detal} language={language} />
-        <ProgramKurs el={detal} language={language} />
+        <Mentory el={detal} language={language} dark={dark} />
+        <ProgramKurs el={detal} language={language} dark={dark} />
       </div>
     </>
   );

@@ -9,6 +9,7 @@ import black6 from "../../img/back6.png";
 import black7 from "../../img/black7.png";
 import black8 from "../../img/black8.png";
 import { LanguageContext } from "../../context";
+import { motion } from "framer-motion";
 
 export const Himages = () => {
   const handleContactClick = (event) => {

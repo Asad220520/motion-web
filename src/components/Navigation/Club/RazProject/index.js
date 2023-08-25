@@ -5,10 +5,15 @@ import chek from "../../../../img/check.png";
 import roket from "../../../../img/rocket .png";
 import { LanguageContext } from "../../../../context";
 
-const RazProject = () => {
+const RazProject = ({ dark }) => {
   const { language } = useContext(LanguageContext);
   return (
-    <div id="why">
+    <div
+      style={{
+        background: dark ? "#1c1c1c" : "",
+      }}
+      id="why"
+    >
       <div className="container">
         <div className="why">
           <h1>
@@ -21,7 +26,13 @@ const RazProject = () => {
             </span>
           </h1>
           <div className="why--text">
-            <div data-aos="fade-left" className="why--text__block">
+            <div
+              style={{
+                background: dark ? "#000" : "",
+                color: dark ? "#fff" : "#000",
+              }}
+              className="why--text__block"
+            >
               <img src={smail} alt="img" />
               <div className="why--text__block--group">
                 <h2>
@@ -31,7 +42,12 @@ const RazProject = () => {
                     ? "Команда менен иштөө"
                     : "Teamwork"}
                 </h2>
-                <p>
+                <p
+                  style={{
+                    background: dark ? "#000" : "",
+                    color: dark ? "#fff" : "#000",
+                  }}
+                >
                   {language === ""
                     ? "Это процесс сотрудничества и взаимодействия между участниками команды. Команда может быть составлена из различных специалистов, каждый из которых вносит свой вклад в проект. Работа в команде включает обмен идеями, распределение задач, обсуждение проблем и поиск совместных решений."
                     : language === "ky"
@@ -40,7 +56,13 @@ const RazProject = () => {
                 </p>
               </div>
             </div>
-            <div data-aos="fade-left" className="why--text__block">
+            <div
+              style={{
+                background: dark ? "#000" : "",
+                color: dark ? "#fff" : "#000",
+              }}
+              className="why--text__block"
+            >
               <img className="img" src={roun} alt="img" />
               <div className="why--text__block--group">
                 <h2>
@@ -50,7 +72,12 @@ const RazProject = () => {
                     ? "Brainstorming (бейне шторму)"
                     : "Brainstorming"}
                 </h2>
-                <p>
+                <p
+                  style={{
+                    background: dark ? "#000" : "",
+                    color: dark ? "#fff" : "#000",
+                  }}
+                >
                   {language === ""
                     ? "Это метод генерации идей, при котором члены команды свободно высказывают свои мысли, предложения и концепции, чтобы найти наилучшие решения и подходы. Brainstorming способствует творческому и продуктивному обсуждению, а также стимулирует инновацию."
                     : language === "ky"
@@ -59,7 +86,13 @@ const RazProject = () => {
                 </p>
               </div>
             </div>
-            <div data-aos="fade-left" className="why--text__block">
+            <div
+              style={{
+                background: dark ? "#000" : "",
+                color: dark ? "#fff" : "#000",
+              }}
+              className="why--text__block"
+            >
               <img src={chek} alt="img" />
               <div className="why--text__block--group">
                 <h2>
@@ -69,7 +102,12 @@ const RazProject = () => {
                     ? "Презентация жана проектти өткөрүү"
                     : "Project Presentation and Defense"}
                 </h2>
-                <p>
+                <p
+                  style={{
+                    background: dark ? "#000" : "",
+                    color: dark ? "#fff" : "#000",
+                  }}
+                >
                   {language === ""
                     ? "После разработки проекта команда подготавливает презентацию, чтобы представить свои идеи и результаты. Презентация может включать в себя визуальные материалы, графики, диаграммы и другие средства визуализации, чтобы лучше передать информацию. Защита проекта подразумевает ответы на вопросы, обратную связь и объяснение принятых решений."
                     : language === "ky"
@@ -78,11 +116,22 @@ const RazProject = () => {
                 </p>
               </div>
             </div>
-            <div data-aos="fade-left" className="why--text__block">
+            <div
+              style={{
+                background: dark ? "#000" : "",
+                color: dark ? "#fff" : "#000",
+              }}
+              className="why--text__block"
+            >
               <img src={roket} alt="img" />
               <div className="why--text__block--group">
                 <h2>{language === "" ? "Talking club" : "Talking club"}</h2>
-                <p>
+                <p
+                  style={{
+                    background: dark ? "#000" : "",
+                    color: dark ? "#fff" : "#000",
+                  }}
+                >
                   {language === ""
                     ? "Talking club - это формат, при котором участники собираются для общения и обмена опытом на определенную тему или вопросы. Это может быть частью командной работы, где члены команды обсуждают прогресс, проблемы и идеи в неформальной обстановке. Talking club также способствует укреплению командного духа и развитию навыков коммуникации."
                     : language === "ky"

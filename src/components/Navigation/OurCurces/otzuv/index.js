@@ -6,9 +6,11 @@ import axios from "axios";
 import { BASE_URL } from "../../../../API";
 import { LanguageContext } from "../../../../context";
 
-const Otzyv = () => {
+const Otzyv = ({ dark }) => {
   const [videos, setVideos] = useState([]);
   const { language } = useContext(LanguageContext);
+  console.log(videos);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   useEffect(() => {
     axios(`${BASE_URL}/${language}/api/v1/blog/reviews/`).then((res) =>
@@ -16,57 +18,74 @@ const Otzyv = () => {
     );
   }, [language]);
 
-  const [currentPage, setCurrentPage] = useState(0);
-  const videosPerPage = 3;
-  const totalVideos = videos.length;
-  const totalPages = Math.ceil(totalVideos / videosPerPage);
-
-  const handleNextSlide = () => {
-    setCurrentPage((prevPage) => (prevPage + 1) % totalPages);
-  };
-
-  const handlePrevSlide = () => {
-    setCurrentPage((prevPage) =>
-      prevPage === 0 ? totalPages - 1 : prevPage - 1
-    );
-  };
-
-  const startIndex = currentPage * videosPerPage;
-  const visibleVideos = videos.slice(startIndex, startIndex + videosPerPage);
   return (
-    <div id="otzyv">
+    <div
+      style={{
+        background: dark
+          ? "linear-gradient(315deg, #131313 16.69%, rgba(28, 28, 28, 0.87) 100%)"
+          : "",
+        borderBottom: dark ? "1px solid #fff" : "",
+      }}
+      id="otzyv"
+    >
       <div className="container">
-        <div className="otzyv">
-          <div className="otzyv--text">
-            <h3>
-              {language === ""
-                ? "Отзывы студентов"
-                : language === "ky"
-                ? "студенттердин пикири"
-                : "Student Reviews"}
-            </h3>
-            <div className="otzyv--text__icon">
-              <div className="icon" onClick={handlePrevSlide}>
-                <HiArrowLongLeft />
-              </div>
+        <h1
+          style={{
+            color: dark ? "#fff" : "",
+          }}
+        >
+          Отзывы студентов
+        </h1>
+        <div
+          style={{
+            background: dark ? "#000" : "",
+          }}
+          className="otzyv"
+        >
+          {/* <div className="otzyv--text__icon">
+            <div className="icon">
+              <HiArrowLongLeft />
             </div>
-          </div>
+          </div> */}
           <div className="otzyv--slid">
             <div className="otzyv--slid__group">
-              {visibleVideos.map((el, i) => (
-                <div key={i} className="otzyv--slid__block">
+              {videos.map((el, i) => (
+                <div
+                  style={{
+                    border: dark ? "1px solid #fff" : "",
+                  }}
+                  key={i}
+                  className="otzyv--slid__block"
+                  onMouseEnter={() => setHoveredIndex(i)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                >
                   <video className="otzyv--slid__block-vid" controls>
                     <source className="vidi" src={el.file} type="video/mp4" />
                   </video>
+                  {hoveredIndex === i && (
+                    <svg
+                      className="plearr"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="55"
+                      height="59"
+                      viewBox="0 0 65 79"
+                      fill="none"
+                    >
+                      <path
+                        d="M65 39.5L0.5 78.9042L0.5 0.0958443L65 39.5Z"
+                        fill="white"
+                      />
+                    </svg>
+                  )}
                 </div>
               ))}
             </div>
           </div>
-          <div className="otzyv--text__icon">
-            <div className="icon" onClick={handleNextSlide}>
+          {/* <div className="otzyv--text__icon">
+            <div className="icon">
               <HiArrowLongRight />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

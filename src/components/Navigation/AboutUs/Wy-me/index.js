@@ -9,11 +9,14 @@ import black7 from "../../../../img/black7.png";
 import black8 from "../../../../img/black8.png";
 import { LanguageContext } from "../../../../context";
 
-const WyMe = () => {
+const WyMe = ({ dark }) => {
   const { language } = useContext(LanguageContext);
 
   return (
-    <div id="himages">
+    <div
+    
+      id="himages"
+    >
       <div className="img">
         <img src={black1} className="img1 group" alt="" />
         <img src={black2} className="img2 group" alt="" />
