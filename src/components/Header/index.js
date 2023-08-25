@@ -57,11 +57,14 @@ const Header = () => {
             <ul ref={navRef} className="menu">
               <li className="menu__item" onClick={showBurger}>
                 <NavLink
-                  style={{
+                  className={`menu__link ${dark ? "dark" : ""}`}
+                  activeStyle={{
                     color: dark ? "#fff" : "",
                   }}
+                  style={{
+                    color: dark ? "#fff" : "#rgba(27, 27, 27, 0.60);",
+                  }}
                   to={"/"}
-                  className="menu__link"
                 >
                   {language === ""
                     ? "Главное"
@@ -72,11 +75,14 @@ const Header = () => {
               </li>
               <li className="menu__item" onClick={showBurger}>
                 <NavLink
-                  style={{
+                  className={`menu__link ${dark ? "dark" : ""}`}
+                  activeStyle={{
                     color: dark ? "#fff" : "",
                   }}
+                  style={{
+                    color: dark ? "#fff" : "#rgba(27, 27, 27, 0.60);",
+                  }}
                   to={"/aboutUs"}
-                  className="menu__link"
                 >
                   {language === ""
                     ? "О нас"
@@ -87,16 +93,19 @@ const Header = () => {
               </li>
               <li className="okurs" style={{ position: "relative" }}>
                 <NavLink
-                  style={{
+                  className={`menu__link ${dark ? "dark" : ""}`}
+                  activeStyle={{
                     color: dark ? "#fff" : "",
                   }}
+                  style={{
+                    color: dark ? "#fff" : "#rgba(27, 27, 27, 0.60);",
+                  }}
                   to={"/curse/1"}
-                  className="menu__link"
                 >
                   {language === ""
                     ? " О курсах"
                     : language === "ky"
-                    ? "курс жөнүндө"
+                    ? "Курс жөнүндө"
                     : "About courses"}
                 </NavLink>
                 <ul
@@ -132,11 +141,14 @@ const Header = () => {
               </li>
               <li className="menu__item" onClick={showBurger}>
                 <NavLink
-                  style={{
+                  className={`menu__link ${dark ? "dark" : ""}`}
+                  activeStyle={{
                     color: dark ? "#fff" : "",
                   }}
+                  style={{
+                    color: dark ? "#fff" : "#rgba(27, 27, 27, 0.60);",
+                  }}
                   to={"/club"}
-                  className="menu__link"
                 >
                   {language === ""
                     ? "Клуб"
@@ -147,11 +159,14 @@ const Header = () => {
               </li>
               <li className="menu__item" onClick={showBurger}>
                 <a
-                  style={{
+                  className={`menu__link ${dark ? "dark" : ""}`}
+                  activeStyle={{
                     color: dark ? "#fff" : "",
                   }}
+                  style={{
+                    color: dark ? "#fff" : "#rgba(27, 27, 27, 0.60);",
+                  }}
                   href="#contact"
-                  className="menu__link"
                   onClick={handleContactClick}
                 >
                   {language === ""
@@ -163,11 +178,14 @@ const Header = () => {
               </li>
               <li className="menu__item" onClick={showBurger}>
                 <NavLink
+                  className={`menu__link ${dark ? "dark" : "link"}`}
+                  activeStyle={{
+                    color: dark ? "#fff" : "#rgba(27, 27, 27, 0.60);",
+                  }}
                   style={{
-                    color: dark ? "#fff" : "",
+                    color: dark ? "#fff" : "#rgba(27, 27, 27, 0.60);",
                   }}
                   to={"/blog"}
-                  className="menu__link"
                 >
                   {language === ""
                     ? "Блог"
@@ -180,22 +198,18 @@ const Header = () => {
             </ul>
             <div className="nav__language">
               <div className="dark" onClick={() => setDark(!dark)}>
-                {dark ? (
-                  <WiDaySunny
-                    style={{
-                      color: dark ? "#fff" : "",
-                    }}
-                  />
-                ) : (
-                  <MdNightlight />
-                )}
+                <WiDaySunny
+                  style={{
+                    color: dark ? "#fff" : "",
+                  }}
+                />
               </div>
-              <GrLanguage
+              {/* <GrLanguage
                 style={{
                   color: dark ? "#fff" : "",
                 }}
                 className="icon"
-              />
+              /> */}
 
               <span
                 style={{

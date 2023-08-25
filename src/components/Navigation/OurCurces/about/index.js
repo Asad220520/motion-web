@@ -49,10 +49,10 @@ const AboutCurs = ({ dark }) => {
               to={"/aboutUs"}
             >
               {language === ""
-                ? "Подробнее"
+                ? "Подробнее..."
                 : language === "ky"
-                ? "Кобуроок"
-                : "More"}
+                ? "Көбүрөөк..."
+                : "More..."}
             </Link>
           </div>
         </div>

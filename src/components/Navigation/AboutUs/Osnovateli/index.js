@@ -20,7 +20,7 @@ const Osnovateli = ({ dark }) => {
                 {language === ""
                   ? "Основатели"
                   : language === "ky"
-                  ? "Негиздоочулор"
+                  ? "Уюштуруучулар"
                   : "Founders"}
               </h1>
               <p

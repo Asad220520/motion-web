@@ -21,7 +21,16 @@ const Galerea = () => {
             <h1 className="a">Галерея</h1>
             {osnov.map((el) => (
               <img data-aos="flip-left" key={el.id} src={el.image} alt="" />
-            ))}
+            ))}{" "}
+            {/* {osnov.map(
+              (el) =>
+                el.file &&
+                el.file.endsWith(".webm") && (
+                  <video controls key={el.id}>
+                    <source className="vidi" src={el.file} type="video/webm" />
+                  </video>
+                )
+            )} */}
             {/* <p className="b">Показать ещё</p> */}
           </div>
         </div>

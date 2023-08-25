@@ -35,40 +35,55 @@
         }
 
         a {
-          color: rgba(27, 27, 27, 0.6);
+          transition: color 0.1s, text-decoration;
+          // color: rgba(121, 127, 125, 0.6);
           font-size: 15px;
           font-weight: 400;
           padding: 8px 0;
           transition: 0.4s;
-          // &:hover {
-          //   color: blue;
-          // }
+          &:hover {
+            // color: #000;
+          }
         }
 
         .active {
-          color: #ec3025;
-          text-transform: capitalize;
+          color: #ff4000;
+          text-decoration: underline;
+          animation: blink 1s infinite alternate;
+        }
+        @keyframes blink {
+          from {
+            text-decoration-color: red;
+          }
+          to {
+            text-decoration-color: rgb(173, 61, 61);
+          }
         }
         .nav-close-btn {
           opacity: 0;
         }
         .li {
-          color: #000;
+          // color: rgba(27, 27, 27, 0.60);
           width: 100%;
           cursor: pointer;
         }
         .li.active {
-          background-color: #000;
+          background-color: rgba(58, 55, 55, 0.6);
           color: #fff;
         }
       }
       &__language {
         display: flex;
+        align-items: center;
         gap: 5px;
         cursor: pointer;
-        .dark{
+        .dark {
           font-size: 20px;
           margin-right: 10px;
+          &:hover {
+            background: #a09b9b;
+            border-radius: 8px;
+          }
         }
         .icon {
           font-size: 18px;
@@ -128,6 +143,7 @@
             padding: 8px 0;
             transition: 0.4s;
           }
+
           .nav-close-btn {
             position: absolute;
             top: 5%;

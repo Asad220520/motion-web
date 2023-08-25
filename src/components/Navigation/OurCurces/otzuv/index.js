@@ -34,7 +34,11 @@ const Otzyv = ({ dark }) => {
             color: dark ? "#fff" : "",
           }}
         >
-          Отзывы студентов
+          {language === ""
+            ? " Отзывы студентов"
+            : language === "ky"
+            ? "Студенттик пикир"
+            : "Student Feedback"}
         </h1>
         <div
           style={{
