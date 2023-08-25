@@ -1,19 +1,21 @@
 #otzyv {
   background: #efefef;
+  padding: 50px 0 100px 0px;
+  h1 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    font-weight: 500;
+    padding-bottom: 20px;
+  }
   .otzyv {
     display: flex;
-    padding: 100px 0 100px 75px;
+    margin: 0 auto;
+    justify-content: center;
     align-items: center;
-
     &--text {
       width: 330px;
       margin-right: 30px;
-
-      h3 {
-        color: #333;
-        font-size: 24px;
-        font-weight: 500;
-      }
 
       &__icon {
         display: flex;
@@ -36,23 +38,52 @@
     &--slid {
       display: flex;
       overflow-x: scroll;
-      margin-top: 20px;
+      white-space: nowrap;
+      overflow-y: hidden;
+      margin-top: 30px;
       border-radius: 8px;
-      overflow: hidden;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      
+      padding: 30px;
+      &::-webkit-scrollbar {
+        width: 10%;
+        height: 2px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 5pxrgb (182, 7, 7);
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: #555;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: #f1f1f1;
+      }
+
+      &::-webkit-scrollbar-track:hover {
+        background-color: #ddd;
+      }
+
+      &::-webkit-scrollbar-button {
+        display: none;
+      }
+
       &__group {
         display: flex;
+        gap: 20px;
         transition: transform 0.5s cubic-bezier(0.3, 0.61, 0.355, 1);
       }
 
       &__block {
-        margin-right: 20px;
-        width: 300px;
+        position: relative;
+        width: 220px;
         border-radius: 8px;
         overflow: hidden;
         transform: scale(1);
-        transition: transform 0.3s cubic-bezier(0.3, 0.61, 0.355, 1), box-shadow 0.3s ease;
+        transition: transform 0.3s cubic-bezier(0.3, 0.61, 0.355, 1),
+          box-shadow 0.3s ease;
 
         &:hover {
           transform: scale(1.05);
@@ -61,7 +92,17 @@
 
         .otzyv--slid__block-vid {
           width: 100%;
+          height: 340px;
           border-radius: 8px;
+          cursor: pointer;
+        }
+
+        .plearr {
+          position: absolute;
+          top: 40%;
+          left: 37%;
+          z-index: 1;
+          transition: 0.3s;
         }
       }
     }

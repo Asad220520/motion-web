@@ -10,13 +10,12 @@
         transition: 1s;
       }
       position: absolute;
-      z-index: -1;
+      z-index: 0;
     }
     .img1 {
       position: absolute;
       left: 12%;
       top: 20%;
-      z-index: 0;
     }
     .img2 {
       position: absolute;
@@ -118,6 +117,25 @@
     }
   }
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.img1,
+.img2,
+.img3,
+.img4,
+.img5,
+.img6,
+.img7,
+.img8 {
+  animation: fadeIn 3s ease-in-out;
+}
 @media (max-width: 1650px) {
   #himages {
     width: 95%;
@@ -125,62 +143,62 @@
 }
 @media (max-width: 1465px) {
   #himages {
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
     position: relative;
-    // .img {
-    //   .group {
-    //     width: 35%;
-    //   }
-    //   .img1 {
-    //     position: absolute;
-    //     left: 0%;
-    //     top: 30%;
-    //     z-index: 0;
-    //   }
-    //   .img2 {
-    //     position: absolute;
-    //     right: 30%;
-    //     top: 0%;
-    //   }
-    //   .img3 {
-    //     position: absolute;
-    //     right: 0%;
-    //     top: 10%;
-    //   }
-    //   .img4 {
-    //     position: absolute;
-    //     left: 17%;
-    //     top: 5%;
-    //   }
-    //   .img5 {
-    //     position: absolute;
-    //     left: 35%;
-    //     bottom: 4%;
-    //   }
-    //   .img6 {
-    //     position: absolute;
-    //     left: 38%;
-    //     bottom: 30%;
-    //   }
-    //   .img7 {
-    //     position: absolute;
-    //     bottom: 17%;
-    //     left: 3%;
-    //   }
-    //   .img8 {
-    //     position: absolute;
-    //     bottom: 25%;
-    //     right: 0%;
-    //   }
-    // }
+    .img {
+      .group {
+        width: 35%;
+      }
+      .img1 {
+        position: absolute;
+        left: 0%;
+        top: 30%;
+        z-index: 0;
+      }
+      .img2 {
+        position: absolute;
+        right: 30%;
+        top: 0%;
+      }
+      .img3 {
+        position: absolute;
+        right: 0%;
+        top: 10%;
+      }
+      .img4 {
+        position: absolute;
+        left: 17%;
+        top: 5%;
+      }
+      .img5 {
+        position: absolute;
+        left: 35%;
+        bottom: 4%;
+      }
+      .img6 {
+        position: absolute;
+        left: 38%;
+        bottom: 30%;
+      }
+      .img7 {
+        position: absolute;
+        bottom: 17%;
+        left: 3%;
+      }
+      .img8 {
+        position: absolute;
+        bottom: 25%;
+        right: 0%;
+      }
+    }
     .img {
       .group {
         width: 25%;
       }
       .img1 {
         position: absolute;
-        left: -5%;
+        left: -3%;
         top: 24%;
         z-index: 0;
         width: 20%;
@@ -193,7 +211,7 @@
       }
       .img3 {
         position: absolute;
-        right: -8%;
+        right: -4%;
         top: 10%;
       }
       .img4 {
@@ -216,12 +234,12 @@
       .img7 {
         position: absolute;
         bottom: 6%;
-        left: -9%;
+        left: -5%;
       }
       .img8 {
         position: absolute;
         bottom: 0%;
-        right: -5%;
+        right: -3%;
         width: 25%;
       }
     }
@@ -360,9 +378,9 @@
       }
       .img8 {
         position: absolute;
-        bottom: 4%;
+        bottom: 7%;
         right: -5%;
-        width: 35%;
+        width: 30%;
       }
     }
     .himages {

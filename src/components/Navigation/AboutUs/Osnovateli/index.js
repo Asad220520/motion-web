@@ -3,10 +3,15 @@ import "./index.scss";
 import person from "../../../../img/person.png";
 import person2 from "../../../../img/person2.png";
 import { LanguageContext } from "../../../../context";
-const Osnovateli = () => {
+const Osnovateli = ({ dark }) => {
   const { language } = useContext(LanguageContext);
   return (
-    <div id="osnovateli">
+    <div
+      style={{
+        background: dark ? "#1c1c1c" : "",
+      }}
+      id="osnovateli"
+    >
       <div className="container">
         <div className="osnovateli">
           <div className="osnovateli__block">
@@ -18,7 +23,11 @@ const Osnovateli = () => {
                   ? "Негиздоочулор"
                   : "Founders"}
               </h1>
-              <p>
+              <p
+                style={{
+                  color: dark ? "#fff" : "",
+                }}
+              >
                 {language === ""
                   ? "Motion web IT академия была основана в апреле 2021 года по инициативе Курманбека Жоошбаева и Аскерова Канатбека"
                   : language === "ky"
@@ -29,8 +38,18 @@ const Osnovateli = () => {
             <div className="osnovateli__block-img">
               <div>
                 <img src={person} alt="" />
-                <h1>Курманбек Жоошбаев</h1>
-                <p>
+                <h1
+                  style={{
+                    color: dark ? "#fff" : "",
+                  }}
+                >
+                  Курманбек Жоошбаев
+                </h1>
+                <p
+                  style={{
+                    color: dark ? "#fff" : "",
+                  }}
+                >
                   {language === ""
                     ? "Основатель"
                     : language === "ky"
@@ -40,8 +59,18 @@ const Osnovateli = () => {
               </div>
               <div>
                 <img src={person2} alt="" />
-                <h1>Канатбек Аскеров</h1>
-                <p>
+                <h1
+                  style={{
+                    color: dark ? "#fff" : "",
+                  }}
+                >
+                  Канатбек Аскеров
+                </h1>
+                <p
+                  style={{
+                    color: dark ? "#fff" : "",
+                  }}
+                >
                   {language === ""
                     ? "Сооснователь"
                     : language === "ky"

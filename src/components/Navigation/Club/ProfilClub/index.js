@@ -9,7 +9,7 @@ import black7 from "../../../../img/black7.png";
 import black8 from "../../../../img/black8.png";
 import { LanguageContext } from "../../../../context";
 
-const ProfilClub = () => {
+const ProfilClub = ({ dark }) => {
   const { language } = useContext(LanguageContext);
 
   return (

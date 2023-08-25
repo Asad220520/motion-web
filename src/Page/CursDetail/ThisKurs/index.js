@@ -1,9 +1,15 @@
 import React from "react";
 import "./index.scss";
 import "./media.scss";
-const ThisKurs = ({ el, language }) => {
+const ThisKurs = ({ el, language, dark }) => {
   return (
-    <div id="this">
+    <div
+      style={{
+        background: dark ? "#000" : "",
+        borderBottom: dark ? "1px solid #fff" : "",
+      }}
+      id="this"
+    >
       <div className="container">
         <div className="this">
           <h2>
@@ -15,12 +21,31 @@ const ThisKurs = ({ el, language }) => {
           </h2>
           <div className="this--group">
             {el.what_give?.map((item, index) => (
-              <div className="this--group__block" key={index}>
+              <div
+                style={{
+                  color: dark ? "#fff" : "",
+                  borderBottom: dark ? "1px solid #fff" : "",
+                }}
+                className="this--group__block"
+                key={index}
+              >
                 <div className="this--group__block--text">
                   <h2>{(index + 1).toString().padStart(2, "0")}.</h2>
-                  <h3>{item.reason}</h3>
+                  <h3
+                    style={{
+                      color: dark ? "#fff" : "",
+                    }}
+                  >
+                    {item.reason}
+                  </h3>
                 </div>
-                <p>{item.info}</p>
+                <p
+                  style={{
+                    color: dark ? "#fff" : "",
+                  }}
+                >
+                  {item.info}
+                </p>
               </div>
             ))}
           </div>

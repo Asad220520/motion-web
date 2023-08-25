@@ -4,7 +4,7 @@ import "./media.scss";
 import { GoChevronDown, GoChevronUp } from "react-icons/go";
 import { LanguageContext } from "../../../../context";
 
-const Quashin = () => {
+const Quashin = ({ dark }) => {
   const [blo1, setBlo1] = useState(false);
   const [blo2, setBlo2] = useState(false);
   const [blo3, setBlo3] = useState(false);
@@ -14,7 +14,13 @@ const Quashin = () => {
   const { language } = useContext(LanguageContext);
 
   return (
-    <div id="quashin">
+    <div
+      style={{
+        background: dark ? "#000" : "",
+        borderBottom: dark ? "1px solid #fff" : "",
+      }}
+      id="quashin"
+    >
       <div className="container ">
         <div className="quashin">
           <h1 className="quashin--h1">
@@ -273,10 +279,6 @@ const Quashin = () => {
             </div>
             <div
               style={{
-                margin:
-                  blo1 || blo2 || blo3 || blo4 || blo5 || blo6
-                    ? "0 0 50px 0"
-                    : "0  0 ",
                 height: blo6 ? "30%" : "60px",
                 overflow: blo6 ? "" : "hidden",
                 borderRadius: blo6 ? "20px" : "30px",

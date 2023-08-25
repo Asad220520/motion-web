@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./index.scss";
 import logo from "../../img/logo.png";
@@ -7,8 +7,17 @@ import { BiLogoInstagramAlt } from "react-icons/bi";
 import { FaTelegram } from "react-icons/fa";
 import { AiFillYoutube } from "react-icons/ai";
 import { LanguageContext } from "../../context";
+import axios from "axios";
+import { BASE_URL } from "../../API";
 
 const Footer = () => {
+  const [bob, setBob] = useState([]);
+  useEffect(() => {
+    axios(`${BASE_URL}/${language}/api/v1/courses/courses/
+`).then((res) => setBob(res.data.results));
+    window.scroll(0, 0);
+  }, []);
+  console.log("head", bob);
   const { language } = useContext(LanguageContext);
   useEffect(() => {
     window.scroll(0, 0);
@@ -67,15 +76,11 @@ const Footer = () => {
                       ? "Курстар"
                       : "Courses"}
                   </Link>
-                  <Link to="/courses/frontend" className="curs">
-                    Frontend
-                  </Link>
-                  <Link to="/courses/ui-ux-design" className="curs">
-                    UI/UX design
-                  </Link>
-                  <Link to="/courses/backend" className="curs">
-                    Backend
-                  </Link>
+                  {bob.map((el) => (
+                    <Link to={`curse/${el.id}/`} className="curs">
+                      {el.name}
+                    </Link>
+                  ))}
                 </li>
                 <li className="menu__item">
                   <Link

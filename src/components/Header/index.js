@@ -1,15 +1,18 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { Link, NavLink, useNavigate, useParams } from "react-router-dom";
 import "./index.scss";
+import { motion } from "framer-motion";
 import { GrLanguage } from "react-icons/gr";
 import logo from "../../img/logo.png";
 import { LanguageContext } from "../../context";
 import axios from "axios";
 import { BASE_URL } from "../../API";
+import { MdNightlight } from "react-icons/md";
+import { WiDaySunny } from "react-icons/wi";
+
 const Header = () => {
   const [bob, setBob] = useState([]);
   const [activeItem, setActiveItem] = useState(null);
-
   useEffect(() => {
     axios(`${BASE_URL}/${language}/api/v1/courses/courses/
 `).then((res) => setBob(res.data.results));
@@ -29,6 +32,7 @@ const Header = () => {
   const navRef = useRef();
 
   const { language, setLanguage } = useContext(LanguageContext);
+  const { dark, setDark } = useContext(LanguageContext);
   const handleLanguageChange = (selectedLanguage) => {
     setLanguage(selectedLanguage);
   };
@@ -38,7 +42,12 @@ const Header = () => {
   };
 
   return (
-    <div id="header">
+    <div
+      style={{
+        background: dark ? "#1c1c1c" : "",
+      }}
+      id="header"
+    >
       <div className="container">
         <div style={{ background: "--hover-color:" }} className="header">
           <nav className="nav">
@@ -47,7 +56,13 @@ const Header = () => {
             </Link>
             <ul ref={navRef} className="menu">
               <li className="menu__item" onClick={showBurger}>
-                <NavLink to={"/"} className="menu__link">
+                <NavLink
+                  style={{
+                    color: dark ? "#fff" : "",
+                  }}
+                  to={"/"}
+                  className="menu__link"
+                >
                   {language === ""
                     ? "Главное"
                     : language === "ky"
@@ -56,20 +71,32 @@ const Header = () => {
                 </NavLink>
               </li>
               <li className="menu__item" onClick={showBurger}>
-                <NavLink to={"/aboutUs"} className="menu__link">
+                <NavLink
+                  style={{
+                    color: dark ? "#fff" : "",
+                  }}
+                  to={"/aboutUs"}
+                  className="menu__link"
+                >
                   {language === ""
                     ? "О нас"
                     : language === "ky"
-                    ? "биз жонундо"
+                    ? "Биз жөнүндө"
                     : "About Us"}
                 </NavLink>
               </li>
               <li className="okurs" style={{ position: "relative" }}>
-                <NavLink to={"/curse/1"} className="menu__link">
+                <NavLink
+                  style={{
+                    color: dark ? "#fff" : "",
+                  }}
+                  to={"/curse/1"}
+                  className="menu__link"
+                >
                   {language === ""
                     ? " О курсах"
                     : language === "ky"
-                    ? "курс жонундо"
+                    ? "курс жөнүндө"
                     : "About courses"}
                 </NavLink>
                 <ul
@@ -104,7 +131,13 @@ const Header = () => {
                 </ul>
               </li>
               <li className="menu__item" onClick={showBurger}>
-                <NavLink to={"/club"} className="menu__link">
+                <NavLink
+                  style={{
+                    color: dark ? "#fff" : "",
+                  }}
+                  to={"/club"}
+                  className="menu__link"
+                >
                   {language === ""
                     ? "Клуб"
                     : language === "ky"
@@ -114,6 +147,9 @@ const Header = () => {
               </li>
               <li className="menu__item" onClick={showBurger}>
                 <a
+                  style={{
+                    color: dark ? "#fff" : "",
+                  }}
                   href="#contact"
                   className="menu__link"
                   onClick={handleContactClick}
@@ -126,7 +162,13 @@ const Header = () => {
                 </a>
               </li>
               <li className="menu__item" onClick={showBurger}>
-                <NavLink to={"/blog"} className="menu__link">
+                <NavLink
+                  style={{
+                    color: dark ? "#fff" : "",
+                  }}
+                  to={"/blog"}
+                  className="menu__link"
+                >
                   {language === ""
                     ? "Блог"
                     : language === "ky"
@@ -137,25 +179,52 @@ const Header = () => {
               <ul className="nav-btn nav-close-btn" onClick={showBurger}></ul>
             </ul>
             <div className="nav__language">
-              <GrLanguage className="icon" />
+              <div className="dark" onClick={() => setDark(!dark)}>
+                {dark ? (
+                  <WiDaySunny
+                    style={{
+                      color: dark ? "#fff" : "",
+                    }}
+                  />
+                ) : (
+                  <MdNightlight />
+                )}
+              </div>
+              <GrLanguage
+                style={{
+                  color: dark ? "#fff" : "",
+                }}
+                className="icon"
+              />
+
               <span
+                style={{
+                  color: dark ? "#fff" : "",
+                }}
                 className={language === "ky" ? "selected" : ""}
                 onClick={() => handleLanguageChange("ky")}
               >
                 КР&nbsp;/
               </span>
               <span
+                style={{
+                  color: dark ? "#fff" : "",
+                }}
                 className={language === "" ? "selected" : ""}
                 onClick={() => handleLanguageChange("")}
               >
                 РУС&nbsp;/
               </span>
               <span
+                style={{
+                  color: dark ? "#fff" : "",
+                }}
                 className={language === "en" ? "selected" : ""}
                 onClick={() => handleLanguageChange("en")}
               >
                 ENG&nbsp;/
               </span>
+
               <ul onClick={showBurger} className="nav-btn">
                 <li></li>
                 <li className="li"></li>

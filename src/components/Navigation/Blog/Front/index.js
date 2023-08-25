@@ -1,10 +1,15 @@
 import React from "react";
 import "./index.scss";
 import { useNavigate } from "react-router-dom";
-const Front = ({ el }) => {
+const Front = ({ el, language, dark }) => {
   const nav = useNavigate();
   return (
-    <div id="front">
+    <div
+      style={{
+        background: dark ? "#1c1c1c" : "",
+      }}
+      id="front"
+    >
       <div className="front">
         <div className="front__img">
           <img src={el.media[0].media} alt="alt" />
@@ -16,7 +21,7 @@ const Front = ({ el }) => {
                 el.descriptions[0].description.length > 50 ? "..." : ""
               }`}
           </p>
-          <button onClick={() => nav(`/detailsIscl/${el.id}`)}>Далее</button>
+          <button onClick={() => nav(`/blogdetail/${el.id}`)}>Далее</button>
         </div>
       </div>
     </div>

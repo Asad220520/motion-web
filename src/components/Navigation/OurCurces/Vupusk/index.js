@@ -5,7 +5,7 @@ import { LanguageContext } from "../../../../context";
 // import { BASE_URL } from "../../../../API";
 // import axios from "axios";
 
-const Vupusk = () => {
+const Vupusk = ({ dark }) => {
   //   const [bob, setBob] = useState([]);
   //   useEffect(() => {
   //     axios(`${BASE_URL}/courses/courses/`).then((res) =>
@@ -16,10 +16,16 @@ const Vupusk = () => {
   const { language } = useContext(LanguageContext);
 
   return (
-    <div className="container">
-      <div className="vupusk">
-        <div className="vupusk--block">
-          <div className="vupusk--block__group">
+    <div id="zoning">
+      <div className="container">
+        <div
+          style={{
+            background: dark ? "#000" : "",
+            border: dark ? "1px solid #fff" : "",
+          }}
+          className="zoning"
+        >
+          <div className="zoning__block">
             <p>
               {language === ""
                 ? "2000+"
@@ -27,7 +33,11 @@ const Vupusk = () => {
                 ? "2000+"
                 : "2000+"}
             </p>
-            <span>
+            <span
+              style={{
+                color: dark ? "#fff" : "",
+              }}
+            >
               {language === ""
                 ? "Выпусников"
                 : language === "ky"
@@ -35,27 +45,39 @@ const Vupusk = () => {
                 : "Graduates"}
             </span>
           </div>
-          <div className="vupusk--block__group">
+          <div className="zoning__block">
             <p>{language === "" ? "2" : language === "ky" ? "2" : "2"}</p>
-            <span>
+            <span
+              style={{
+                color: dark ? "#fff" : "",
+              }}
+            >
               {language === "" ? "Года" : language === "ky" ? "Жыл" : "Years"}
             </span>
           </div>
-          <div className="vupusk--block__group">
+          <div className="zoning__block">
             <p>{language === "" ? "10+" : language === "ky" ? "10+" : "10+"}</p>
-            <span>
+            <span
+              style={{
+                color: dark ? "#fff" : "",
+              }}
+            >
               {language === ""
                 ? "Менторов"
                 : language === "ky"
                 ? "Менторлор"
                 : "Mentors"}
             </span>
-          </div>
-          <div className="vupusk--block__group">
+          </div>{" "}
+          <div className="zoning__block">
             <p>
               {language === "" ? "95%+" : language === "ky" ? "95%+" : "95%+"}
             </p>
-            <span>
+            <span
+              style={{
+                color: dark ? "#fff" : "",
+              }}
+            >
               {language === ""
                 ? "Трудоустроились"
                 : language === "ky"

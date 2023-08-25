@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./index.scss";
 import { GoChevronDown, GoChevronUp } from "react-icons/go";
 
-const ProgramKurs = ({ el }) => {
+const ProgramKurs = ({ el, dark }) => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleOpen = (index) => {
@@ -10,7 +10,13 @@ const ProgramKurs = ({ el }) => {
   };
 
   return (
-    <div id="program">
+    <div
+      style={{
+        background: dark ? "#000" : "",
+        borderBottom: dark ? "1px solid #fff" : "",
+      }}
+      id="program"
+    >
       <div className="container">
         <div className="program">
           <div className="program--title">
