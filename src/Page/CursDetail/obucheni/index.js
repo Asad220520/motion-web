@@ -4,7 +4,7 @@ import "./media.scss";
 import { HiXMark } from "react-icons/hi2";
 // import { BiFontSize } from "react-icons/bi";
 
-const Obusheni = ({ el }) => {
+const Obusheni = ({ el, language }) => {
   const [online, setOnline] = useState(false);
   const [ofline, setOfline] = useState(false);
   return (
@@ -44,7 +44,13 @@ const Obusheni = ({ el }) => {
               }}
               className="obucheni--modal__ofline"
             >
-              <h2>Офлайн</h2>
+              <h2>
+                {language === ""
+                  ? "Офлайн"
+                  : language === "ky"
+                  ? "Оффлайн"
+                  : "Offline"}
+              </h2>
             </button>
             <button
               onClick={() => {
@@ -53,7 +59,13 @@ const Obusheni = ({ el }) => {
               }}
               className="obucheni--modal__online"
             >
-              <h2>Онлайн</h2>
+              <h2>
+                {language === ""
+                  ? "Онлайн"
+                  : language === "ky"
+                  ? "Онлайн"
+                  : "Online"}
+              </h2>
             </button>
             <div
               style={{
@@ -75,16 +87,34 @@ const Obusheni = ({ el }) => {
                   cursor: "pointer",
                 }}
               />
-              <h2>Офлайн</h2>
+              <h2>
+                {language === ""
+                  ? "Офлайн"
+                  : language === "ky"
+                  ? "Оффлайн"
+                  : "Offline"}
+              </h2>
               <ol>
                 <li>
-                  В одной группе обучается всего 10-12-14 студентов стандартной
-                  формы.
+                  {language === ""
+                    ? " В одной группе обучается всего 10-12-14 студентов стандартной формы."
+                    : language === "ky"
+                    ? "Бир тайпада стандарттык формадагы 10-12-14 гана окуучу бар."
+                    : "In one group, there are only 10-12-14 students of the standard form."}
                 </li>
-                <li>Занятия будут проходить на кыргызском языке.</li>
                 <li>
-                  В Академии есть возможность практиковать внеклассное обучение
-                  в период с 09 до 22 (OPEN SPACE).
+                  {language === ""
+                    ? "Занятия будут проходить на кыргызском языке."
+                    : language === "ky"
+                    ? "Сабактар ​​кыргыз тилинде өткөрүлөт."
+                    : "Classes will be held in the Kyrgyz language."}
+                </li>
+                <li>
+                  {language === ""
+                    ? "В Академии есть возможность практиковать внеклассное обучение в период с 09 до 22 (OPEN SPACE)."
+                    : language === "ky"
+                    ? "Академияда класстан тышкаркы окууну практикалоо мүмкүнчүлүгү бар 09дан 22ге чейин (АЧЫК мейкиндик)."
+                    : "The Academy has the opportunity to practice extracurricular learning in the period from 09 to 22 (OPEN SPACE)."}
                 </li>
               </ol>
             </div>
@@ -109,16 +139,34 @@ const Obusheni = ({ el }) => {
                   cursor: "pointer",
                 }}
               />
-              <h2>Онлайн</h2>
+              <h2>
+                {language === ""
+                  ? "Онлайн"
+                  : language === "ky"
+                  ? "Онлайн"
+                  : "Online"}
+              </h2>
               <ol>
                 <li>
-                  В одной группе обучается всего 10-12-14 студентов стандартной
-                  формы.
+                  {language === ""
+                    ? " В одной группе обучается всего 10-12-14 студентов стандартной формы."
+                    : language === "ky"
+                    ? "Бир тайпада стандарттык формадагы 10-12-14 гана окуучу бар."
+                    : "In one group, there are only 10-12-14 students of the standard form."}
                 </li>
-                <li>Занятия будут проходить на кыргызском языке.</li>
                 <li>
-                  В Академии есть возможность практиковать внеклассное обучение
-                  в период с 09 до 22 (OPEN SPACE).
+                  {language === ""
+                    ? "Занятия будут проходить на кыргызском языке."
+                    : language === "ky"
+                    ? "Сабактар ​​кыргыз тилинде өткөрүлөт."
+                    : "Classes will be held in the Kyrgyz language."}
+                </li>
+                <li>
+                  {language === ""
+                    ? "В Академии есть возможность практиковать внеклассное обучение в период с 09 до 22 (OPEN SPACE)."
+                    : language === "ky"
+                    ? "Академияда класстан тышкаркы окууну практикалоо мүмкүнчүлүгү бар 09дан 22ге чейин (АЧЫК мейкиндик)."
+                    : "The Academy has the opportunity to practice extracurricular learning in the period from 09 to 22 (OPEN SPACE)."}
                 </li>
               </ol>
             </div>

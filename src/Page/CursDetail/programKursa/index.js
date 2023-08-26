@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./index.scss";
 import { GoChevronDown, GoChevronUp } from "react-icons/go";
 
-const ProgramKurs = ({ el, dark }) => {
+const ProgramKurs = ({ el, dark, language }) => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleOpen = (index) => {
@@ -20,7 +20,13 @@ const ProgramKurs = ({ el, dark }) => {
       <div className="container">
         <div className="program">
           <div className="program--title">
-            <h3>Программа курса</h3>
+            <h3>
+              {language === ""
+                ? "Программа курса"
+                : language === "ky"
+                ? "Курс программасы"
+                : "Course program"}
+            </h3>
           </div>
           <div className="program--group">
             {el.program?.map((programEl, i) => (

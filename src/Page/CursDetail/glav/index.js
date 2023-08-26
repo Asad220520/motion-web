@@ -7,7 +7,7 @@ import black5 from "../../../img/black5.png";
 import black6 from "../../../img/back6.png";
 import black7 from "../../../img/black7.png";
 import black8 from "../../../img/black8.png";
-const Glav = ({ el }) => {
+const Glav = ({ el, language }) => {
   const handleContactClick = (event) => {
     event.preventDefault();
     const footer = document.getElementById("contact");
@@ -31,7 +31,13 @@ const Glav = ({ el }) => {
           <span>{el.name?.slice(el.name.indexOf(" ") + 1)}</span>
         </h1>
         <p>{el.description}</p>
-        <button onClick={handleContactClick}>Оставить заявку</button>
+        <button onClick={handleContactClick}>
+          {language === ""
+            ? "Оставить заявку"
+            : language === "ky"
+            ? "Билдирүү калтыруу"
+            : "Leave an application"}
+        </button>
       </div>
     </div>
   );

@@ -7,14 +7,13 @@ import { LanguageContext } from "../../../context";
 const Contact = () => {
   const [modal, setModal] = useState(false);
   const [firstName, setFirstName] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("+996");
   const [email, setEmail] = useState("");
   const [isChecked, setIsChecked] = useState(false);
   const { language } = useContext(LanguageContext);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
     const formData = {
       first_name: firstName,
       phone_number: phoneNumber,
@@ -41,6 +40,7 @@ const Contact = () => {
       });
   };
 
+  const isEmailValid = email.match(/^\S+@\S+\.\S+$/);
   return (
     <div id="contact">
       <div className="container">
@@ -72,7 +72,7 @@ const Contact = () => {
               onChange={(e) => setFirstName(e.target.value)}
             />
             <input
-              type="text"
+              type="tel"
               placeholder={
                 language === ""
                   ? "Номер"
@@ -83,7 +83,7 @@ const Contact = () => {
               name="phoneNumber"
               value={phoneNumber}
               onChange={(e) => setPhoneNumber(e.target.value)}
-            />
+            />{" "}
             <input
               type="email"
               placeholder={
@@ -97,6 +97,7 @@ const Contact = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
+            {!isEmailValid && email && <p>Некорректный email</p>}
             <ul className="checked">
               <li className="checkbox">
                 <input

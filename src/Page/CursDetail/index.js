@@ -35,13 +35,13 @@ const CursDetail = () => {
           borderBottom: dark ? "1px solid #fff" : "",
         }}
       >
-        <Glav el={detal} />
+        <Glav el={detal} language={language} />
         <Why language={language} el={detal} dark={dark} />
         <WereKurs language={language} el={detal} dark={dark} />
-        <Obusheni el={detal} dark={dark} />
+        <Obusheni el={detal} dark={dark} language={language} />
         <ThisKurs language={language} el={detal} dark={dark} />
-        <Sertivkat />
-        <SvoiSait />
+        <Sertivkat language={language} />
+        <SvoiSait language={language} />
         <Mentory el={detal} language={language} dark={dark} />
         <ProgramKurs el={detal} language={language} dark={dark} />
       </div>
