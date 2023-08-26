@@ -29,8 +29,8 @@
       display: flex;
       flex-direction: column;
       width: 500px;
-      position: relative;
       gap: 15px;
+      position: relative;
 
       input {
         width: 100%;
@@ -45,6 +45,12 @@
           line-height: 130%; /* 23.4px */
         }
       }
+      p {
+        color: rgb(172, 54, 54);
+        position: absolute;
+        top: 60%;
+        left: 3%;
+      }
 
       .checked {
         display: flex;
@@ -56,6 +62,9 @@
           position: relative;
           .checkbox-spin + label span:before,
           .checkbox-spin + label span:after {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             transition: all 0.3s ease-in-out;
             content: "";
             position: absolute;
@@ -75,9 +84,13 @@
             border: none;
           }
 
+          .checkbox-spin:checked + label span::after {
+            content: "✓";
+            background: red;
+          }
+
           .checkbox-spin:checked + label span:before {
             transform: rotateZ(180deg);
-            background: red;
           }
         }
         span {

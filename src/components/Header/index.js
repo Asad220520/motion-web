@@ -1,13 +1,10 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { Link, NavLink, useNavigate, useParams } from "react-router-dom";
 import "./index.scss";
-import { motion } from "framer-motion";
-import { GrLanguage } from "react-icons/gr";
 import logo from "../../img/logo.png";
 import { LanguageContext } from "../../context";
 import axios from "axios";
 import { BASE_URL } from "../../API";
-import { MdNightlight } from "react-icons/md";
 import { WiDaySunny } from "react-icons/wi";
 
 const Header = () => {
@@ -61,9 +58,9 @@ const Header = () => {
                   activeStyle={{
                     color: dark ? "#fff" : "",
                   }}
-                  style={{
-                    color: dark ? "#fff" : "#rgba(27, 27, 27, 0.60);",
-                  }}
+                  // style={{
+                  //   color: dark ? "#fff" : "#000",
+                  // }}
                   to={"/"}
                 >
                   {language === ""
@@ -79,9 +76,9 @@ const Header = () => {
                   activeStyle={{
                     color: dark ? "#fff" : "",
                   }}
-                  style={{
-                    color: dark ? "#fff" : "#rgba(27, 27, 27, 0.60);",
-                  }}
+                  // style={{
+                  //   color: dark ? "#fff" : "#000",
+                  // }}
                   to={"/aboutUs"}
                 >
                   {language === ""
@@ -97,9 +94,9 @@ const Header = () => {
                   activeStyle={{
                     color: dark ? "#fff" : "",
                   }}
-                  style={{
-                    color: dark ? "#fff" : "#rgba(27, 27, 27, 0.60);",
-                  }}
+                  // style={{
+                  //   color: dark ? "#fff" : "#000",
+                  // }}
                   to={"/curse/1"}
                 >
                   {language === ""
@@ -145,9 +142,9 @@ const Header = () => {
                   activeStyle={{
                     color: dark ? "#fff" : "",
                   }}
-                  style={{
-                    color: dark ? "#fff" : "#rgba(27, 27, 27, 0.60);",
-                  }}
+                  // style={{
+                  //   color: dark ? "#fff" : "#000",
+                  // }}
                   to={"/club"}
                 >
                   {language === ""
@@ -163,9 +160,9 @@ const Header = () => {
                   activeStyle={{
                     color: dark ? "#fff" : "",
                   }}
-                  style={{
-                    color: dark ? "#fff" : "#rgba(27, 27, 27, 0.60);",
-                  }}
+                  // style={{
+                  //   color: dark ? "#fff" : "#000",
+                  // }}
                   href="#contact"
                   onClick={handleContactClick}
                 >
@@ -180,11 +177,11 @@ const Header = () => {
                 <NavLink
                   className={`menu__link ${dark ? "dark" : "link"}`}
                   activeStyle={{
-                    color: dark ? "#fff" : "#rgba(27, 27, 27, 0.60);",
+                    color: dark ? "#fff" : "#000",
                   }}
-                  style={{
-                    color: dark ? "#fff" : "#rgba(27, 27, 27, 0.60);",
-                  }}
+                  // style={{
+                  //   color: dark ? "#fff" : "#000",
+                  // }}
                   to={"/blog"}
                 >
                   {language === ""

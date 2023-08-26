@@ -5,7 +5,7 @@ import neg from "../../../img/neg.png"; // Импортируйте ваши и�
 import img1 from "../../../img/neg2.svg";
 import img2 from "../../../img/neg3.svg";
 
-const WereKurs = ({ el, dark }) => {
+const WereKurs = ({ el, dark, language }) => {
   const images = [neg, img1, img2]; // Массив изображений
 
   return (
@@ -16,7 +16,11 @@ const WereKurs = ({ el, dark }) => {
             color: dark ? "#fff" : "",
           }}
         >
-          Кому подойдёт этот курс
+          {language === ""
+            ? "Кому подойдёт этот курс"
+            : language === "ky"
+            ? "Бул курс кимдер үчүн?"
+            : "Who is this course for?"}
         </h1>
         <div className="were--group">
           {el.for_who?.map((item, index) => {

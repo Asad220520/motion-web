@@ -21,7 +21,9 @@ const Front = ({ el, language, dark }) => {
                 el.descriptions[0].description.length > 50 ? "..." : ""
               }`}
           </p>
-          <button onClick={() => nav(`/blogdetail/${el.id}`)}>Далее</button>
+          <button onClick={() => nav(`/blogdetail/${el.id}`)}>
+            {language === "" ? "Далее" : language === "ky" ? "дагы" : "Further"}
+          </button>
         </div>
       </div>
     </div>

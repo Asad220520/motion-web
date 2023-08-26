@@ -71,7 +71,7 @@ const Blog = () => {
               <div className="blog">
                 {posts.map((post) => (
                   <div className="bl" key={post.id}>
-                    <Front dark={dark} el={post} />
+                    <Front language={language} dark={dark} el={post} />
                   </div>
                 ))}
               </div>
