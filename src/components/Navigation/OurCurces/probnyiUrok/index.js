@@ -8,7 +8,12 @@ import { LanguageContext } from "../../../../context";
 const Probnyi = ({ dark }) => {
   const [bob, setBob] = useState([]);
   const { language } = useContext(LanguageContext);
-
+  const handleContactClick = (event) => {
+    event.preventDefault();
+    const footer = document.getElementById("contact");
+    footer.scrollIntoView({ behavior: "smooth" });
+    footer.style.padding = "50px 0";
+  };
   useEffect(() => {
     axios(`${BASE_URL}/${language}/api/v1/courses/triallesson/`).then((res) =>
       setBob(res.data.results)
@@ -61,7 +66,7 @@ const Probnyi = ({ dark }) => {
                     {el.name}
                   </p>
                 </h2>
-                <button>
+                <button onClick={handleContactClick}>
                   {language === ""
                     ? "Записаться"
                     : language === "ky"
