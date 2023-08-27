@@ -65,7 +65,11 @@ const Contact = () => {
             <input
               type="text"
               placeholder={
-                language === "" ? "Имя" : language === "ky" ? "Атыныз" : "Name"
+                language === ""
+                  ? "Имя:"
+                  : language === "ky"
+                  ? "Атыңыз:"
+                  : "Name:"
               }
               name="firstName"
               value={firstName}
@@ -75,10 +79,10 @@ const Contact = () => {
               type="tel"
               placeholder={
                 language === ""
-                  ? "Номер"
+                  ? "Номер:"
                   : language === "ky"
-                  ? "Номер"
-                  : "Phone"
+                  ? "Байланышуу тел:"
+                  : "Phone:"
               }
               name="phoneNumber"
               value={phoneNumber}
@@ -88,10 +92,10 @@ const Contact = () => {
               type="email"
               placeholder={
                 language === ""
-                  ? "Электронная почта"
+                  ? "Электронная почта:"
                   : language === "ky"
-                  ? "Электрондук почта"
-                  : "Email"
+                  ? "Электрондук почта:"
+                  : "Email:"
               }
               name="email"
               value={email}
