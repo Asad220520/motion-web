@@ -6,6 +6,12 @@ import { LanguageContext } from "../../../../context";
 const Kursy = ({ el, dark }) => {
   const nav = useNavigate();
   const { language } = useContext(LanguageContext);
+  const handleContactClick = (event) => {
+    event.preventDefault();
+    const footer = document.getElementById("contact");
+    footer.scrollIntoView({ behavior: "smooth" });
+    footer.style.padding = "50px 0";
+  };
   return (
     <div id="kursy">
       <div className="izyk">
@@ -52,7 +58,11 @@ const Kursy = ({ el, dark }) => {
                   ? "Көбүрөөк"
                   : "Details"}
               </button>
-              <button data-aos="flip-left" className="btn2">
+              <button
+                onClick={handleContactClick}
+                data-aos="flip-left"
+                className="btn2"
+              >
                 {language === ""
                   ? "Оставить заявку"
                   : language === "ky"
