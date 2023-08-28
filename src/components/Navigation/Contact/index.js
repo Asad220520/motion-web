@@ -76,7 +76,7 @@ const Contact = () => {
               onChange={(e) => setFirstName(e.target.value)}
             />
             <input
-              type="tel"
+              type="number"
               placeholder={
                 language === ""
                   ? "Номер:"
