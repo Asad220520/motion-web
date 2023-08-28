@@ -49,27 +49,28 @@
           width: 380px;
           height: 308px;
         }
+        &--text {
+          h3 {
+            color: #000;
+            font-family: SF Pro Display;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            text-align: start;
+            line-height: normal;
+            padding: 16px 0 16px 10px;
+          }
 
-        h3 {
-          color: #000;
-          font-family: SF Pro Display;
-          font-size: 24px;
-          font-style: normal;
-          font-weight: 400;
-          text-align: start;
-          line-height: normal;
-          padding: 16px 0 16px 10px;
-        }
-
-        p {
-          color: rgba(27, 27, 27, 0.8);
-          font-family: SF Pro Display;
-          font-size: 18px;
-          font-style: normal;
-          font-weight: 400;
-          padding: 0 0 0 10px;
-          text-align: start;
-          line-height: 130%;
+          p {
+            color: rgba(27, 27, 27, 0.8);
+            font-family: SF Pro Display;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            padding: 0 0 0 10px;
+            text-align: start;
+            line-height: 130%;
+          }
         }
       }
     }
@@ -81,7 +82,7 @@
     .mentory {
       &--group {
         &__block {
-          img{
+          img {
             width: 100%;
           }
           &--text {
