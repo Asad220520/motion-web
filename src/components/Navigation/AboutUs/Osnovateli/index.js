@@ -51,11 +51,11 @@ const Osnovateli = ({ dark }) => {
                   }}
                 >
                   {language === ""
-                    ? "Основатель"
+                    ? "Сооснователь"
                     : language === "ky"
-                    ? "Основатель"
+                    ? "Сооснователь"
                     : "Founder"}
-                </p>{" "}
+                </p>
               </div>
               <div>
                 <img src={person2} alt="" />
@@ -72,11 +72,11 @@ const Osnovateli = ({ dark }) => {
                   }}
                 >
                   {language === ""
-                    ? "Сооснователь"
+                    ? "Основатель"
                     : language === "ky"
-                    ? "Сооснователь"
+                    ? "Основатель"
                     : "Founder"}
-                </p>{" "}
+                </p>
               </div>
             </div>
           </div>
